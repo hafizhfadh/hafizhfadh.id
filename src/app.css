@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+	--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	--font-mono: 'Space Mono', 'JetBrains Mono', 'Fira Code', monospace;
+
+	--color-bg-base: #0B0D13;
+	--color-bg-surface: #111520;
+	--color-bg-elevated: #171D2C;
+	--color-border-subtle: #1E2536;
+	--color-border-strong: #2D374D;
+	--color-border-accent: #10B981;
+
+	--color-text-primary: #F8FAFC;
+	--color-text-body: #E2E8F0;
+	--color-text-muted: #94A3B8;
+	--color-text-subtle: #64748B;
+
+	--color-accent-emerald: #10B981;
+	--color-accent-emerald-hover: #059669;
+	--color-accent-cyan: #06B6D4;
+	--color-accent-amber: #F59E0B;
+}
+
+:root {
+	color-scheme: dark;
+}
+
+html {
+	font-family: var(--font-sans);
+	background-color: #0B0D13;
+	color: #E2E8F0;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+	outline: 2px solid #10B981;
+	outline-offset: 2px;
+}
+
+/* Custom scrollbar matching dark obsidian palette */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #0B0D13;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #1E2536;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #2D374D;
+}

@@ -1,0 +1,19 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "hafizhfadh-id",
+	"account_id": "1026cb37c2e9558166572bbb1f21d7d4",
+	"compatibility_date": "2026-11-04",
+	"compatibility_flags": [
+		"nodejs_als"
+	],
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"workers_dev": true,
+	"preview_urls": true,
+	"observability": {
+		"enabled": true
+	}
+}
