@@ -9,8 +9,8 @@ workers_dev = true
 # D1 Database
 [[d1_databases]]
 binding = "DB"
-database_name = "cms-db"
-database_id = "60e1a61d-cf6a-4e56-a522-8b32c0a0f169" # Run: wrangler d1 create my-sonicjs-db
+database_name = "sonicjs-worktree-main"
+database_id = "cca391fe-f2e9-4bbe-b835-a0450a5c108a" # Run: wrangler d1 create my-sonicjs-db
 migrations_dir = "./node_modules/@sonicjs-cms/core/migrations"
 
 # R2 Bucket for media storage
