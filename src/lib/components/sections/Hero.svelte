@@ -1,142 +1,212 @@
 <script lang="ts">
 	import { profile } from '#lib/data/profile';
 	import Button from '../ui/Button.svelte';
-	import { ArrowUpRight, Terminal, Database, ShieldCheck, Activity, Server, Cpu } from 'lucide-svelte';
+	import { reveal } from '#lib/actions/reveal';
+	import { ArrowDown } from 'lucide-svelte';
 </script>
 
-<section class="relative pt-12 pb-20 md:pt-20 md:pb-28 border-b border-slate-800/80 bg-[#0B0D13]">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-			<!-- Left column: Editorial Value Proposition -->
-			<div class="lg:col-span-7 space-y-7">
-				<div class="space-y-4">
-					<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08]">
-						Engineering Beyond <br class="hidden sm:inline" />
-						<span class="text-emerald-400">Infrastructure.</span>
-					</h1>
+<section class="relative overflow-hidden bg-ivory pt-12 pb-14 sm:pt-16 md:pb-20">
+	<div class="mx-auto max-w-6xl px-5 sm:px-8">
+		<div class="grid items-center gap-14 lg:grid-cols-12 lg:gap-8">
+			<!-- Left: the editorial statement -->
+			<div class="lg:col-span-7">
+				<h1
+					class="font-serif text-[clamp(3rem,7.4vw,6rem)] leading-[0.98] tracking-[-0.02em] text-charcoal"
+				>
+					Engineering
+					<br />
+					Beyond
+					<em class="text-terracotta">Infrastructure.</em>
+				</h1>
 
-					<p class="text-sm sm:text-base font-mono text-emerald-400 tracking-wider uppercase font-semibold">
-						{profile.supporting}
-					</p>
-				</div>
-
-				<p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
-					{profile.bio}
+				<p class="mt-7 text-[15px] text-inkmuted">
+					<span class="font-semibold text-charcoal">{profile.name}</span>
+					<span class="mx-2 text-sanddeep" aria-hidden="true">·</span>
+					Independent engineering consultancy
+					<span class="mx-2 text-sanddeep" aria-hidden="true">·</span>
+					Depok, Indonesia
 				</p>
 
-				<p class="text-xs sm:text-sm text-slate-400 font-sans leading-relaxed max-w-2xl bg-[#111520] p-4 rounded-xl border border-slate-800">
-					"{profile.approachStatement}"
+				<p class="mt-5 max-w-[36rem] text-lg leading-relaxed text-inkmuted">
+					I help organizations build, secure, and evolve technology platforms through thoughtful
+					engineering, open-source solutions, and reliable infrastructure.
 				</p>
 
-				<!-- CTAs -->
-				<div class="flex flex-wrap items-center gap-4 pt-2">
+				<div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
 					<Button href="#contact" variant="primary" size="lg">
-						Start a Professional Conversation
-						<ArrowUpRight class="w-4 h-4" />
+						Let's talk about your engineering challenges
 					</Button>
-
-					<Button href="#impact" variant="outline" size="lg">
-						Explore Verified Impact
-					</Button>
-				</div>
-
-				<!-- Telemetry Status Line -->
-				<div class="pt-4 flex flex-wrap items-center gap-6 text-xs font-mono text-slate-400">
-					<div class="flex items-center gap-2">
-						<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-						<span>DIRECT PRINCIPAL CONSULTATION</span>
-					</div>
-					<div class="flex items-center gap-2">
-						<span class="text-slate-500">•</span>
-						<span>DEPOK, INDONESIA</span>
-					</div>
-					<div class="flex items-center gap-2">
-						<span class="text-slate-500">•</span>
-						<span>ENTERPRISE & GROWTH ENGAGEMENTS</span>
-					</div>
+					<a
+						href="#services"
+						class="group inline-flex items-center gap-2 text-[15px] font-semibold text-charcoal underline decoration-sanddeep decoration-2 underline-offset-8 transition-colors hover:decoration-clay"
+					>
+						Explore my work
+						<ArrowDown
+							class="h-4 w-4 text-clay transition-transform duration-300 group-hover:translate-y-0.5"
+						/>
+					</a>
 				</div>
 			</div>
 
-			<!-- Right column: Technical Architecture Blueprint (Authentic System Topology) -->
+			<!-- Right: the platform schematic, drawn on paper -->
 			<div class="lg:col-span-5">
-				<div class="rounded-2xl border border-slate-800 bg-[#111520] p-6 space-y-5">
-					<div class="flex items-center justify-between pb-3 border-b border-slate-800 text-xs font-mono text-slate-400">
-						<div class="flex items-center gap-2">
-							<Terminal class="w-4 h-4 text-emerald-400" />
-							<span class="text-slate-200 font-semibold">PLATFORM_TOPOLOGY.SPEC</span>
-						</div>
-						<span class="text-emerald-400 font-mono text-xs">
-							STATUS: OPTIMIZED
-						</span>
-					</div>
+				<svg
+					viewBox="0 0 480 600"
+					class="mx-auto w-full max-w-md lg:ml-auto"
+					role="img"
+					aria-label="Schematic of the platforms Hafizh engineers: global edge routing, a 1.6 TB core database answering queries under 500 milliseconds, observability with MonIT and Grafana, and ISO/IEC 27001 security."
+				>
+					<!-- Contour lines, like a site plan -->
+					<g class="fade-in" style="animation-delay: 1.5s" fill="none" stroke="#E5D8C4" stroke-width="1">
+						<path d="M 150 600 A 330 330 0 0 1 480 270" opacity="0.55" />
+						<path d="M 210 600 A 270 270 0 0 1 480 330" opacity="0.7" />
+						<path d="M 270 600 A 210 210 0 0 1 480 390" opacity="0.85" />
+						<path d="M 330 600 A 150 150 0 0 1 480 450" />
+					</g>
+					<g class="fade-in" style="animation-delay: 1.7s" stroke="#D6C5AB" stroke-width="1">
+						<path d="M 116 76 v 10 M 111 81 h 10" />
+						<path d="M 44 296 v 10 M 39 301 h 10" />
+					</g>
 
-					<!-- Topology Architecture Nodes -->
-					<div class="space-y-3 font-mono text-xs">
-						<!-- Node 1: Edge Ingress -->
-						<div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
-							<div class="flex items-center gap-3">
-								<Cpu class="w-4 h-4 text-cyan-400 shrink-0" />
-								<div>
-									<div class="text-slate-200 font-semibold">EDGE INGRESS & ROUTING</div>
-									<div class="text-slate-400 text-xs font-sans">Cloudflare Workers // Sub-millisecond latency</div>
-								</div>
-							</div>
-							<span class="text-xs text-slate-400 font-mono">GLOBAL</span>
-						</div>
+					<!-- Spine -->
+					<path
+						class="draw"
+						style="animation-delay: 0.15s"
+						d="M 84 48 V 552"
+						pathLength="1"
+						stroke="#687C70"
+						stroke-width="1.5"
+						fill="none"
+					/>
 
-						<!-- Connector line -->
-						<div class="h-3 border-l border-dashed border-slate-700 ml-6"></div>
+					<!-- Station 1 — edge & routing -->
+					<g class="fade-in" style="animation-delay: 0.45s">
+						<path class="draw" style="animation-delay: 0.9s" d="M 108 104 H 122" pathLength="1" stroke="#D6C5AB" stroke-width="1.5" fill="none" />
+						<circle cx="84" cy="104" r="24" fill="#FAF8F2" stroke="#687C70" stroke-width="1.5" />
+						<g stroke="#55645B" stroke-width="1.4" fill="none">
+							<circle cx="84" cy="104" r="9" />
+							<path d="M 75 104 H 93" />
+							<ellipse cx="84" cy="104" rx="4" ry="9" />
+						</g>
+						<text x="128" y="102" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.2" fill="#282C2B">EDGE &amp; ROUTING</text>
+						<text x="128" y="119" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#5C5A52">cloudflare workers · global</text>
+					</g>
 
-						<!-- Node 2: Core Data Cluster -->
-						<div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
-							<div class="flex items-center gap-3">
-								<Database class="w-4 h-4 text-emerald-400 shrink-0" />
-								<div>
-									<div class="text-slate-200 font-semibold">CORE DATABASE ENGINES</div>
-									<div class="text-slate-400 text-xs font-sans">1.6 TB PPOB Telco DB // &le; 500ms query targets</div>
-								</div>
-							</div>
-							<span class="text-xs text-emerald-400 font-mono font-bold">-70% TCO</span>
-						</div>
+					<!-- Station 2 — the core database -->
+					<g class="fade-in" style="animation-delay: 0.75s">
+						<path class="draw" style="animation-delay: 1.05s" d="M 114 252 H 128" pathLength="1" stroke="#B04A2C" stroke-width="1.5" fill="none" />
+						<circle cx="121" cy="252" r="2.2" fill="#B04A2C" />
+						<circle
+							class="spin-slow"
+							cx="84"
+							cy="252"
+							r="37"
+							fill="none"
+							stroke="#C85A3A"
+							stroke-width="1"
+							stroke-dasharray="3 6"
+							opacity="0.85"
+						/>
+						<circle cx="84" cy="252" r="30" fill="#172B40" />
+						<g stroke="#E5D8C4" stroke-width="1.5" fill="none">
+							<ellipse cx="84" cy="244" rx="9" ry="3.5" />
+							<path d="M 75 244 V 259" />
+							<path d="M 75 251.5 A 9 3.5 0 0 0 93 251.5" />
+							<path d="M 75 259 A 9 3.5 0 0 0 93 259" />
+						</g>
+						<text x="128" y="250" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.2" fill="#282C2B">CORE DATABASE</text>
+						<text x="128" y="267" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#5C5A52">1.6 tb · &le; 500 ms queries</text>
+					</g>
 
-						<!-- Connector line -->
-						<div class="h-3 border-l border-dashed border-slate-700 ml-6"></div>
+					<!-- Station 3 — observability -->
+					<g class="fade-in" style="animation-delay: 1.05s">
+						<path class="draw" style="animation-delay: 1.2s" d="M 108 400 H 122" pathLength="1" stroke="#D6C5AB" stroke-width="1.5" fill="none" />
+						<circle cx="84" cy="400" r="24" fill="#FAF8F2" stroke="#687C70" stroke-width="1.5" />
+						<path
+							d="M 72 400 H 78 L 82 391 L 87 408 L 91 400 H 96"
+							stroke="#55645B"
+							stroke-width="1.4"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+						<text x="128" y="398" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.2" fill="#282C2B">OBSERVABILITY</text>
+						<text x="128" y="415" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#5C5A52">monit · grafana dashboards</text>
+					</g>
 
-						<!-- Node 3: Observability Plane -->
-						<div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
-							<div class="flex items-center gap-3">
-								<Activity class="w-4 h-4 text-amber-400 shrink-0" />
-								<div>
-									<div class="text-slate-200 font-semibold">OBSERVABILITY & MONITORING</div>
-									<div class="text-slate-400 text-xs font-sans">MonIT platform + Grafana telemetry dashboards</div>
-								</div>
-							</div>
-							<span class="text-xs text-slate-400 font-mono">REAL-TIME</span>
-						</div>
+					<!-- Station 4 — security -->
+					<g class="fade-in" style="animation-delay: 1.35s">
+						<path class="draw" style="animation-delay: 1.35s" d="M 108 516 H 122" pathLength="1" stroke="#D6C5AB" stroke-width="1.5" fill="none" />
+						<circle cx="84" cy="516" r="24" fill="#FAF8F2" stroke="#687C70" stroke-width="1.5" />
+						<g stroke="#55645B" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M 84 506.5 L 92 510 V 516.5 C 92 521.5 88.5 524.8 84 526.2 C 79.5 524.8 76 521.5 76 516.5 V 510 Z" />
+							<path d="M 80.5 516 L 83 518.5 L 87.8 513.2" />
+						</g>
+						<text x="128" y="514" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.2" fill="#282C2B">SECURITY &amp; COMPLIANCE</text>
+						<text x="128" y="531" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#5C5A52">iso/iec 27001:2022</text>
+					</g>
 
-						<!-- Connector line -->
-						<div class="h-3 border-l border-dashed border-slate-700 ml-6"></div>
-
-						<!-- Node 4: Security Boundary -->
-						<div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
-							<div class="flex items-center gap-3">
-								<ShieldCheck class="w-4 h-4 text-emerald-400 shrink-0" />
-								<div>
-									<div class="text-slate-200 font-semibold">COMPLIANCE & THREAT DETECTION</div>
-									<div class="text-slate-400 text-xs font-sans">ISO/IEC 27001:2022 technical lead // SIEM platform</div>
-								</div>
-							</div>
-							<span class="text-xs text-slate-400 font-mono">AUDITED</span>
-						</div>
-					</div>
-
-					<!-- Bottom telemetry note -->
-					<div class="pt-3 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-slate-500">
-						<span>ARCHITECTURE: OPEN-SOURCE & SECURE</span>
-						<span class="text-emerald-400">PRINCIPAL LED</span>
-					</div>
-				</div>
+					<!-- Figure caption -->
+					<text
+						x="62"
+						y="584"
+						font-family="IBM Plex Mono, monospace"
+						font-size="10.5"
+						font-style="italic"
+						fill="#5C5A52"
+					>
+						fig. 01 — the platforms I keep running
+					</text>
+				</svg>
 			</div>
+		</div>
+
+		<!-- Supporting statement strip -->
+		<div
+			class="mt-14 flex items-center gap-5 border-t border-sand pt-6 sm:gap-8"
+			use:reveal={{ delay: 200 }}
+		>
+			<span class="font-serif text-xl text-charcoal italic sm:text-2xl">Secure.</span>
+			<span class="h-px flex-1 bg-sand" aria-hidden="true"></span>
+			<span class="font-serif text-xl text-charcoal italic sm:text-2xl">Open.</span>
+			<span class="h-px flex-1 bg-sand" aria-hidden="true"></span>
+			<span class="font-serif text-xl text-charcoal italic sm:text-2xl">Adaptable.</span>
 		</div>
 	</div>
 </section>
+
+<style>
+	.draw {
+		stroke-dasharray: 1;
+		stroke-dashoffset: 1;
+		animation: draw 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+	}
+
+	@keyframes draw {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.fade-in {
+		opacity: 0;
+		animation: fadein 0.9s ease-out forwards;
+	}
+
+	@keyframes fadein {
+		to {
+			opacity: 1;
+		}
+	}
+
+	.spin-slow {
+		animation: spin 28s linear 3;
+		transform-origin: 84px 252px;
+	}
+
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+</style>

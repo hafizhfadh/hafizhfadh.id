@@ -23,21 +23,20 @@
 
 	const variantStyles = {
 		primary:
-			'bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/20 active:scale-[0.98]',
+			'bg-clay text-ivory hover:bg-claydark shadow-[0_1px_2px_rgba(40,44,43,0.10),0_10px_28px_-14px_rgba(176,74,44,0.55)] hover:shadow-[0_1px_2px_rgba(40,44,43,0.10),0_12px_32px_-14px_rgba(154,62,35,0.6)] active:scale-[0.98]',
 		outline:
-			'bg-transparent hover:bg-slate-800/60 text-slate-100 border border-slate-700 hover:border-slate-500 active:scale-[0.98]',
-		ghost:
-			'bg-transparent hover:bg-slate-800/40 text-slate-300 hover:text-white'
+			'bg-transparent text-charcoal border border-sanddeep hover:border-charcoal/40 hover:bg-cream active:scale-[0.98]',
+		ghost: 'bg-transparent text-inkmuted hover:text-charcoal'
 	};
 
 	const sizeStyles = {
-		sm: 'px-3 py-1.5 text-xs',
-		md: 'px-5 py-2.5 text-sm',
-		lg: 'px-6 py-3.5 text-base'
+		sm: 'px-4 py-2 text-sm',
+		md: 'px-5 py-2.5 text-[15px]',
+		lg: 'px-7 py-3.5 text-base'
 	};
 
 	const baseClasses =
-		'inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0D13] disabled:opacity-50 disabled:pointer-events-none cursor-pointer';
+		'inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-[-0.01em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-2 focus-visible:ring-offset-ivory disabled:opacity-50 disabled:pointer-events-none cursor-pointer';
 </script>
 
 {#if href}

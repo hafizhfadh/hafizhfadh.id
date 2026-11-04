@@ -1,90 +1,60 @@
 <script lang="ts">
 	import { profile } from '#lib/data/profile';
-	import { ArrowUpRight, Shield, Terminal, Database } from 'lucide-svelte';
+	import { ArrowUpRight } from 'lucide-svelte';
+	import LinkedInIcon from '../ui/LinkedInIcon.svelte';
 
 	const currentYear = new Date().getFullYear();
+
+	const navItems = [
+		{ label: 'Services', href: '#services' },
+		{ label: 'Impact', href: '#impact' },
+		{ label: 'Experience', href: '#experience' },
+		{ label: 'Principles', href: '#philosophy' },
+		{ label: 'Toolkit', href: '#ecosystem' },
+		{ label: 'Process', href: '#process' }
+	];
 </script>
 
-<footer class="border-t border-slate-800 bg-[#0B0D13] relative overflow-hidden">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-		<div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-slate-800/80">
-			<!-- Col 1: Identity & Positioning -->
-			<div class="md:col-span-6 space-y-4">
-				<div class="flex items-center gap-2">
-					<span class="font-mono text-lg font-bold text-slate-100">
-						{profile.name}<span class="text-emerald-400">_</span>
-					</span>
-					<span class="text-xs font-mono text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
-						INFRASTRUCTURE PARTNER
-					</span>
-				</div>
-
-				<p class="text-sm text-slate-400 max-w-md leading-relaxed">
-					Independent Infrastructure & Platform Engineering Partner. Helping organizations build, operate, and evolve secure, scalable platforms through open-source adoption, database optimization, and custom software.
+<footer class="on-navy border-t border-ivory/10 bg-navydeep text-ivory">
+	<div class="mx-auto max-w-6xl px-5 py-16 sm:px-8">
+		<div class="grid gap-12 md:grid-cols-12">
+			<!-- Identity -->
+			<div class="md:col-span-6">
+				<p class="font-serif text-2xl tracking-[-0.01em]">
+					{profile.name}<span class="text-terracotta">.</span>
 				</p>
-
-				<div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-500 pt-2">
-					<span class="inline-flex items-center gap-1.5 text-slate-400">
-						<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-						{profile.location}
-					</span>
-					<span>•</span>
-					<span>SECURE. OPEN. ADAPTABLE.</span>
-				</div>
+				<p class="mt-4 max-w-md text-sm leading-relaxed text-fog">
+					Independent engineering consultancy for infrastructure, platforms, and databases —
+					building, securing, and evolving the systems organizations depend on.
+				</p>
+				<p class="mt-6 font-mono text-xs text-ivory/60">{profile.location}</p>
 			</div>
 
-			<!-- Col 2: Navigation -->
-			<div class="md:col-span-3 space-y-3">
-				<h3 class="text-xs font-mono font-semibold text-slate-300 uppercase tracking-wider">
-					Navigation
-				</h3>
-				<ul class="space-y-2 text-sm">
-					<li>
-						<a href="#services" class="text-slate-400 hover:text-emerald-400 transition-colors">
-							Services & Capabilities
-						</a>
-					</li>
-					<li>
-						<a href="#impact" class="text-slate-400 hover:text-emerald-400 transition-colors">
-							Verified Impact Metrics
-						</a>
-					</li>
-					<li>
-						<a href="#experience" class="text-slate-400 hover:text-emerald-400 transition-colors">
-							Professional Experience
-						</a>
-					</li>
-					<li>
-						<a href="#philosophy" class="text-slate-400 hover:text-emerald-400 transition-colors">
-							Engineering Principles
-						</a>
-					</li>
-					<li>
-						<a href="#ecosystem" class="text-slate-400 hover:text-emerald-400 transition-colors">
-							Technology Ecosystem
-						</a>
-					</li>
-					<li>
-						<a href="#process" class="text-slate-400 hover:text-emerald-400 transition-colors">
-							Engagement Process
-						</a>
-					</li>
+			<!-- Explore -->
+			<nav class="md:col-span-3" aria-label="Footer navigation">
+				<h2 class="font-mono text-xs lowercase tracking-wide text-ivory/60">explore</h2>
+				<ul class="mt-4 space-y-2.5">
+					{#each navItems as item}
+						<li>
+							<a href={item.href} class="text-sm text-fog transition-colors hover:text-ivory">
+								{item.label}
+							</a>
+						</li>
+					{/each}
 				</ul>
-			</div>
+			</nav>
 
-			<!-- Col 3: Direct Coordinates -->
-			<div class="md:col-span-3 space-y-3">
-				<h3 class="text-xs font-mono font-semibold text-slate-300 uppercase tracking-wider">
-					Professional Coordinates
-				</h3>
-				<ul class="space-y-2.5 text-sm">
+			<!-- Write -->
+			<div class="md:col-span-3">
+				<h2 class="font-mono text-xs lowercase tracking-wide text-ivory/60">write to me</h2>
+				<ul class="mt-4 space-y-2.5">
 					<li>
 						<a
 							href="mailto:{profile.email}"
-							class="inline-flex items-center gap-1.5 text-slate-400 hover:text-emerald-400 transition-colors group"
+							class="inline-flex items-center gap-1.5 text-sm text-fog transition-colors hover:text-claylight"
 						>
-							<span>{profile.email}</span>
-							<ArrowUpRight class="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 transition-colors" />
+							{profile.email}
+							<ArrowUpRight class="h-3.5 w-3.5 text-ivory/40" />
 						</a>
 					</li>
 					<li>
@@ -92,32 +62,25 @@
 							href={profile.linkedin}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="inline-flex items-center gap-1.5 text-slate-400 hover:text-emerald-400 transition-colors group"
+							class="inline-flex items-center gap-1.5 text-sm text-fog transition-colors hover:text-claylight"
 						>
-							<span>LinkedIn Profile</span>
-							<ArrowUpRight class="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 transition-colors" />
+							<LinkedInIcon class="h-3.5 w-3.5" />
+							LinkedIn
+							<ArrowUpRight class="h-3.5 w-3.5 text-ivory/40" />
 						</a>
 					</li>
 					<li>
-						<a
-							href="#contact"
-							class="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors font-mono text-xs"
-						>
-							<span>Request Discovery Interview →</span>
+						<a href="#contact" class="text-sm font-semibold text-claylight transition-colors hover:text-ivory">
+							Start a conversation
 						</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 
-		<!-- Bottom bar -->
-		<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
-			<p>© {currentYear} {profile.name}. All rights reserved.</p>
-			<p class="flex items-center gap-4">
-				<span>Designed for production reliability</span>
-				<span>•</span>
-				<span>Cloudflare Edge Deployment</span>
-			</p>
+		<div class="mt-14 flex flex-col items-start justify-between gap-4 border-t border-ivory/10 pt-7 sm:flex-row sm:items-center">
+			<p class="text-xs text-ivory/60">© {currentYear} {profile.name}. All rights reserved.</p>
+			<p class="font-serif text-sm italic text-ivory/70">Secure. Open. Adaptable.</p>
 		</div>
 	</div>
 </footer>

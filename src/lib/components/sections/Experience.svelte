@@ -1,132 +1,90 @@
 <script lang="ts">
 	import { experiences, education, certifications } from '#lib/data/experience';
-	import Badge from '../ui/Badge.svelte';
-	import { Briefcase, GraduationCap, Award, Calendar, CheckCircle2 } from 'lucide-svelte';
+	import { reveal } from '#lib/actions/reveal';
+
+	const currentOrgs = new Set(['Infradigital Nusantara', 'Monster Data Asia']);
 </script>
 
-<section id="experience" class="py-20 md:py-32 border-b border-slate-800/80 relative">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-		<!-- Section Header -->
-		<div class="max-w-3xl space-y-4">
-			<Badge variant="cyan">PRODUCTION HISTORY</Badge>
-			<h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-				Professional Experience & Engineering Leadership.
+<section id="experience" class="bg-ivory py-20 sm:py-28">
+	<div class="mx-auto max-w-6xl px-5 sm:px-8">
+		<!-- Section opening -->
+		<div class="max-w-2xl" use:reveal>
+			<h2 class="font-serif text-[clamp(2.1rem,4vw,3.25rem)] leading-[1.04] tracking-[-0.015em] text-charcoal">
+				The work so far.
 			</h2>
-			<p class="text-base sm:text-lg text-slate-300 leading-relaxed">
-				A track record supporting business-critical systems across telecommunications, cloud infrastructure, payment processing, and high-concurrency mobile environments.
+			<p class="mt-5 text-lg leading-relaxed text-inkmuted">
+				Seven years across telecommunications, cloud infrastructure, and software that people rely
+				on daily — each chapter measured by what it moved.
 			</p>
 		</div>
 
-		<!-- Experience Timeline / Editorial Cards -->
-		<div class="space-y-8">
-			{#each experiences as exp}
-				<div
-					class="p-6 sm:p-8 rounded-2xl bg-[#111520] border border-slate-800 hover:border-slate-700 transition-all duration-200 relative overflow-hidden space-y-6"
-				>
-					<!-- Header Row -->
-					<div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-800/80 pb-5">
-						<div class="space-y-1">
-							<div class="flex items-center gap-2">
-								<span class="text-xs font-mono text-emerald-400 font-semibold uppercase">
-									{exp.role}
-								</span>
-								<span class="text-slate-500">•</span>
-								<h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">
-									{exp.organization}
-								</h3>
-							</div>
-							<p class="text-xs sm:text-sm font-mono text-slate-400">
-								{exp.period}
-							</p>
-						</div>
+		<!-- Timeline -->
+		<div class="relative mt-14">
+			<div class="absolute top-2 bottom-8 left-0 w-px bg-sand sm:left-[11rem]" aria-hidden="true"></div>
 
-						<!-- Highlight banner -->
-						<div class="px-3.5 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 font-mono text-xs font-medium self-start md:self-auto">
-							{exp.highlight}
-						</div>
+			{#each experiences as exp}
+				<div class="relative grid gap-3 pb-16 last:pb-4 sm:grid-cols-[10rem_1fr] sm:gap-8" use:reveal>
+					<!-- Period -->
+					<div class="pt-1.5 font-mono text-xs leading-relaxed text-inkmuted sm:text-right">
+						{exp.period}
 					</div>
 
-					<!-- Achievements list -->
-					<div class="space-y-3">
-						<h4 class="text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider">
-							Key Engineering Contributions
-						</h4>
-						<ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-300">
+					<!-- Entry -->
+					<div class="relative pl-6 sm:pl-0">
+						<span
+							class="absolute top-[9px] -left-5 h-2 w-2 rounded-full sm:-left-3 {currentOrgs.has(exp.organization) ? 'bg-clay' : 'bg-sage'}"
+							aria-hidden="true"
+						></span>
+
+						<h3 class="font-serif text-2xl leading-tight text-charcoal sm:text-[1.7rem]">
+							{exp.organization}
+						</h3>
+						<p class="mt-1 text-[15px] font-semibold text-sagedeep">{exp.role}</p>
+
+						<p class="mt-3 max-w-[54ch] font-serif text-[1.3rem] leading-snug text-clay italic">
+							{exp.highlight}
+						</p>
+
+						<ul class="mt-5 grid gap-x-10 gap-y-2.5 md:grid-cols-2">
 							{#each exp.achievements as item}
-								<li class="flex items-start gap-2.5 p-3 rounded-lg bg-slate-900/60 border border-slate-800/60">
-									<CheckCircle2 class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-									<span class="leading-relaxed">{item}</span>
+								<li class="flex items-start gap-3 text-sm leading-relaxed text-inkmuted">
+									<span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-sage" aria-hidden="true"></span>
+									<span>{item}</span>
 								</li>
 							{/each}
 						</ul>
-					</div>
 
-					<!-- Tags -->
-					<div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-800/80">
-						<span class="text-xs font-mono text-slate-500 mr-2">DOMAINS:</span>
-						{#each exp.tags as tag}
-							<span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-800/60 text-slate-300 border border-slate-700/60">
-								{tag}
-							</span>
-						{/each}
+						<p class="mt-5 font-mono text-[11px] leading-relaxed text-inkmuted/80">
+							{exp.tags.join(' · ')}
+						</p>
 					</div>
 				</div>
 			{/each}
 		</div>
 
-		<!-- Education & Certifications Row -->
-		<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-4">
-			<!-- Education -->
-			<div class="lg:col-span-7 p-7 rounded-2xl bg-[#111520] border border-slate-800 space-y-6">
-				<div class="flex items-center gap-2.5 border-b border-slate-800 pb-4">
-					<GraduationCap class="w-5 h-5 text-emerald-400" />
-					<h3 class="text-lg font-bold text-white tracking-tight">
-						Education & Academic Foundation
-					</h3>
-				</div>
-
-				<div class="space-y-4">
+		<!-- Foundation: education & certifications -->
+		<div class="grid gap-12 border-t border-sand pt-12 md:grid-cols-2" use:reveal>
+			<div>
+				<h3 class="font-mono text-xs lowercase tracking-wide text-sagedeep">education</h3>
+				<ul class="mt-5 space-y-5">
 					{#each education as edu}
-						<div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 space-y-1">
-							<div class="flex items-center justify-between flex-wrap gap-2">
-								<h4 class="text-sm font-semibold text-slate-100">
-									{edu.degree}
-								</h4>
-								<span class="text-xs font-mono text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
-									{edu.status || edu.period}
-								</span>
-							</div>
-							<p class="text-xs text-slate-400">
-								{edu.institution} {edu.period ? `// ${edu.period}` : ''}
-							</p>
-						</div>
+						<li>
+							<p class="text-[15px] font-semibold text-charcoal">{edu.degree}</p>
+							<p class="mt-1 text-sm text-inkmuted">{edu.institution} · {edu.status || edu.period}</p>
+						</li>
 					{/each}
-				</div>
+				</ul>
 			</div>
-
-			<!-- Certifications -->
-			<div class="lg:col-span-5 p-7 rounded-2xl bg-[#111520] border border-slate-800 space-y-6">
-				<div class="flex items-center gap-2.5 border-b border-slate-800 pb-4">
-					<Award class="w-5 h-5 text-cyan-400" />
-					<h3 class="text-lg font-bold text-white tracking-tight">
-						Certifications & Credentials
-					</h3>
-				</div>
-
-				<div class="space-y-4">
+			<div>
+				<h3 class="font-mono text-xs lowercase tracking-wide text-sagedeep">certifications</h3>
+				<ul class="mt-5 space-y-5">
 					{#each certifications as cert}
-						<div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 space-y-1">
-							<div class="flex items-center justify-between">
-								<h4 class="text-sm font-semibold text-slate-100">
-									{cert.name}
-								</h4>
-							</div>
-							<p class="text-xs font-mono text-cyan-400">
-								Issuer: {cert.issuer}
-							</p>
-						</div>
+						<li>
+							<p class="text-[15px] font-semibold text-charcoal">{cert.name}</p>
+							<p class="mt-1 text-sm text-inkmuted">{cert.issuer}</p>
+						</li>
 					{/each}
-				</div>
+				</ul>
 			</div>
 		</div>
 	</div>

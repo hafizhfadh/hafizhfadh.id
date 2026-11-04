@@ -1,14 +1,13 @@
 <script lang="ts">
 	import { profile } from '#lib/data/profile';
-	import Badge from '../ui/Badge.svelte';
 	import Button from '../ui/Button.svelte';
 	import LinkedInIcon from '../ui/LinkedInIcon.svelte';
-	import { Mail, MapPin, Send, CheckCircle2, AlertCircle, Copy, ArrowUpRight } from 'lucide-svelte';
+	import { reveal } from '#lib/actions/reveal';
+	import { AlertCircle, ArrowUpRight, Check, Copy } from 'lucide-svelte';
 
 	let fullName = $state('');
 	let workEmail = $state('');
 	let organization = $state('');
-	let jobTitle = $state('');
 	let serviceInterest = $state('Forward Deployed Engineering');
 	let challengeDescription = $state('');
 	let techStack = $state('');
@@ -21,15 +20,15 @@
 		'Forward Deployed Engineering',
 		'Managed Platforms & Infrastructure',
 		'Custom Applications & Integration',
-		'Infrastructure Cost Optimization Audit',
-		'Database Performance / Query Tuning'
+		'Something else'
 	];
 
 	function handleSubmit(e: SubmitEvent) {
 		e.preventDefault();
 
 		if (!fullName.trim() || !workEmail.trim() || !organization.trim() || !challengeDescription.trim()) {
-			errorMessage = 'Please complete all required fields (Name, Work Email, Organization, and Challenge Description).';
+			errorMessage =
+				'Almost there — please fill in your name, work email, organization, and a few words about the challenge.';
 			return;
 		}
 
@@ -42,15 +41,14 @@
 	}
 
 	function getMailtoUrl(): string {
-		const subject = encodeURIComponent(`Professional Engineering Inquiry: ${organization} / ${fullName}`);
+		const subject = encodeURIComponent(`Engineering conversation: ${organization} / ${fullName}`);
 		const body = encodeURIComponent(
 			`Name: ${fullName}\n` +
-				`Role: ${jobTitle || 'N/A'}\n` +
 				`Organization: ${organization}\n` +
 				`Work Email: ${workEmail}\n` +
-				`Service Area: ${serviceInterest}\n` +
+				`Relates to: ${serviceInterest}\n` +
 				`Current Stack: ${techStack || 'Not specified'}\n\n` +
-				`Challenge Summary:\n${challengeDescription}\n`
+				`Challenge:\n${challengeDescription}\n`
 		);
 		return `mailto:${profile.email}?subject=${subject}&body=${body}`;
 	}
@@ -58,12 +56,11 @@
 	async function copyInquiryData() {
 		const text =
 			`Name: ${fullName}\n` +
-			`Role: ${jobTitle || 'N/A'}\n` +
 			`Organization: ${organization}\n` +
 			`Work Email: ${workEmail}\n` +
-			`Service Area: ${serviceInterest}\n` +
+			`Relates to: ${serviceInterest}\n` +
 			`Current Stack: ${techStack || 'Not specified'}\n\n` +
-			`Challenge Summary:\n${challengeDescription}\n`;
+			`Challenge:\n${challengeDescription}\n`;
 
 		try {
 			await navigator.clipboard.writeText(text);
@@ -75,295 +72,221 @@
 			console.error('Failed to copy', err);
 		}
 	}
+
+	const expectations = [
+		'A reply from me personally within 24–48 business hours.',
+		'No sales sequences, no unsolicited follow-ups.',
+		'Mutual confidentiality — an NDA is available whenever it helps you speak freely.'
+	];
 </script>
 
-<section id="contact" class="py-20 md:py-32 relative">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-		<!-- Section Header -->
-		<div class="max-w-3xl space-y-4">
-			<Badge variant="emerald">PRIMARY CONTACT & DISCOVERY</Badge>
-			<h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
-				Have a Technical Challenge Worth Solving?
+<section id="contact" class="on-navy bg-navy py-20 text-ivory sm:py-28">
+	<div class="mx-auto max-w-6xl px-5 sm:px-8">
+		<!-- The invitation -->
+		<div class="max-w-3xl" use:reveal>
+			<h2 class="font-serif text-[clamp(2.4rem,5vw,4rem)] leading-[1.03] tracking-[-0.015em]">
+				Have a technical challenge worth solving?
 			</h2>
-			<p class="text-base sm:text-lg text-slate-300 leading-relaxed">
-				Tell me about your organization, your current technology environment, and the engineering challenges you are facing. Let's start with a professional conversation and determine whether we are a good fit to work together.
+			<p class="mt-6 max-w-[60ch] text-lg leading-relaxed text-fog">
+				Tell me a little about your organization and what you're trying to achieve. We can start
+				with a conversation, understand the challenge, and explore whether working together makes
+				sense.
 			</p>
 		</div>
 
-		<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-			<!-- Left column: Coordinates & Engagement Standards -->
-			<div class="lg:col-span-5 space-y-8">
-				<div class="p-7 rounded-2xl bg-[#111520] border border-slate-800 space-y-6">
-					<h3 class="text-lg font-bold text-white tracking-tight">
-						Direct Communication Coordinates
-					</h3>
-
-					<div class="space-y-4 text-sm">
+		<div class="mt-14 grid gap-14 lg:grid-cols-12">
+			<!-- Direct lines -->
+			<div class="lg:col-span-5" use:reveal>
+				<div class="space-y-8">
+					<div>
+						<h3 class="font-mono text-xs lowercase tracking-wide text-ivory/60">prefer email?</h3>
 						<a
 							href="mailto:{profile.email}"
-							class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/30 text-slate-300 hover:text-white transition-all group"
+							class="mt-3 inline-block font-serif text-[clamp(1.5rem,3vw,2.1rem)] leading-tight text-claylight underline decoration-ivory/25 decoration-2 underline-offset-8 transition-colors hover:decoration-claylight"
 						>
-							<div class="p-2 rounded-lg bg-slate-800 text-emerald-400 group-hover:bg-emerald-500/10">
-								<Mail class="w-4 h-4" />
-							</div>
-							<div class="space-y-0.5">
-								<span class="text-[11px] font-mono text-slate-500 uppercase block">PRIMARY EMAIL</span>
-								<span class="font-mono text-xs text-slate-200">{profile.email}</span>
-							</div>
+							{profile.email}
 						</a>
+					</div>
 
+					<div>
+						<h3 class="font-mono text-xs lowercase tracking-wide text-ivory/60">or find me on linkedin</h3>
 						<a
 							href={profile.linkedin}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/30 text-slate-300 hover:text-white transition-all group"
+							class="mt-3 inline-flex items-center gap-2 text-[15px] font-semibold text-ivory transition-colors hover:text-claylight"
 						>
-							<div class="p-2 rounded-lg bg-slate-800 text-cyan-400 group-hover:bg-cyan-500/10">
-								<LinkedInIcon class="w-4 h-4" />
-							</div>
-							<div class="space-y-0.5">
-								<span class="text-[11px] font-mono text-slate-500 uppercase block">PROFESSIONAL NETWORK</span>
-								<span class="font-mono text-xs text-slate-200">linkedin.com/in/hafizhfadh</span>
-							</div>
+							<LinkedInIcon class="h-4 w-4" />
+							linkedin.com/in/hafizhfadh
+							<ArrowUpRight class="h-4 w-4 text-ivory/50" />
 						</a>
-
-						<div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300">
-							<div class="p-2 rounded-lg bg-slate-800 text-slate-400">
-								<MapPin class="w-4 h-4" />
-							</div>
-							<div class="space-y-0.5">
-								<span class="text-[11px] font-mono text-slate-500 uppercase block">BASE LOCATION</span>
-								<span class="font-mono text-xs text-slate-200">{profile.location}</span>
-							</div>
-						</div>
 					</div>
 
-					<!-- Consultation Standards -->
-					<div class="pt-4 border-t border-slate-800/80 space-y-3">
-						<h4 class="text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider">
-							What to Expect in Stage 01
-						</h4>
-						<ul class="space-y-2 text-xs text-slate-400">
-							<li class="flex items-start gap-2">
-								<CheckCircle2 class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-								<span>Direct response from Hafizh within 24–48 business hours.</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<CheckCircle2 class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-								<span>No aggressive sales calls or unsolicited follow-up sequences.</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<CheckCircle2 class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-								<span>Mutual confidentiality; standard mutual NDA available upon request.</span>
-							</li>
+					<p class="font-mono text-xs text-ivory/60">{profile.location} · working with teams worldwide</p>
+
+					<div class="border-t border-ivory/15 pt-8">
+						<h3 class="font-mono text-xs lowercase tracking-wide text-ivory/60">what happens next</h3>
+						<ul class="mt-4 space-y-3">
+							{#each expectations as expectation}
+								<li class="flex items-start gap-3 text-sm leading-relaxed text-fog">
+									<Check class="mt-0.5 h-4 w-4 shrink-0 text-sage" aria-hidden="true" />
+									<span>{expectation}</span>
+								</li>
+							{/each}
 						</ul>
 					</div>
 				</div>
 			</div>
 
-			<!-- Right column: Structured Discovery Form -->
-			<div class="lg:col-span-7">
-				<div class="p-7 sm:p-10 rounded-2xl bg-[#111520] border border-slate-800 relative shadow-2xl">
+			<!-- The note -->
+			<div class="lg:col-span-7" use:reveal={{ delay: 120 }}>
+				<div class="rounded-2xl bg-cream p-7 text-charcoal shadow-[0_2px_6px_rgba(15,31,48,0.25),0_24px_60px_-24px_rgba(15,31,48,0.55)] sm:p-9">
 					{#if !isSubmitted}
 						<form onsubmit={handleSubmit} class="space-y-6">
-							<div class="border-b border-slate-800 pb-4">
-								<span class="text-xs font-mono text-emerald-400 tracking-wider uppercase font-semibold">
-									STAGE 01 // DISCOVERY INTAKE
-								</span>
-								<h3 class="text-xl font-bold text-white tracking-tight pt-1">
-									Structured Engagement Inquiry
-								</h3>
-							</div>
-
 							{#if errorMessage}
-								<div class="p-3.5 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-300 text-xs flex items-center gap-2">
-									<AlertCircle class="w-4 h-4 shrink-0" />
+								<div class="flex items-start gap-2.5 rounded-lg border border-terracotta/30 bg-terracotta/10 px-4 py-3 text-sm text-claydark">
+									<AlertCircle class="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
 									<span>{errorMessage}</span>
 								</div>
 							{/if}
 
-							<!-- Row 1: Name & Work Email -->
-							<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-								<div class="space-y-1.5">
-									<label for="fullName" class="block text-xs font-mono text-slate-300 uppercase tracking-wider">
-										Full Name <span class="text-emerald-400">*</span>
+							<div class="grid gap-6 sm:grid-cols-2">
+								<div>
+									<label for="fullName" class="block text-sm font-semibold">
+										Your name <span class="text-clay" aria-hidden="true">*</span>
 									</label>
 									<input
 										id="fullName"
 										type="text"
 										bind:value={fullName}
-										placeholder="e.g. Alex Morgan"
-										class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700/80 text-sm text-white placeholder-slate-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+										placeholder="Alex Morgan"
+										autocomplete="name"
+										class="mt-2 w-full rounded-lg border border-sanddeep bg-ivory px-4 py-3 text-base text-charcoal transition-colors placeholder:text-inkmuted/90 focus:border-clay"
 										required
 									/>
 								</div>
 
-								<div class="space-y-1.5">
-									<label for="workEmail" class="block text-xs font-mono text-slate-300 uppercase tracking-wider">
-										Work Email <span class="text-emerald-400">*</span>
+								<div>
+									<label for="workEmail" class="block text-sm font-semibold">
+										Work email <span class="text-clay" aria-hidden="true">*</span>
 									</label>
 									<input
 										id="workEmail"
 										type="email"
 										bind:value={workEmail}
 										placeholder="alex@company.com"
-										class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700/80 text-sm text-white placeholder-slate-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+										autocomplete="email"
+										class="mt-2 w-full rounded-lg border border-sanddeep bg-ivory px-4 py-3 text-base text-charcoal transition-colors placeholder:text-inkmuted/90 focus:border-clay"
 										required
 									/>
 								</div>
 							</div>
 
-							<!-- Row 2: Organization & Job Title -->
-							<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-								<div class="space-y-1.5">
-									<label for="organization" class="block text-xs font-mono text-slate-300 uppercase tracking-wider">
-										Organization <span class="text-emerald-400">*</span>
-									</label>
-									<input
-										id="organization"
-										type="text"
-										bind:value={organization}
-										placeholder="Company or Enterprise"
-										class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700/80 text-sm text-white placeholder-slate-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
-										required
-									/>
-								</div>
-
-								<div class="space-y-1.5">
-									<label for="jobTitle" class="block text-xs font-mono text-slate-300 uppercase tracking-wider">
-										Job Title / Role
-									</label>
-									<input
-										id="jobTitle"
-										type="text"
-										bind:value={jobTitle}
-										placeholder="e.g. CTO, Head of Platform"
-										class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700/80 text-sm text-white placeholder-slate-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
-									/>
-								</div>
-							</div>
-
-							<!-- Row 3: Service Interest -->
-							<div class="space-y-1.5">
-								<label for="serviceInterest" class="block text-xs font-mono text-slate-300 uppercase tracking-wider">
-									Primary Service Area
+							<div>
+								<label for="organization" class="block text-sm font-semibold">
+									Organization <span class="text-clay" aria-hidden="true">*</span>
 								</label>
-								<select
-									id="serviceInterest"
-									bind:value={serviceInterest}
-									class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700/80 text-sm text-white focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
-								>
-									{#each servicesOptions as opt}
-										<option value={opt} class="bg-slate-900 text-white">{opt}</option>
-									{/each}
-								</select>
+								<input
+									id="organization"
+									type="text"
+									bind:value={organization}
+									placeholder="Company or team"
+									autocomplete="organization"
+									class="mt-2 w-full rounded-lg border border-sanddeep bg-ivory px-4 py-3 text-base text-charcoal transition-colors placeholder:text-inkmuted/90 focus:border-clay"
+									required
+								/>
 							</div>
 
-							<!-- Row 4: Challenge Description -->
-							<div class="space-y-1.5">
-								<label for="challengeDescription" class="block text-xs font-mono text-slate-300 uppercase tracking-wider">
-									Technical Challenge Summary <span class="text-emerald-400">*</span>
+							<fieldset>
+								<legend class="font-mono text-xs lowercase tracking-wide text-sagedeep">
+									what does this relate to?
+								</legend>
+								<div class="mt-3 flex flex-wrap gap-2.5">
+									{#each servicesOptions as option}
+										<label
+											class="cursor-pointer rounded-full border px-4 py-2.5 text-sm transition-all duration-200 focus-within:ring-2 focus-within:ring-clay focus-within:ring-offset-2 focus-within:ring-offset-cream {serviceInterest ===
+											option
+												? 'border-navy bg-navy text-ivory'
+												: 'border-sanddeep bg-transparent text-inkmuted hover:border-charcoal/40 hover:text-charcoal'}"
+										>
+											<input
+												type="radio"
+												class="sr-only"
+												name="serviceInterest"
+												value={option}
+												bind:group={serviceInterest}
+											/>
+											{option}
+										</label>
+									{/each}
+								</div>
+							</fieldset>
+
+							<div>
+								<label for="challengeDescription" class="block text-sm font-semibold">
+									What are you trying to solve? <span class="text-clay" aria-hidden="true">*</span>
 								</label>
 								<textarea
 									id="challengeDescription"
-									rows="4"
+									rows="5"
 									bind:value={challengeDescription}
-									placeholder="Describe your current system bottlenecks, cloud cost escalations, database scale challenges, or integration goals..."
-									class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700/80 text-sm text-white placeholder-slate-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+									placeholder="A few honest sentences are plenty — the bottleneck, the cloud bill that keeps climbing, the system nobody wants to touch…"
+									class="mt-2 w-full resize-y rounded-lg border border-sanddeep bg-ivory px-4 py-3 text-base leading-relaxed text-charcoal transition-colors placeholder:text-inkmuted/90 focus:border-clay"
 									required
 								></textarea>
 							</div>
 
-							<!-- Row 5: Current Stack (optional) -->
-							<div class="space-y-1.5">
-								<label for="techStack" class="block text-xs font-mono text-slate-300 uppercase tracking-wider">
-									Existing Environment / Technology Stack <span class="text-slate-500 font-normal">(Optional)</span>
+							<div>
+								<label for="techStack" class="block text-sm font-semibold">
+									Current stack <span class="font-normal text-inkmuted">(optional, if you know it)</span>
 								</label>
 								<input
 									id="techStack"
 									type="text"
 									bind:value={techStack}
-									placeholder="e.g. AWS + PostgreSQL 15 + Kubernetes, or on-premises MySQL"
-									class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700/80 text-sm text-white placeholder-slate-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+									placeholder="e.g. AWS + PostgreSQL 15, or on-premises MySQL"
+									class="mt-2 w-full rounded-lg border border-sanddeep bg-ivory px-4 py-3 font-mono text-base text-charcoal transition-colors placeholder:text-inkmuted/90 focus:border-clay"
 								/>
 							</div>
 
-							<div class="pt-2">
-								<Button type="submit" variant="primary" size="lg" class="w-full justify-center">
-									Request a Professional Conversation
-									<Send class="w-4 h-4" />
+							<div class="pt-1">
+								<Button type="submit" variant="primary" size="lg" class="w-full">
+									Send — let's start the conversation
 								</Button>
-								<p class="text-[11px] font-mono text-slate-500 text-center pt-2">
-									No pricing packages. Discovery and evaluation precede commercial terms.
+								<p class="pt-3 text-center text-xs text-inkmuted">
+									No pricing packages, no obligation — understanding comes first.
 								</p>
 							</div>
 						</form>
 					{:else}
-						<!-- Post-Submit Structured Confirmation -->
 						<div class="space-y-6">
-							<div class="flex items-center gap-2 text-emerald-400">
-								<CheckCircle2 class="w-6 h-6" />
-								<h3 class="text-xl font-bold text-white tracking-tight">
-									Inquiry Prepared & Ready for Transmission
-								</h3>
-							</div>
-
-							<p class="text-sm text-slate-300 leading-relaxed">
-								Thank you, <strong class="text-white">{fullName}</strong>. Your inquiry has been structured according to Stage 01 discovery requirements.
-							</p>
-
-							<!-- Direct Action Banner -->
-							<div class="p-5 rounded-xl bg-slate-900 border border-slate-800 space-y-4">
-								<div class="flex items-center justify-between">
-									<span class="text-xs font-mono text-emerald-400 font-semibold uppercase">
-										Direct Dispatch Option
-									</span>
-									<span class="text-[11px] font-mono text-slate-400">RECIPIENT: {profile.email}</span>
-								</div>
-
-								<p class="text-xs text-slate-300 leading-relaxed">
-									You can immediately transmit this structured brief to Hafizh via your email client, or copy the formatted text for your internal records.
-								</p>
-
-								<div class="flex flex-wrap items-center gap-3">
-									<a
-										href={getMailtoUrl()}
-										class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs transition-colors"
-									>
-										Send via Default Email Client
-										<ArrowUpRight class="w-3.5 h-3.5" />
-									</a>
-
-									<button
-										type="button"
-										onclick={copyInquiryData}
-										class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-mono text-xs transition-colors"
-									>
-										<Copy class="w-3.5 h-3.5" />
-										<span>{copied ? 'Copied to Clipboard!' : 'Copy Summary'}</span>
-									</button>
-								</div>
-							</div>
-
-							<!-- Edge Configuration Notice -->
-							<div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/80 text-xs font-mono text-slate-400 space-y-1.5">
-								<span class="text-slate-300 font-semibold uppercase block">
-									[SYSTEM NOTE: EDGE WORKER FORM HANDLER]
-								</span>
-								<p>
-									This site runs on Cloudflare Workers edge. For automatic webhook delivery directly to Slack, Discord, or an email service (Resend / Mailgun), provide your endpoint binding in <code class="text-emerald-400 font-bold">wrangler.jsonc</code>.
+							<div>
+								<h3 class="font-serif text-3xl leading-tight text-charcoal">Your note is ready.</h3>
+								<p class="mt-3 text-[15px] leading-relaxed text-inkmuted">
+									Thanks, {fullName}. Everything is structured and addressed to
+									<span class="font-semibold text-charcoal">{profile.email}</span>. Send it straight
+									from your email app — or copy it if you prefer.
 								</p>
 							</div>
 
-							<div class="pt-2">
-								<button
-									type="button"
-									onclick={resetForm}
-									class="text-xs font-mono text-slate-400 hover:text-emerald-400 transition-colors"
-								>
-									← Edit or Submit Another Inquiry
-								</button>
+							<div class="flex flex-wrap items-center gap-3">
+								<Button href={getMailtoUrl()} variant="primary" size="md">
+									Open your email app
+									<ArrowUpRight class="h-4 w-4" />
+								</Button>
+								<Button variant="outline" size="md" onclick={copyInquiryData}>
+									<Copy class="h-4 w-4" />
+									{copied ? 'Copied — check your clipboard' : 'Copy the note'}
+								</Button>
 							</div>
+
+							<button
+								type="button"
+								onclick={resetForm}
+								class="text-sm font-semibold text-clay transition-colors hover:text-claydark"
+							>
+								← Edit the note
+							</button>
 						</div>
 					{/if}
 				</div>

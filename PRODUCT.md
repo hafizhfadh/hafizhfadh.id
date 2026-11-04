@@ -32,7 +32,7 @@ Technical decision-makers evaluating senior expertise, reviewing verified perfor
 - Sub-millisecond static asset delivery via Cloudflare Workers Assets.
 - Commercial framework: Discovery interview preceding tailored proposals; no public hourly rates or pricing packages.
 - Craft floor compliance: Zero AI tells (no gradient text, no eyebrow kickers, no decorative 2-axis grids, no repetitive card rows, no nested cards, no side-border tabs).
-- Visual direction: Technical Engineering (obsidian foundation `#0B0D13`, slate graphite `#111520`, crisp typographic hierarchy, `#10B981` emerald telemetry accent).
+- Visual direction: Warm Technical Editorial (warm ivory `#F4EFE5` canvas, deep navy `#172B40` anchors, terracotta `#C85A3A` display accents with clay `#B04A2C` interactive states, sage `#687C70` technical linework, Instrument Serif display / Manrope body / IBM Plex Mono for data only; sand hairlines and editorial compositions instead of card grids).
 
 ## Brand Commitments
 
@@ -63,5 +63,5 @@ Technical decision-makers evaluating senior expertise, reviewing verified perfor
 
 ## Accessibility & Inclusion
 
-- WCAG 2.1 AA compliance across dark obsidian surfaces.
+- WCAG 2.1 AA compliance across warm ivory and deep navy surfaces.
 - Strict keyboard operability, visible focus indicators, and screen-reader friendly landmarks.

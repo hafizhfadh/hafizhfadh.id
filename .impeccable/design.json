@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-04",
+  "title": "Design System: hafizhfadh.id — Warm Technical Editorial",
+  "extensions": {
+    "colorMeta": {
+      "ivory": { "role": "neutral", "displayName": "Warm Ivory", "canonical": "#f4efe5", "tonalRamp": ["oklch(18% 0.01 90)", "oklch(30% 0.015 90)", "oklch(44% 0.02 90)", "oklch(58% 0.025 90)", "oklch(71% 0.025 90)", "oklch(82% 0.02 90)", "oklch(90% 0.015 90)", "oklch(96.5% 0.012 90)"] },
+      "cream": { "role": "neutral", "displayName": "Cream Panel", "canonical": "#faf8f2", "tonalRamp": ["oklch(20% 0.008 100)", "oklch(32% 0.012 100)", "oklch(46% 0.016 100)", "oklch(60% 0.02 100)", "oklch(73% 0.02 100)", "oklch(84% 0.015 100)", "oklch(92% 0.01 100)", "oklch(98% 0.008 100)"] },
+      "sand": { "role": "neutral", "displayName": "Sand Hairline", "canonical": "#e5d8c4", "tonalRamp": ["oklch(20% 0.015 85)", "oklch(32% 0.025 85)", "oklch(46% 0.035 85)", "oklch(60% 0.04 85)", "oklch(72% 0.04 85)", "oklch(82% 0.04 85)", "oklch(89% 0.04 85)", "oklch(95% 0.02 85)"] },
+      "sanddeep": { "role": "neutral", "displayName": "Deep Sand", "canonical": "#d6c5ab", "tonalRamp": ["oklch(20% 0.018 82)", "oklch(31% 0.03 82)", "oklch(44% 0.042 82)", "oklch(57% 0.048 82)", "oklch(69% 0.048 82)", "oklch(79% 0.045 82)", "oklch(87% 0.04 82)", "oklch(94% 0.02 82)"] },
+      "charcoal": { "role": "neutral", "displayName": "Warm Charcoal", "canonical": "#282c2b", "tonalRamp": ["oklch(16% 0.004 180)", "oklch(22% 0.005 180)", "oklch(28% 0.006 180)", "oklch(40% 0.006 180)", "oklch(54% 0.005 180)", "oklch(68% 0.004 180)", "oklch(82% 0.003 180)", "oklch(94% 0.002 180)"] },
+      "inkmuted": { "role": "neutral", "displayName": "Muted Ink", "canonical": "#5c5a52", "tonalRamp": ["oklch(18% 0.008 95)", "oklch(27% 0.01 95)", "oklch(36% 0.012 95)", "oklch(45% 0.013 95)", "oklch(56% 0.012 95)", "oklch(70% 0.01 95)", "oklch(84% 0.007 95)", "oklch(95% 0.004 95)"] },
+      "navy": { "role": "secondary", "displayName": "Deep Navy", "canonical": "#172b40", "tonalRamp": ["oklch(15% 0.02 255)", "oklch(22% 0.04 255)", "oklch(28% 0.05 255)", "oklch(38% 0.05 255)", "oklch(50% 0.045 255)", "oklch(64% 0.035 255)", "oklch(79% 0.02 255)", "oklch(93% 0.008 255)"] },
+      "navydeep": { "role": "secondary", "displayName": "Navy Deep", "canonical": "#0f1f30", "tonalRamp": ["oklch(12% 0.015 255)", "oklch(18% 0.03 255)", "oklch(24% 0.04 255)", "oklch(34% 0.045 255)", "oklch(46% 0.04 255)", "oklch(60% 0.03 255)", "oklch(76% 0.018 255)", "oklch(92% 0.007 255)"] },
+      "fog": { "role": "secondary", "displayName": "Fog", "canonical": "#c3cfd9", "tonalRamp": ["oklch(20% 0.01 250)", "oklch(30% 0.015 250)", "oklch(42% 0.02 250)", "oklch(55% 0.02 250)", "oklch(68% 0.02 250)", "oklch(78% 0.02 250)", "oklch(86% 0.015 250)", "oklch(95% 0.008 250)"] },
+      "terracotta": { "role": "primary", "displayName": "Terracotta", "canonical": "#c85a3a", "tonalRamp": ["oklch(15% 0.02 40)", "oklch(27% 0.07 40)", "oklch(38% 0.11 40)", "oklch(49% 0.13 40)", "oklch(60% 0.14 40)", "oklch(71% 0.12 40)", "oklch(83% 0.07 40)", "oklch(94% 0.015 40)"] },
+      "clay": { "role": "primary", "displayName": "Fired Clay", "canonical": "#b04a2c", "tonalRamp": ["oklch(15% 0.02 40)", "oklch(26% 0.06 40)", "oklch(36% 0.1 40)", "oklch(45% 0.12 40)", "oklch(55% 0.13 40)", "oklch(68% 0.11 40)", "oklch(82% 0.07 40)", "oklch(94% 0.015 40)"] },
+      "claydark": { "role": "primary", "displayName": "Clay Dark", "canonical": "#9a3e23", "tonalRamp": ["oklch(14% 0.02 40)", "oklch(24% 0.06 40)", "oklch(33% 0.09 40)", "oklch(42% 0.11 40)", "oklch(52% 0.12 40)", "oklch(66% 0.1 40)", "oklch(80% 0.06 40)", "oklch(93% 0.014 40)"] },
+      "claylight": { "role": "primary", "displayName": "Clay Light", "canonical": "#e09b77", "tonalRamp": ["oklch(20% 0.02 45)", "oklch(32% 0.05 45)", "oklch(44% 0.08 45)", "oklch(56% 0.1 45)", "oklch(66% 0.1 45)", "oklch(76% 0.09 45)", "oklch(86% 0.06 45)", "oklch(95% 0.015 45)"] },
+      "sage": { "role": "tertiary", "displayName": "Sage", "canonical": "#687c70", "tonalRamp": ["oklch(16% 0.015 165)", "oklch(26% 0.025 165)", "oklch(36% 0.03 165)", "oklch(46% 0.032 165)", "oklch(56% 0.03 165)", "oklch(68% 0.025 165)", "oklch(81% 0.015 165)", "oklch(94% 0.006 165)"] },
+      "sagedeep": { "role": "tertiary", "displayName": "Sage Deep", "canonical": "#55645b", "tonalRamp": ["oklch(15% 0.015 165)", "oklch(24% 0.022 165)", "oklch(33% 0.028 165)", "oklch(42% 0.03 165)", "oklch(52% 0.028 165)", "oklch(66% 0.022 165)", "oklch(80% 0.014 165)", "oklch(93% 0.005 165)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only — two lines, final word italic terracotta." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s; the contact invitation scales up to clamp(2.4rem, 5vw, 4rem)." },
+      "title": { "displayName": "Title", "purpose": "Chapter and item titles in Instrument Serif; smaller serif roles at 1.4–1.7rem." },
+      "body": { "displayName": "Body", "purpose": "Manrope running text — lead 1.125rem, standard 1.0625rem, compact 0.9375rem, small 0.875rem; 36–62ch measure." },
+      "label": { "displayName": "Mono Label", "purpose": "Lowercase IBM Plex Mono micro-labels at 0.75rem — sage-deep on ivory, ivory/60 on navy." },
+      "data": { "displayName": "Mono Data", "purpose": "Dates, metrics, stack lists, attributions, diagram annotations — mono is a measurement instrument, never a voice." }
+    },
+    "shadows": [
+      { "name": "button-ambient", "value": "0 1px 2px rgba(40,44,43,0.10), 0 10px 28px -14px rgba(176,74,44,0.55)", "purpose": "Warm clay-tinted lift under the primary button; hover deepens to rgba(154,62,35,0.6) at 0 12px 32px -14px." },
+      { "name": "form-panel-float", "value": "0 2px 6px rgba(15,31,48,0.25), 0 24px 60px -24px rgba(15,31,48,0.55)", "purpose": "The cream contact form panel floating over the navy invitation section." }
+    ],
+    "motion": [
+      { "name": "ease-reveal", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Scroll-reveal rise and fade (0.7s) — the system's default editorial easing." },
+      { "name": "ease-draw", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Hero schematic stroke draw-in (1.4s) — the page's one authored load animation." },
+      { "name": "duration-state", "value": "200ms", "purpose": "Button, chip, input, and link state transitions." },
+      { "name": "duration-underline", "value": "300ms", "purpose": "Nav-link underline growth; wordmark period scale." },
+      { "name": "duration-menu", "value": "250ms", "purpose": "Mobile menu slide transition." },
+      { "name": "reveal-rise", "value": "translateY(16px) → none, 0.7s", "purpose": "Scroll-reveal offset; JS-applied only (content visible without JS), IntersectionObserver threshold 0.12 with −48px bottom margin, one-shot." },
+      { "name": "pulse-soft", "value": "2.6s ease-in-out infinite", "purpose": "The only ambient loop: terracotta diagram pulse dots (opacity 1→0.55, scale 1→1.25)." },
+      { "name": "spin-slow", "value": "28s linear 3", "purpose": "Hero dashed terracotta ring rotation — three turns, once, then at rest." },
+      { "name": "reduced-motion", "value": "animation-duration 0.01ms; transition-duration 0.01ms; scroll-behavior auto", "purpose": "prefers-reduced-motion clamp — the reveal action never hides content." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The page's only raised colored element — a warm clay pill carrying the most important action per view.",
+      "html": "<button class=\"ds-btn-primary\">Let's talk about your engineering challenges</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--color-clay, #b04a2c); color: var(--color-ivory, #f4efe5); font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 16px; font-weight: 600; letter-spacing: -0.01em; padding: 14px 28px; border: none; border-radius: 9999px; cursor: pointer; box-shadow: 0 1px 2px rgba(40,44,43,0.10), 0 10px 28px -14px rgba(176,74,44,0.55); transition: all 0.2s ease; } .ds-btn-primary:hover { background: var(--color-claydark, #9a3e23); box-shadow: 0 1px 2px rgba(40,44,43,0.10), 0 12px 32px -14px rgba(154,62,35,0.6); } .ds-btn-primary:active { transform: scale(0.98); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-clay, #b04a2c); outline-offset: 2px; } .ds-btn-primary:disabled { opacity: 0.5; pointer-events: none; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action — transparent pill with a sand border, quiet until hovered.",
+      "html": "<button class=\"ds-btn-outline\">Copy the note</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: transparent; color: var(--color-charcoal, #282c2b); font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 15px; font-weight: 600; letter-spacing: -0.01em; padding: 10px 20px; border: 1px solid var(--color-sanddeep, #d6c5ab); border-radius: 9999px; cursor: pointer; transition: all 0.2s ease; } .ds-btn-outline:hover { background: var(--color-cream, #faf8f2); border-color: rgba(40,44,43,0.4); } .ds-btn-outline:active { transform: scale(0.98); } .ds-btn-outline:focus-visible { outline: 2px solid var(--color-clay, #b04a2c); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Handwritten-note input inside the cream form panel — ivory ground, sand border, clay focus and caret.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-name\">Your name <span class=\"ds-field-req\" aria-hidden=\"true\">*</span></label><input id=\"ds-name\" class=\"ds-field-input\" type=\"text\" placeholder=\"Alex Morgan\" /></div>",
+      "css": ".ds-field-label { display: block; font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 14px; font-weight: 600; color: var(--color-charcoal, #282c2b); } .ds-field-req { color: var(--color-clay, #b04a2c); } .ds-field-input { margin-top: 8px; width: 100%; background: var(--color-ivory, #f4efe5); color: var(--color-charcoal, #282c2b); font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 16px; padding: 12px 16px; border: 1px solid var(--color-sanddeep, #d6c5ab); border-radius: 8px; caret-color: var(--color-clay, #b04a2c); transition: border-color 0.2s ease; } .ds-field-input::placeholder { color: rgba(92,90,82,0.9); } .ds-field-input:hover { border-color: rgba(40,44,43,0.4); } .ds-field-input:focus { outline: none; border-color: var(--color-clay, #b04a2c); } .ds-field-input:focus-visible { outline: 2px solid var(--color-clay, #b04a2c); outline-offset: 2px; }"
+    },
+    {
+      "name": "Service Radio Chips",
+      "kind": "chip",
+      "refersTo": "chip-radio-selected",
+      "description": "Pill radio group for the service selector — navy fill marks the selection, the only component-scale navy.",
+      "html": "<fieldset class=\"ds-chips\"><legend class=\"ds-chips-legend\">what does this relate to?</legend><div class=\"ds-chips-row\"><label class=\"ds-chip ds-chip-selected\"><input type=\"radio\" name=\"ds-relates\" checked /> Forward Deployed Engineering</label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-relates\" /> Managed Platforms &amp; Infrastructure</label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-relates\" /> Something else</label></div></fieldset>",
+      "css": ".ds-chips-legend { font-family: var(--font-mono, 'IBM Plex Mono', monospace); font-size: 12px; letter-spacing: 0.025em; text-transform: lowercase; color: var(--color-sagedeep, #55645b); } .ds-chips-row { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; } .ds-chip { display: inline-flex; align-items: center; padding: 10px 16px; border: 1px solid var(--color-sanddeep, #d6c5ab); border-radius: 9999px; font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 14px; color: var(--color-inkmuted, #5c5a52); cursor: pointer; transition: all 0.2s ease; } .ds-chip:hover { border-color: rgba(40,44,43,0.4); color: var(--color-charcoal, #282c2b); } .ds-chip-selected { background: var(--color-navy, #172b40); border-color: var(--color-navy, #172b40); color: var(--color-ivory, #f4efe5); } .ds-chip:focus-within { outline: 2px solid var(--color-clay, #b04a2c); outline-offset: 2px; } .ds-chip input { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }"
+    },
+    {
+      "name": "Site Navigation",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "Sticky cream bar with backdrop blur, serif wordmark with terracotta full stop, and a sand hairline closing the bottom.",
+      "html": "<header class=\"ds-nav\"><div class=\"ds-nav-inner\"><a class=\"ds-nav-wordmark\" href=\"#\">Hafizh Fadhlurrohman<span class=\"ds-nav-dot\">.</span></a><nav class=\"ds-nav-links\" aria-label=\"Main navigation\"><a href=\"#services\">Services</a><a href=\"#impact\">Impact</a><a href=\"#experience\">Experience</a></nav><a href=\"#contact\" class=\"ds-nav-cta\">Start a conversation</a></div></header>",
+      "css": ".ds-nav { position: sticky; top: 0; z-index: 50; background: rgba(250,248,242,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(229,216,196,0.8); } .ds-nav-inner { max-width: 1152px; margin: 0 auto; height: 64px; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; } .ds-nav-wordmark { font-family: var(--font-serif, Georgia, serif); font-size: 20px; letter-spacing: -0.01em; line-height: 1; color: var(--color-charcoal, #282c2b); text-decoration: none; } .ds-nav-dot { color: var(--color-terracotta, #c85a3a); display: inline-block; transition: transform 0.3s ease; } .ds-nav-wordmark:hover .ds-nav-dot { transform: scale(1.25); } .ds-nav-links { display: flex; gap: 28px; } .ds-nav-links a { position: relative; font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 15px; font-weight: 500; color: var(--color-inkmuted, #5c5a52); text-decoration: none; transition: color 0.2s ease; } .ds-nav-links a::after { content: ''; position: absolute; left: 0; bottom: -2px; height: 1px; width: 0; background: var(--color-clay, #b04a2c); transition: all 0.3s ease; } .ds-nav-links a:hover { color: var(--color-charcoal, #282c2b); } .ds-nav-links a:hover::after { width: 100%; } .ds-nav-cta { display: inline-flex; align-items: center; background: var(--color-clay, #b04a2c); color: var(--color-ivory, #f4efe5); font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 14px; font-weight: 600; padding: 8px 16px; border-radius: 9999px; text-decoration: none; box-shadow: 0 1px 2px rgba(40,44,43,0.10), 0 10px 28px -14px rgba(176,74,44,0.55); transition: all 0.2s ease; } .ds-nav-cta:hover { background: var(--color-claydark, #9a3e23); } .ds-nav-cta:focus-visible { outline: 2px solid var(--color-clay, #b04a2c); outline-offset: 2px; } @media (max-width: 767px) { .ds-nav-links { display: none; } }"
+    },
+    {
+      "name": "Impact Ledger Row",
+      "kind": "custom",
+      "refersTo": "button-primary",
+      "description": "Signature component — a verified metric set like an annual-report entry on deep navy, opened by an ivory hairline.",
+      "html": "<div class=\"ds-ledger\"><div class=\"ds-ledger-row\"><div class=\"ds-ledger-figure\">70%</div><div><h3 class=\"ds-ledger-claim\">Cloud infrastructure cost reduction</h3><p class=\"ds-ledger-context\">Verified on production telecom and government cloud estates.</p></div><div><p class=\"ds-ledger-details\">Rightsizing, reserved capacity, and query-plan work — measured monthly.</p><p class=\"ds-ledger-meta\">Infradigital Nusantara · DevOps</p></div></div></div>",
+      "css": ".ds-ledger { background: var(--color-navy, #172b40); color: var(--color-ivory, #f4efe5); padding: 40px 32px; } .ds-ledger-row { max-width: 1152px; margin: 0 auto; border-top: 1px solid rgba(244,239,229,0.15); padding: 40px 0; display: grid; gap: 20px; align-items: baseline; } @media (min-width: 1024px) { .ds-ledger-row { grid-template-columns: 4fr 5fr 3fr; gap: 40px; } } .ds-ledger-figure { font-family: var(--font-serif, Georgia, serif); font-size: clamp(3.4rem, 6.5vw, 5.75rem); line-height: 1; letter-spacing: -0.02em; color: var(--color-claylight, #e09b77); } .ds-ledger-claim { margin: 0; font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 20px; font-weight: 600; line-height: 1.375; color: var(--color-ivory, #f4efe5); } .ds-ledger-context { margin: 8px 0 0; font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 15px; line-height: 1.625; color: var(--color-fog, #c3cfd9); } .ds-ledger-details { margin: 0; font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 14px; line-height: 1.625; color: var(--color-fog, #c3cfd9); } .ds-ledger-meta { margin: 16px 0 0; font-family: var(--font-mono, 'IBM Plex Mono', monospace); font-size: 12px; color: rgba(244,239,229,0.6); }"
+    },
+    {
+      "name": "Authored Figure",
+      "kind": "custom",
+      "refersTo": "button-primary",
+      "description": "Signature component — hand-drawn sage line-art with an italic mono print caption; diagrams are always authored, never stock.",
+      "html": "<figure class=\"ds-figure\"><svg viewBox=\"0 0 280 120\" role=\"img\" aria-label=\"Line-art diagram: a tangled path resolving into one straight, reliable flow\"><path d=\"M 20 96 H 260\" stroke=\"#E5D8C4\" stroke-width=\"1\" stroke-dasharray=\"2 5\" /><path d=\"M 20 60 C 48 28, 74 92, 102 60 C 122 38, 142 78, 162 60\" fill=\"none\" stroke=\"#687C70\" stroke-width=\"1.5\" stroke-linecap=\"round\" /><path d=\"M 162 60 H 244\" fill=\"none\" stroke=\"#B04A2C\" stroke-width=\"1.5\" /><path d=\"M 236 54 L 246 60 L 236 66\" fill=\"none\" stroke=\"#B04A2C\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"162\" cy=\"60\" r=\"5.5\" fill=\"#172B40\" /><circle class=\"ds-figure-pulse\" cx=\"244\" cy=\"60\" r=\"3\" fill=\"#C85A3A\" /></svg><figcaption class=\"ds-figure-caption\">fig. 04 — from tangle to throughput</figcaption></figure>",
+      "css": ".ds-figure { max-width: 320px; margin: 0; } .ds-figure svg { display: block; width: 100%; height: auto; } .ds-figure-caption { margin-top: 8px; font-family: var(--font-mono, 'IBM Plex Mono', monospace); font-size: 10.5px; font-style: italic; color: var(--color-inkmuted, #5c5a52); } .ds-figure-pulse { animation: ds-pulse-soft 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; } @keyframes ds-pulse-soft { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.55; transform: scale(1.25); } } @media (prefers-reduced-motion: reduce) { .ds-figure-pulse { animation: none; } }"
+    },
+    {
+      "name": "Pull Quote",
+      "kind": "custom",
+      "refersTo": "button-primary",
+      "description": "Serif italic pull-quote ruled by a deep-sand left hairline — the letter's voice at full volume.",
+      "html": "<blockquote class=\"ds-pullquote\">“Every engineering engagement starts with understanding the problem, not quoting a price.”</blockquote>",
+      "css": ".ds-pullquote { margin: 0; border-left: 1px solid var(--color-sanddeep, #d6c5ab); padding: 4px 0 4px 24px; font-family: var(--font-serif, Georgia, serif); font-style: italic; font-size: clamp(1.35rem, 2.4vw, 1.75rem); line-height: 1.375; color: var(--color-charcoal, #282c2b); }"
+    },
+    {
+      "name": "Form Panel on Navy",
+      "kind": "card",
+      "refersTo": "button-primary",
+      "description": "The only boxed container in the system — a cream panel floating over the navy contact invitation, holding the discovery form.",
+      "html": "<div class=\"ds-form-panel\"><h3 class=\"ds-form-title\">Your note is ready.</h3><p class=\"ds-form-lede\">No pricing packages, no obligation — understanding comes first.</p><div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-email\">Work email <span class=\"ds-field-req\" aria-hidden=\"true\">*</span></label><input id=\"ds-email\" class=\"ds-field-input\" type=\"email\" placeholder=\"alex@company.com\" /></div></div>",
+      "css": ".ds-form-panel { background: var(--color-cream, #faf8f2); color: var(--color-charcoal, #282c2b); border-radius: 16px; padding: 36px; box-shadow: 0 2px 6px rgba(15,31,48,0.25), 0 24px 60px -24px rgba(15,31,48,0.55); max-width: 460px; } .ds-form-title { margin: 0; font-family: var(--font-serif, Georgia, serif); font-size: 30px; line-height: 1.2; font-weight: 400; } .ds-form-lede { margin: 12px 0 24px; font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 15px; line-height: 1.625; color: var(--color-inkmuted, #5c5a52); } .ds-field-label { display: block; font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 14px; font-weight: 600; color: var(--color-charcoal, #282c2b); } .ds-field-req { color: var(--color-clay, #b04a2c); } .ds-field-input { margin-top: 8px; width: 100%; background: var(--color-ivory, #f4efe5); color: var(--color-charcoal, #282c2b); font-family: var(--font-sans, 'Manrope', sans-serif); font-size: 16px; padding: 12px 16px; border: 1px solid var(--color-sanddeep, #d6c5ab); border-radius: 8px; caret-color: var(--color-clay, #b04a2c); transition: border-color 0.2s ease; } .ds-field-input::placeholder { color: rgba(92,90,82,0.9); } .ds-field-input:focus { outline: none; border-color: var(--color-clay, #b04a2c); } .ds-field-input:focus-visible { outline: 2px solid var(--color-clay, #b04a2c); outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Engineer's Annual Report",
+    "overview": "A personal letter from a senior engineer, set like a fine engineering annual report — warmth carrying authority. The whole site is warm ivory paper: type-led compositions ruled with sand hairlines, deep navy sections anchoring the proof and the invitation, and one family of fired-earth accents that lets the page speak (terracotta) and act (clay). Density is low and confidence is high; every claim is set in a measured serif and every number in a working mono. The system deliberately refuses two references. The first is the old world — a dark obsidian telemetry dashboard with emerald accents — now the anti-reference: no dark grounds outside the three navy anchors, no neon, no glow, no classification tags, no dashboard chrome. The second is the generic cream-and-serif consultancy template: this system earns its editorial character through a complete structure — navy anchor sections, sand hairlines instead of cards, sage technical linework, true bylines and pull-quotes, italic-mono figure captions, and terracotta so rare it always means something. Each of the nine sections is its own composition inside one system: an asymmetric hero with an authored systems schematic, an editorial letter with a pull-quote, alternating service chapters with diagrams, a navy ledger of verified numbers, a ruled timeline, a glyph field guide, a mono toolkit index, a sticky-split process, and a navy invitation holding a cream form panel.",
+    "keyCharacteristics": [
+      "Warm ivory canvas (#f4efe5) with cream panels (#faf8f2); structure drawn as 1px sand hairlines (#e5d8c4), never boxed cards",
+      "Three full-bleed deep-navy anchors (#172b40) per page: impact ledger, contact invitation, footer",
+      "Terracotta (#c85a3a) for display emphasis; clay (#b04a2c) for everything interactive",
+      "Editorial serif display (Instrument Serif) with italic terracotta emphasis; Manrope body; IBM Plex Mono strictly for data, dates, and technical annotations",
+      "Sage (#687c70) authored SVG line-art with italic mono figure captions (\"fig. 01 — …\")",
+      "One authored motion moment — the hero schematic draws in; scroll reveals are gentle, JS-applied, and reduced-motion safe",
+      "Pill buttons; soft 8–16px corners only where content is contained; focus rings in clay (clay-light on navy)"
+    ],
+    "rules": [
+      { "name": "The Terracotta Speaks, Clay Acts Rule", "body": "Terracotta is display-only emphasis — type, nodes, punctuation. Every interactive state is clay or clay-dark. Terracotta is never a surface you can click; clay is never a headline color.", "section": "colors" },
+      { "name": "The Three Navy Surfaces Rule", "body": "Deep navy appears exactly three times per page as full-bleed anchors — the impact ledger, the contact invitation, the footer. Never as cards, panels, or sidebars on ivory.", "section": "colors" },
+      { "name": "The Warm Ink Rule", "body": "Ink is warm charcoal on warm paper — never pure black, never cool gray. On navy, text is fog or ivory, and muted levels are made with opacity (ivory/60, ivory/15), not by inventing new grays.", "section": "colors" },
+      { "name": "The One Weight Rule", "body": "Instrument Serif ships one weight — 400 — plus italics. Hierarchy is size, tracking, and italics; never bold the serif and never fake a heavier display weight.", "section": "typography" },
+      { "name": "The Mono Is a Measurement Rule", "body": "IBM Plex Mono appears only as data, dates, metrics, stack lists, attributions, lowercase micro-labels, and figure captions. Never for headlines, never for running prose, never uppercase.", "section": "typography" },
+      { "name": "The Two Shadows Rule", "body": "Only the primary button and the contact form panel cast shadows. Everything else is flat: if a surface needs separating, use a sand hairline or change the ground — never add a shadow.", "section": "elevation" },
+      { "name": "The Hairline Structure Rule", "body": "If it separates, it's a 1px sand rule. If it contains, it may round (8px fields, 16px panels). If it's pressed, it's a pill. Nothing else gets a border.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do draw structure with 1px sand hairlines (#e5d8c4) — divide-y chapters, border-t rows, border-y section frames — instead of reaching for a card.",
+      "Do keep IBM Plex Mono strictly for data: dates, metrics, \"·\"-joined stack lists, attributions, lowercase micro-labels, and figure captions.",
+      "Do set emphasis in serif italic, and spend terracotta (#c85a3a) only where the page speaks loudest — the hero's final word, the wordmark's period, diagram pulse nodes.",
+      "Do make every interactive element clay (#b04a2c) with a 2px clay focus ring (clay-light #e09b77 on navy).",
+      "Do author diagrams as sage line art (1–1.5px strokes, round caps) with italic mono captions (\"fig. NN — …\").",
+      "Do hold body copy to a 36–62ch measure and let whitespace — 80/112px section padding — do the separating.",
+      "Do respect reduced motion: reveals never hide content, animations clamp to ~0ms, and the page must be fully readable with JavaScript off."
+    ],
+    "donts": [
+      "Don't box content: no card grids, no repetitive card rows, no nested cards — compose with hairline-ruled rows and asymmetric 12-col splits.",
+      "Don't resurrect the old dark dashboard: no obsidian grounds, emerald telemetry accents, neon glows, gradient text, or SERVICE // 01-style classification tags.",
+      "Don't set headlines or prose in mono, and never uppercase the mono labels — they stay lowercase.",
+      "Don't add eyebrow kickers above headlines.",
+      "Don't use navy as a component fill (the selected radio chip is the one exception) or shrink it into boxes and sidebars — navy is full-bleed only, and only three times per page.",
+      "Don't introduce a second authored load animation; the hero draw-in is the page's one motion moment (diagram pulse dots are the only loop).",
+      "Don't bold Instrument Serif or fake a heavier display weight."
+    ]
+  }
+}

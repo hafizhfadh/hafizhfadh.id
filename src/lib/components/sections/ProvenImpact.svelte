@@ -1,75 +1,63 @@
 <script lang="ts">
 	import { verifiedMetrics } from '#lib/data/metrics';
-	import Badge from '../ui/Badge.svelte';
-	import { ShieldCheck, ArrowDownRight, Database, Users } from 'lucide-svelte';
+	import { reveal } from '#lib/actions/reveal';
 </script>
 
-<section id="impact" class="py-20 md:py-32 border-b border-slate-800/80 bg-[#0B0D13] relative">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-		<!-- Section Header -->
-		<div class="max-w-3xl space-y-4">
-			<Badge variant="emerald">AUDITED TRACK RECORD</Badge>
-			<h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-				Proven Operational & Engineering Impact.
+<section id="impact" class="on-navy bg-navy py-20 text-ivory sm:py-28">
+	<div class="mx-auto max-w-6xl px-5 sm:px-8">
+		<!-- Section opening -->
+		<div class="max-w-2xl" use:reveal>
+			<h2 class="font-serif text-[clamp(2.1rem,4vw,3.25rem)] leading-[1.04] tracking-[-0.015em]">
+				Proof, not promises.
 			</h2>
-			<p class="text-base sm:text-lg text-slate-300 leading-relaxed">
-				Engineering credibility is earned through concrete production numbers. Each metric below represents verified, real-world operational outcomes achieved in high-stakes environments.
+			<p class="mt-5 text-lg leading-relaxed text-fog">
+				Engineering credibility is earned in production. These are verified outcomes from real
+				environments — telecom billing, mission-critical infrastructure, software on over 200,000
+				phones.
 			</p>
 		</div>
 
-		<!-- 4 Priority Metrics Grid -->
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-			{#each verifiedMetrics as metric}
+		<!-- The ledger -->
+		<div class="mt-14">
+			{#each verifiedMetrics as metric, i}
 				<div
-					class="p-8 rounded-2xl bg-[#111520] border border-slate-800 hover:border-slate-700 transition-all duration-200 space-y-5 relative overflow-hidden"
+					class="grid gap-x-10 gap-y-5 border-t border-ivory/15 py-10 sm:py-12 lg:grid-cols-12 lg:items-baseline"
+					use:reveal
 				>
-					<!-- Top tag & context -->
-					<div class="flex items-center justify-between border-b border-slate-800/80 pb-4">
-						<span class="text-xs font-mono font-semibold text-emerald-400 tracking-wider">
-							{metric.badge}
-						</span>
-						<span class="text-xs font-mono text-slate-400">
-							{metric.organization}
-						</span>
-					</div>
-
-					<!-- Metric Value Display -->
-					<div class="space-y-1">
-						<div class="text-4xl sm:text-5xl font-mono font-bold text-white tracking-tight flex items-baseline gap-2">
-							<span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
-								{metric.value}
-							</span>
+					<!-- The figure -->
+					<div class="lg:col-span-4">
+						<div class="font-serif text-[clamp(3.4rem,6.5vw,5.75rem)] leading-none tracking-[-0.02em] text-claylight">
+							{metric.value}
 						</div>
-						<h3 class="text-base sm:text-lg font-bold text-slate-100 pt-1">
-							{metric.label}
-						</h3>
 					</div>
 
-					<!-- Context & Attribution -->
-					<div class="p-3.5 rounded-lg bg-slate-900/80 border border-slate-800/80 space-y-1">
-						<span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">
-							ROLE: {metric.role}
-						</span>
-						<p class="text-xs text-slate-300 font-sans">
-							{metric.context}
+					<!-- What it means -->
+					<div class="lg:col-span-5">
+						<h3 class="text-xl font-semibold leading-snug text-ivory">{metric.label}</h3>
+						<p class="mt-2 text-[15px] leading-relaxed text-fog">{metric.context}</p>
+					</div>
+
+					<!-- How, and where -->
+					<div class="lg:col-span-3">
+						<p class="text-sm leading-relaxed text-fog">{metric.details}</p>
+						<p class="mt-4 font-mono text-xs text-ivory/60">
+							{metric.organization} · {metric.role}
 						</p>
 					</div>
-
-					<!-- Engineering Specifics -->
-					<p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-						{metric.details}
-					</p>
 				</div>
 			{/each}
-		</div>
 
-		<!-- Integrity note -->
-		<div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80 flex items-center justify-between flex-wrap gap-4 text-xs font-mono text-slate-400">
-			<div class="flex items-center gap-2">
-				<ShieldCheck class="w-4 h-4 text-emerald-400 shrink-0" />
-				<span>VERIFIABLE PERFORMANCE: All claims are derived directly from documented production employment and consulting history.</span>
+			<!-- Integrity note -->
+			<div class="flex items-start gap-3 border-t border-ivory/15 pt-8" use:reveal>
+				<svg viewBox="0 0 16 16" class="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true">
+					<circle cx="8" cy="8" r="7" fill="none" stroke="#687C70" stroke-width="1.3" />
+					<path d="M 4.8 8.3 L 7 10.5 L 11.4 5.6" fill="none" stroke="#687C70" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+				<p class="max-w-[62ch] text-sm leading-relaxed text-fog">
+					Every figure on this page comes from documented production and consulting history —
+					nothing projected, nothing aspirational. Happy to walk through the details on a call.
+				</p>
 			</div>
-			<span class="text-slate-400">NO HYPERBOLE // NO FABRICATION</span>
 		</div>
 	</div>
 </section>

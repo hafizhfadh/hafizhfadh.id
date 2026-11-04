@@ -1,344 +1,316 @@
 ---
-name: EngineeringPartner
+name: hafizhfadh.id — Warm Technical Editorial
+description: A personal letter from a senior engineer set like a fine engineering annual report — warm ivory paper, deep navy anchors, terracotta display accents, sage technical linework.
 colors:
-  primary: "#10B981"
-  secondary: "#0B0D13"
-  surface: "#111520"
-  surfaceElevated: "#171D2C"
-  borderSubtle: "#1E2536"
-  borderStrong: "#2D374D"
-  text: "#F8FAFC"
-  textBody: "#E2E8F0"
-  textMuted: "#94A3B8"
-  textSubtle: "#64748B"
-  accentCyan: "#06B6D4"
-  accentAmber: "#F59E0B"
-  accentRose: "#F43F5E"
+  ivory: "#f4efe5"
+  cream: "#faf8f2"
+  sand: "#e5d8c4"
+  sanddeep: "#d6c5ab"
+  charcoal: "#282c2b"
+  inkmuted: "#5c5a52"
+  navy: "#172b40"
+  navydeep: "#0f1f30"
+  terracotta: "#c85a3a"
+  clay: "#b04a2c"
+  claydark: "#9a3e23"
+  claylight: "#e09b77"
+  sage: "#687c70"
+  sagedeep: "#55645b"
+  fog: "#c3cfd9"
 typography:
-  fontSans: "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"
-  fontMono: "Space Mono, JetBrains Mono, Fira Code, monospace"
   display:
-    fontSize: "3.5rem"
-    lineHeight: "1.1"
-  h1:
-    fontSize: "2.5rem"
-    lineHeight: "1.2"
-  h2:
-    fontSize: "1.75rem"
-    lineHeight: "1.25"
+    fontFamily: "'Instrument Serif', ui-serif, Georgia, 'Times New Roman', serif"
+    fontSize: "clamp(3rem, 7.4vw, 6rem)"
+    fontWeight: 400
+    lineHeight: 0.98
+    letterSpacing: "-0.02em"
+  headline:
+    fontFamily: "'Instrument Serif', ui-serif, Georgia, 'Times New Roman', serif"
+    fontSize: "clamp(2.1rem, 4vw, 3.25rem)"
+    fontWeight: 400
+    lineHeight: 1.04
+    letterSpacing: "-0.015em"
+  title:
+    fontFamily: "'Instrument Serif', ui-serif, Georgia, 'Times New Roman', serif"
+    fontSize: "clamp(1.8rem, 3vw, 2.5rem)"
+    fontWeight: 400
+    lineHeight: 1.06
+    letterSpacing: "-0.01em"
   body:
-    fontSize: "1rem"
-    lineHeight: "1.65"
+    fontFamily: "'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    fontSize: "1.0625rem"
+    fontWeight: 400
+    lineHeight: 1.625
+  label:
+    fontFamily: "'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace"
+    fontSize: "0.75rem"
+    fontWeight: 400
+    letterSpacing: "0.025em"
+  data:
+    fontFamily: "'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace"
+    fontSize: "0.8125rem"
+    fontWeight: 400
+    lineHeight: 1.6
 rounded:
-  sm: "4px"
+  sm: "2px"
   md: "8px"
-  lg: "12px"
+  lg: "16px"
   full: "9999px"
+spacing:
+  xs: "4px"
+  sm: "8px"
+  md: "16px"
+  lg: "24px"
+  xl: "40px"
+  row: "56px"
+  section: "80px"
+  section-lg: "112px"
+components:
+  button-primary:
+    backgroundColor: "{colors.clay}"
+    textColor: "{colors.ivory}"
+    typography: "600 1rem 'Manrope', sans-serif"
+    rounded: "{rounded.full}"
+    padding: "14px 28px"
+  button-primary-hover:
+    backgroundColor: "{colors.claydark}"
+  button-outline:
+    backgroundColor: "transparent"
+    textColor: "{colors.charcoal}"
+    typography: "600 0.9375rem 'Manrope', sans-serif"
+    rounded: "{rounded.full}"
+    padding: "10px 20px"
+  input-text:
+    backgroundColor: "{colors.ivory}"
+    textColor: "{colors.charcoal}"
+    typography: "400 1rem 'Manrope', sans-serif"
+    rounded: "{rounded.md}"
+    padding: "12px 16px"
+  chip-radio-selected:
+    backgroundColor: "{colors.navy}"
+    textColor: "{colors.ivory}"
+    typography: "400 0.875rem 'Manrope', sans-serif"
+    rounded: "{rounded.full}"
+    padding: "10px 16px"
+  chip-radio-unselected:
+    backgroundColor: "transparent"
+    textColor: "{colors.inkmuted}"
+    typography: "400 0.875rem 'Manrope', sans-serif"
+    rounded: "{rounded.full}"
+    padding: "10px 16px"
 ---
 
 <!-- impeccable:design-schema 1 -->
 
-# Design System & Visual Specification
-
-**Project:** Personal Engineering Profile & Professional Services Website  
-**Domain:** `hafizhfadh.id`  
-**Identity:** Hafizh Fadhlurrohman — Independent Infrastructure & Platform Engineering Partner  
-**Core Philosophy:** "Engineering Beyond Infrastructure"  
-**Supporting Statement:** "Secure. Open. Adaptable."  
-**Version:** 1.0.0  
-**Status:** Living Design Single Source of Truth  
-
----
-
-## 1. Brand Positioning & Personality
-
-### Positioning
-Independent Infrastructure & Platform Engineering Partner. Collaborating directly with engineering leadership, founders, and technical teams to design, optimize, secure, and operate business-critical technology platforms.
-
-### Target Audience
-- Chief Technology Officers (CTOs), VPs of Engineering, and Heads of Infrastructure.
-- Fast-scaling tech companies facing cloud cost escalation, database latency bottlenecks, or compliance milestones.
-- Organizations seeking pragmatic open-source adoption without lock-in or unnecessary operational burden.
-
-### Brand Personality Attributes
-- **Authoritative & Methodical:** Communicates through hard operational evidence, benchmarked metrics, and rigorous systems reasoning.
-- **Consultative & Selective:** Believes serious engineering deserves serious discovery before quoting prices or committing architectures.
-- **Vendor-Independent & Pragmatic:** Technology choices are driven by business requirements, TCO, security, and operational maturity—never dogmatic stack evangelism.
-- **Understated & Premium:** Quiet confidence. No hyperbole, no flashy marketing buzzwords, no superficial animations.
-
----
-
-## 2. Design Philosophy
-
-1. **Proof Precedes Positioning:** Metrics like `70% cloud spend reduction`, `1.6 TB database with 11 GB weekly growth`, `< 500ms query targets`, and `200k+ application installs` anchor every value claim.
-2. **Editorial Systems Aesthetic:** Blends high-density systems engineering transparency with generous editorial whitespace, structured technical data grids, and clean typographic rhythm.
-3. **Restraint Over Decoration:** Every visual element serves orientation, clarity, or comprehension. Zero decorative gradients, zero floating icons, zero synthetic dashboard mockups.
-4. **Adaptive Consultation Model:** Promotes collaborative evaluation: *"Every engineering engagement starts with understanding the problem, not quoting a price."*
-
----
-
-## 3. Visual Direction & References
-
-- **Atmosphere:** Deep obsidian and graphite canvas reminiscent of high-reliability terminal monitors, Grafana control centers, and premium Swiss technical publications.
-- **Textures:** Crisp 1px structural grid lines, subtle monospace telemetry headers, discrete status pills, and understated border illumination on interactive focus.
-- **Anti-Patterns Banned:**
-  - Generic SaaS neon purple/pink radial glows.
-  - Floating 3D geometric shapes or generic AI illustrations.
-  - Oversized vanity logos without context.
-  - Opaque pricing package grids or "Add to Cart" freelance widgets.
-
----
-
-## 4. Color Palette & Tokens
-
-### Canvas & Backgrounds
-| Token Name | HEX / Value | Usage |
-|---|---|---|
-| `--bg-base` | `#0B0D13` | Root page background (Deep Obsidian) |
-| `--bg-surface` | `#111520` | Primary card surfaces & container backgrounds |
-| `--bg-elevated` | `#171D2C` | Hover states, popovers, active selection layers |
-| `--bg-subtle` | `rgba(255, 255, 255, 0.02)` | Table striping, secondary input backgrounds |
-| `--bg-accent-tint` | `rgba(16, 185, 129, 0.08)` | Telemetry badges, active filters, verified callouts |
-
-### Borders & Dividers
-| Token Name | HEX / Value | Usage |
-|---|---|---|
-| `--border-subtle` | `#1E2536` | Default card borders, section dividing rules |
-| `--border-strong` | `#2D374D` | Active card borders, focused inputs, table headers |
-| `--border-accent` | `#10B981` | Focused interactive states, key verified callouts |
-
-### Typography & Text
-| Token Name | HEX / Value | Usage |
-|---|---|---|
-| `--text-primary` | `#F8FAFC` | Headlines, primary card headers, prominent figures |
-| `--text-body` | `#E2E8F0` | Body copy, technical descriptions, list items |
-| `--text-muted` | `#94A3B8` | Secondary labels, descriptions, supporting copy |
-| `--text-subtle` | `#64748B` | Timestamps, monospace labels, breadcrumbs |
-
-### Semantic & Accents
-| Token Name | HEX / Value | Usage |
-|---|---|---|
-| `--accent-emerald` | `#10B981` | Core brand action accent, verified status, primary CTA |
-| `--accent-emerald-hover`| `#059669` | Primary button hover state |
-| `--accent-cyan` | `#06B6D4` | Infrastructure & observability metrics callout |
-| `--accent-amber` | `#F59E0B` | In-progress milestones, cautionary recommendations |
-| `--accent-rose` | `#F43F5E` | System error states, strict constraints |
-
----
-
-## 5. Typography System & Hierarchy
-
-### Font Families
-- **Primary Body & Display:** `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif` — Selected for pristine legibility, balanced geometry, and comprehensive Unicode support.
-- **Technical & Monospace:** `"Space Mono", "JetBrains Mono", "Fira Code", monospace` — Applied to telemetry values, verified metrics, code snippets, engineering stamps, and timeline dates.
-
-### Typographic Scale
-| Level | Font Size | Line Height | Tracking | Weight | Typical Element |
-|---|---|---|---|---|---|
-| **Display 1** | `3.5rem` (56px) / `2.5rem` (40px mobile) | `1.1` | `-0.03em` | `700` | Hero Main Title |
-| **Heading 1** | `2.5rem` (40px) / `2rem` (32px mobile) | `1.2` | `-0.025em` | `600` | Major Section Headers |
-| **Heading 2** | `1.75rem` (28px) / `1.5rem` (24px mobile)| `1.25` | `-0.02em` | `600` | Pillar / Service Headings |
-| **Heading 3** | `1.25rem` (20px) | `1.35` | `-0.01em` | `600` | Experience Role / Card Title |
-| **Lead Body** | `1.125rem` (18px) | `1.6` | `-0.005em` | `400` | Hero Subhead, Section Intros |
-| **Body Regular** | `1rem` (16px) | `1.65` | `0` | `400` | Paragraphs, Service Details |
-| **Body Small** | `0.875rem` (14px) | `1.5` | `0` | `400` | Secondary copy, form instructions |
-| **Technical Mono** | `0.8125rem` (13px) | `1.4` | `+0.05em` | `500` | Metrics, badges, dates, code |
-
----
-
-## 6. Spacing Scale & Rhythm
-
-Built on a unified **4px baseline scale**:
-- `4px` (`space-1`), `8px` (`space-2`), `12px` (`space-3`), `16px` (`space-4`)
-- `24px` (`space-6`), `32px` (`space-8`), `48px` (`space-12`), `64px` (`space-16`)
-- `80px` (`space-20`), `96px` (`space-24`), `128px` (`space-32`)
-
-### Section Vertical Padding
-- **Desktop (>= 1024px):** `6rem` to `8rem` (96px – 128px) top and bottom.
-- **Mobile (< 768px):** `4rem` to `5rem` (64px – 80px) top and bottom.
-
----
-
-## 7. Responsive Breakpoints & Container Widths
-
-- **Breakpoints:**
-  - `sm`: 640px
-  - `md`: 768px
-  - `lg`: 1024px
-  - `xl`: 1280px
-  - `2xl`: 1440px
-- **Max Container Width:** `1200px` (`max-w-7xl` with `px-4 sm:px-6 lg:px-8` safe padding).
-- **Narrow Container Width:** `800px` (`max-w-3xl`) for focused philosophical prose and discovery explanations.
-- **Grid Layout:** 12-column responsive CSS grid with `1.5rem` (24px) gutters on mobile and `2rem` (32px) gutters on desktop.
-
----
-
-## 8. Border, Shadow & Radius Conventions
-
-- **Radii:**
-  - Pills / Status Badges: `rounded-full` (9999px)
-  - Cards & Content Containers: `rounded-2xl` (16px)
-  - Interactive Buttons & Inputs: `rounded-lg` (8px)
-  - Code & Diagnostic Panels: `rounded-xl` (12px)
-- **Borders:**
-  - Default structural border: `1px solid #1E2536`
-  - Active / Hover card border: `1px solid #2D374D`
-  - Focused interactive border: `1px solid #10B981`
-- **Shadows:**
-  - Subtle card shadow: `0 4px 20px -2px rgba(0, 0, 0, 0.5)`
-  - Elevated modal / popover: `0 20px 40px -4px rgba(0, 0, 0, 0.7)`
-
----
-
-## 9. Navigation Specifications
-
-- **Type:** Sticky header with subtle frosted background blur (`backdrop-blur-md bg-[#0B0D13]/85`).
-- **Height:** `64px` (desktop), `56px` (mobile).
-- **Brand Identity:** `Hafizh Fadhlurrohman` in crisp monospace with discrete `_` cursor marker and `ID` partner indicator.
-- **Links:**
-  - Services (`#services`)
-  - Proven Impact (`#impact`)
-  - Experience (`#experience`)
-  - Philosophy (`#philosophy`)
-  - Ecosystem (`#ecosystem`)
-  - Process (`#process`)
-- **Primary Action:** Button `"Start Conversation"` linked to `#contact`.
-- **Mobile Navigation:** Clean full-height overlay with slide-down transition, accessible keyboard tab-trap, and immediate link routing.
+# Design System: hafizhfadh.id — Warm Technical Editorial
 
----
+> Extracted from the implemented system: `src/app.css` `@theme` tokens, `src/lib/components/ui/Button.svelte`, `src/lib/components/layout/*`, `src/lib/components/sections/*`, and `src/lib/actions/reveal.ts`, under the committed direction contract in `.impeccable/surfaces/src-routes-page-svelte.md`. Tokens are normative; prose explains application. The previous dark-obsidian system this replaces is the explicit anti-reference.
 
-## 10. Button & Link Variants
+## Overview
 
-1. **Primary Button:**
-   - Background: `var(--accent-emerald)` (`#10B981`)
-   - Text: `#0B0D13` (bold, contrast ratio > 11:1)
-   - Hover: `var(--accent-emerald-hover)` (`#059669`) with `translate-y(-1px)`
-   - Active: `scale-98`
-   - Focus: `ring-2 ring-emerald-400 ring-offset-2 ring-offset-[#0B0D13]`
-2. **Secondary / Outline Button:**
-   - Background: `transparent`
-   - Border: `1px solid var(--border-strong)` (`#2D374D`)
-   - Text: `var(--text-primary)` (`#F8FAFC`)
-   - Hover: `background: var(--bg-elevated)` (`#171D2C`), border: `#475569`
-3. **Text / Monospace Link:**
-   - Text: `var(--text-muted)`
-   - Hover: `var(--accent-emerald)` with subtle underline animation.
+**Creative North Star: "The Engineer's Annual Report"**
 
----
+A personal letter from a senior engineer, set like a fine engineering annual report — warmth carrying authority. The whole site is warm ivory paper: type-led compositions ruled with sand hairlines, deep navy sections anchoring the proof and the invitation, and one family of fired-earth accents that lets the page speak (terracotta) and act (clay). Density is low and confidence is high; every claim is set in a measured serif and every number in a working mono.
 
-## 11. Cards & Content Surfaces
+The system deliberately refuses two references. The first is the old world — a dark obsidian telemetry dashboard with emerald accents — now the anti-reference: no dark grounds outside the three navy anchors, no neon, no glow, no classification tags, no dashboard chrome. The second is the generic cream-and-serif consultancy template: this system earns its editorial character through a complete structure — navy anchor sections, sand hairlines instead of cards, sage technical linework, true bylines and pull-quotes, italic-mono figure captions, and terracotta so rare it always means something.
 
-- **Surface Baseline:** Built with solid slate-graphite (`#111520`) with 1px border (`#1E2536`).
-- **Card Header:** Includes monospace classification tag (e.g., `SERVICE // 01`, `METRIC // VERIFIED`, `ROLE // 2023-PRESENT`).
-- **Interactive States:** Subtle transition of border color to `#2D374D` on hover, without loud lift or glow animations.
+Each of the nine sections is its own composition inside one system: an asymmetric hero with an authored systems schematic, an editorial letter with a pull-quote, alternating service chapters with diagrams, a navy ledger of verified numbers, a ruled timeline, a glyph field guide, a mono toolkit index, a sticky-split process, and a navy invitation holding a cream form panel.
 
----
+**Key Characteristics:**
 
-## 12. Section Specifications
+- Warm ivory canvas (#f4efe5) with cream panels (#faf8f2); structure drawn as 1px sand hairlines (#e5d8c4), never boxed cards
+- Three full-bleed deep-navy anchors (#172b40) per page: impact ledger, contact invitation, footer
+- Terracotta (#c85a3a) for display emphasis; clay (#b04a2c) for everything interactive
+- Editorial serif display (Instrument Serif) with italic terracotta emphasis; Manrope body; IBM Plex Mono strictly for data, dates, and technical annotations
+- Sage (#687c70) authored SVG line-art with italic mono figure captions ("fig. 01 — …")
+- One authored motion moment — the hero schematic draws in; scroll reveals are gentle, JS-applied, and reduced-motion safe
+- Pill buttons; soft 8–16px corners only where content is contained; focus rings in clay (clay-light on navy)
 
-### Hero Section
-- Direct positioning statement: "Engineering Beyond Infrastructure."
-- Subtitle: "I help organizations build, optimize, and operate secure technology platforms through open-source engineering and practical software solutions."
-- Telemetry summary card highlighting verified operational boundaries (latency, scale, cost).
+## Colors
 
-### Services Section
-- Three distinct service pillars (Forward Deployed Engineering, Managed Platforms & Infrastructure, Custom Applications & Integration).
-- Clear breakdown of capabilities, business outcomes, engagement examples, and relevant technologies.
+Fired-earth accents on warm paper, disciplined by deep navy anchors and muted sage linework — every color is low-gloss, warm, and print-like.
 
-### Proven Impact Section
-- Visual prominence for 4 verified career metrics:
-  - `70%` Cloud infrastructure cost reduction (Infradigital Nusantara)
-  - `33–40%` Telecommunications cloud spend reduction (Monster Data Asia)
-  - `1.6 TB` Database scale administered under 500ms query targets (Monster Data Asia)
-  - `200,000+` Mobile application installs (Pelajar Flutter App)
+### Primary
 
-### Professional Experience Section
-- Editorial timeline prioritizing business impact, technical contributions, and system scale across verified roles.
-- Inclusion of academic foundation and Microsoft Technology Associate certifications.
+- **Terracotta** (#c85a3a): The display accent and the closest thing to a brand color. The hero's final word "Infrastructure.", the wordmark's full stop, the pulse nodes in diagrams. It never appears as a UI surface, border, or button.
+- **Clay** (#b04a2c): The interactive accent. Primary buttons, text links, the timeline's current-role dot, focus rings, input carets, the "→" outcome markers. If a user can click it, it is clay.
+- **Clay Dark** (#9a3e23): Hover and pressed depth for clay — button hover ground, link hover color.
+- **Clay Light** (#e09b77): Clay's voice on dark grounds — ledger figures, focus rings and link hovers on navy, the footer's highlighted links.
 
-### Technical Philosophy Section
-- 6 durable engineering principles detailing pragmatic real-world trade-offs.
+### Secondary
 
-### Technology Ecosystem Section
-- Categorized technical matrix (Database Engineering, Cloud/Infra, DevOps/Observability, Security/Compliance, Software Engineering).
+- **Navy** (#172b40): The anchor ground. Full-bleed sections that carry weight: the impact ledger and the contact invitation. Also the selected radio-chip fill — its only component-scale appearance.
+- **Navy Deep** (#0f1f30): The footer's deeper night ground.
+- **Fog** (#c3cfd9): Body copy and secondary text on navy — a cool blue-gray mist that keeps dark sections readable without stark white.
 
-### Engagement Process Section
-- 5-step collaborative discovery and tailored proposal flow.
-- Core tenet: *"Every engineering engagement starts with understanding the problem, not quoting a price."*
+### Tertiary
 
-### Contact & Professional Interview Section
-- Structured intake form with required context fields (Full Name, Work Email, Organization, Challenge Description) and optional environment stack.
-- Clear validation feedback and edge direct dispatch configuration note.
+- **Sage** (#687c70): The technical linework color. Diagram strokes, checkmarks, timeline dots, principle glyphs — the drawing ink of the schematic world.
+- **Sage Deep** (#55645b): The linework's caption ink — lowercase mono micro-labels, diagram inner strokes, role text.
 
-### Footer Section
-- Complete coordinates, LinkedIn link, verified email, copyright, and edge architecture indicators.
+### Neutral
 
----
+- **Ivory** (#f4efe5): The page canvas, input fills, scrollbar track. The default answer to "what is this section's ground?"
+- **Cream** (#faf8f2): Raised editorial panels — the navbar, the cream sections (note, principles, process), the mobile menu, diagram node fills, and the contact form panel.
+- **Sand** (#e5d8c4): The hairline color. 1px rules that do the structural work everywhere; also the scrollbar thumb and text-selection ground.
+- **Sand Deep** (#d6c5ab): Emphasized hairlines and small strokes — blockquote rules, outline/chip borders, byline separators, step markers, hero contour lines.
+- **Charcoal** (#282c2b): Primary ink on light grounds — headings, body emphasis, labels.
+- **Ink Muted** (#5c5a52): Secondary text on light grounds — running copy, captions, mono annotations.
 
-## 13. Iconography Guidelines
+### Named Rules
 
-- Standardized on `lucide-svelte` icons rendered at `16px`, `20px`, or `24px`.
-- Dedicated inline vector components for brand marks (e.g., LinkedIn).
-- Strict stroke width of `2px` with rounded caps and joins.
+**The Terracotta Speaks, Clay Acts Rule.** Terracotta is display-only emphasis — type, nodes, punctuation. Every interactive state is clay or clay-dark. Terracotta is never a surface you can click; clay is never a headline color.
 
----
+**The Three Navy Surfaces Rule.** Deep navy appears exactly three times per page as full-bleed anchors — the impact ledger, the contact invitation, the footer. Never as cards, panels, or sidebars on ivory.
 
-## 14. Motion & Animation Principles
+**The Warm Ink Rule.** Ink is warm charcoal on warm paper — never pure black, never cool gray. On navy, text is fog or ivory, and muted levels are made with opacity (ivory/60, ivory/15), not by inventing new grays.
 
-- **Subtle & Purposeful:** Motion is reserved for status pulses, hover feedback, and disclosure transitions.
-- **Duration:** Micro-interactions run at `150ms` – `200ms` with `ease-out`. Drawer transitions run at `250ms`.
-- **Reduced Motion:** Fully respects `@media (prefers-reduced-motion: reduce)` by disabling transitions and pulses.
+## Typography
 
----
+**Display Font:** Instrument Serif (400 + italic only; fallbacks ui-serif, Georgia, 'Times New Roman', serif)
+**Body Font:** Manrope (fallbacks -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif)
+**Label/Mono Font:** IBM Plex Mono (fallbacks ui-monospace, 'SF Mono', Menlo, monospace)
 
-## 15. States (Hover, Focus, Active, Disabled)
+**Character:** A print-like trio. Instrument Serif supplies the annual-report voice — high-contrast and elegant at display sizes, quietly decorative in italics. Manrope is the calm, geometric working sans that keeps the letter readable. IBM Plex Mono plays the typewriter, appearing only where an engineer would annotate: numbers, dates, machines, captions.
 
-- **Hover:** Subtle luminance shift on border (`#1E2536` -> `#2D374D`) and text (`#94A3B8` -> `#F8FAFC`).
-- **Focus:** Unambiguous 2px focus ring (`#10B981`) with 2px offset.
-- **Active:** Slight tactile scaling (`scale-[0.98]`).
-- **Disabled:** `opacity-50 pointer-events-none`.
+### Hierarchy
 
----
+- **Display** (400, clamp(3rem, 7.4vw, 6rem), lh 0.98, tracking −0.02em): the hero headline only — two lines, final word in italic terracotta.
+- **Headline** (400, clamp(2.1rem, 4vw, 3.25rem), lh 1.04, tracking −0.015em): section H2s; the contact invitation runs larger at clamp(2.4rem, 5vw, 4rem).
+- **Title** (400, clamp(1.8rem, 3vw, 2.5rem), lh 1.06, tracking −0.01em): service chapter H3s; smaller serif titles at 1.4–1.7rem for organizations, categories, and principle names.
+- **Emphasis** (serif italic): pull-quotes at clamp(1.35rem, 2.4vw, 1.75rem) in sand-ruled blockquotes; ledger figures at clamp(3.4rem, 6.5vw, 5.75rem) in clay-light with tracking −0.02em; italic terracotta highlights at 1.3rem in the timeline.
+- **Body** (Manrope 400): lead 1.125rem/1.625; standard 1.0625rem; compact 0.9375rem; small 0.875rem. Measures stay between 36ch and 62ch (observed max-w-[36rem] to max-w-[62ch]).
+- **Label** (IBM Plex Mono 400, 0.75rem, lowercase, tracking +0.025em): micro-labels ("what that covers", "explore", "write to me") in sage-deep on ivory, ivory/60 on navy.
+- **Data** (IBM Plex Mono 400, 0.6875–0.8125rem): dates, tags, "·"-joined stack lists, attributions, the mono form field; diagram annotations at 10.5–12px with letter-spaced station labels (+0.1em).
 
-## 16. Accessibility (WCAG 2.1 AA)
+### Named Rules
 
-- All text meets or exceeds `4.5:1` contrast ratio against dark backgrounds.
-- High-contrast interactive elements achieve `> 10:1` contrast (e.g. emerald primary buttons on `#0B0D13`).
-- Full keyboard operability for navigation, modals, and forms.
-- Semantic landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`).
+**The One Weight Rule.** Instrument Serif ships one weight — 400 — plus italics. Hierarchy is size, tracking, and italics; never bold the serif and never fake a heavier display weight.
 
----
+**The Mono Is a Measurement Rule.** IBM Plex Mono appears only as data, dates, metrics, stack lists, attributions, lowercase micro-labels, and figure captions. Never for headlines, never for running prose, never uppercase.
 
-## 17. Light/Dark Theme Strategy
+## Layout
 
-- The website is intentionally locked to an authentic **Dark Obsidian Systems Theme** reflecting high-reliability control planes and database terminals.
-- Clean system contrast preserves readability in bright ambient lighting through high-contrast foreground whites (`#F8FAFC`, `#E2E8F0`).
+A single narrative scroll: Hero (ivory) → A note on how I work (cream) → Services (ivory) → Proven impact ledger (navy) → Experience (ivory) → Principles (cream) → Toolkit (ivory) → Engagement process (cream) → Contact invitation (navy), closed by the navy-deep footer. Sections alternate grounds and are separated by hairlines, not gaps alone.
 
----
+- **Container:** max-w-6xl (1152px) with px-5 (20px) / sm:px-8 (32px) safe padding.
+- **Grid:** 12 columns at lg with recurring asymmetric splits — hero 7/5, note 4/7 (starting column 6), service chapters 7/5 with alternating reading order, process 5/6, contact 5/7. Everything collapses to one column below lg.
+- **Section rhythm:** py-20 (80px) / sm:py-28 (112px). Cream sections are framed with top and bottom sand hairlines (border-y sand/70); ivory sections rule their interiors instead — divide-y chapter lists and border-t index rows.
+- **Rows, not cards:** the ledger, the timeline, the toolkit index, and the principle field guide are full-width hairline-ruled rows on the 12-col baseline grid.
+- **The one sticky composition:** the process section pins its left argument (lg:sticky, top-28) beside a sand-ruled ordered list.
+- **The timeline:** entries hang off a 1px sand rule at sm:left-[11rem]; the mono period column sits right-aligned on desktop, above the entry on mobile.
+- **Responsive:** below lg, splits stack in source order; the mobile nav replaces links with an editorial index; form fields go single-column below sm.
 
-## 18. Mobile-Specific Interaction Behavior
+**Motion rhythm:**
 
-- Sticky header reduces height to `56px` on mobile.
-- Clean slide-down navigation sheet with large touch targets ($\ge 44 \times 44 \text{ px}$).
-- Form inputs feature 16px font sizes to prevent iOS Safari auto-zoom.
-- Horizontal metric and telemetry cards adapt gracefully to single-column vertical flow.
+- **Scroll reveal** (`use:reveal`): opacity 0 + 16px rise → visible over 0.7s cubic-bezier(0.22, 1, 0.36, 1), optional stagger (60–200ms). The hidden state is applied only when JavaScript runs — content is fully visible without it. IntersectionObserver at threshold 0.12 with a −48px bottom margin; one-shot (disconnects after first reveal).
+- **Hero schematic:** the sage spine and connectors draw in (stroke-dashoffset over 1.4s, cubic-bezier(0.4, 0, 0.2, 1)); stations fade in over 0.9s, staggered 0.45–1.7s; the dashed terracotta ring spins 28s linear ×3. This is the page's single authored load animation.
+- **Micro-interactions:** 200ms state transitions on buttons/chips/inputs; 300ms nav-underline growth; 250ms mobile-menu slide; one ambient loop — the 2.6s terracotta pulse dot in diagrams.
+- **Reduced motion:** prefers-reduced-motion clamps every animation and transition to ~0.01ms, disables smooth scrolling, and the reveal action never hides content.
 
----
+## Elevation & Depth
 
-## 19. Component Inventory & Naming Conventions
+Flat by default; depth is tonal, not cast. Three grounds stack — ivory canvas → cream panels → navy anchors — and 1px hairlines do the structural work that shadows would do elsewhere. Shadow exists in exactly two places:
 
-All components are located in `src/lib/components/`:
-- `layout/Navbar.svelte`
-- `layout/Footer.svelte`
-- `ui/Badge.svelte`
-- `ui/Button.svelte`
-- `ui/LinkedInIcon.svelte`
-- `sections/Hero.svelte`
-- `sections/ValueProp.svelte`
-- `sections/Services.svelte`
-- `sections/ProvenImpact.svelte`
-- `sections/Experience.svelte`
-- `sections/Philosophy.svelte`
-- `sections/TechEcosystem.svelte`
-- `sections/EngagementProcess.svelte`
-- `sections/ContactSection.svelte`
+### Shadow Vocabulary
+
+- **Primary-button ambient** (`0 1px 2px rgba(40,44,43,0.10), 0 10px 28px -14px rgba(176,74,44,0.55)`; hover deepens to `0 1px 2px rgba(40,44,43,0.10), 0 12px 32px -14px rgba(154,62,35,0.6)`): a warm clay-tinted lift under the one primary action.
+- **Form-panel float** (`0 2px 6px rgba(15,31,48,0.25), 0 24px 60px -24px rgba(15,31,48,0.55)`): the cream contact panel hovering over navy.
+
+### Named Rules
+
+**The Two Shadows Rule.** Only the primary button and the contact form panel cast shadows. Everything else is flat: if a surface needs separating, use a sand hairline or change the ground — never add a shadow.
+
+## Shapes
+
+Structure is drawn, not boxed.
+
+- **Hairlines everywhere:** 1px sand rules divide chapters (divide-y), open ledger rows (border-t ivory/15 on navy), frame cream sections (border-y), and rule blockquotes (border-l sanddeep). No structural border is ever thicker than 1px — 2px appears only as focus rings and underline accents.
+- **Pills for anything a thumb touches:** buttons and radio chips are fully rounded (9999px).
+- **Soft corners only where content is contained:** inputs, textareas, the error banner, and icon buttons at 8px; the contact form panel at 16px; the focus outline at 2px.
+- **Diagram language:** 1–1.5px sage strokes with round caps and joins, terracotta pulse nodes (r ≈ 3), solid navy circles as system nodes, sand ground lines and dashed 2-5 guide strokes; station labels in letter-spaced mono caps.
+- **Editorial chrome:** scrollbars are an ivory track with a rounded sand thumb (10px wide, 2px ivory border, sanddeep on hover); text selection is sand ground with charcoal text; carets are clay.
+
+### Named Rules
+
+**The Hairline Structure Rule.** If it separates, it's a 1px sand rule. If it contains, it may round (8px fields, 16px panels). If it's pressed, it's a pill. Nothing else gets a border.
+
+## Components
+
+### Buttons
+
+The page's only raised, colored UI element — a confident warm pill carrying the single most important action per view.
+
+- **Shape:** full pill (9999px), inline-flex with an 8px icon gap, weight 600, tracking −0.01em, 200ms transition on all properties.
+- **Primary:** clay ground, ivory text, warm ambient shadow. Sizes: sm 16px/8px padding + 14px text, md 20px/10px + 15px text, lg 28px/14px + 16px text.
+- **Hover / Focus:** hover deepens to clay-dark with a slightly larger shadow; active compresses to scale(0.98); focus-visible is a 2px clay ring with 2px offset on ivory (clay-light on navy); disabled is 50% opacity with no pointer events.
+- **Outline:** transparent ground, charcoal text, 1px sanddeep border; hover to cream ground with charcoal/40 border; active scale(0.98). Used for secondary actions ("Copy the note", "Report a broken link").
+- **Ghost:** exists in the component API (transparent, ink-muted → charcoal on hover) but is currently unused on the page — prefer an underlined text link.
+
+### Text Links & Arrow Links
+
+- **Underlined:** semibold charcoal with a 2px sanddeep underline at 8px offset; hover moves the rule to clay ("Explore my work").
+- **Arrow link:** clay semibold text with a trailing icon; hover to clay-dark while the icon nudges 4px ("Start the conversation").
+- **Nav links:** 15px medium ink-muted → charcoal, with a 1px clay underline that grows from the left over 300ms.
+- **On navy:** fog → ivory for lists; the email is a large serif clay-light link with a 2px ivory/25 underline (hover: clay-light rule); footer links hover clay-light.
+
+### Chips (Service Radio Pills)
+
+- **Style:** pill labels with a 1px sanddeep border, transparent ground, ink-muted 14px text, 10px/16px padding; hidden native radios keep keyboard semantics.
+- **Selected:** navy ground, ivory text, navy border — the only place navy appears at component scale.
+- **Focus:** focus-within ring, 2px clay with 2px offset on cream.
+
+### Inputs / Fields
+
+Handwritten-note fields inside the cream panel — quiet until focused.
+
+- **Style:** 1px sanddeep border, ivory ground, 8px radius, 16px/12px padding, 16px text (prevents iOS zoom), placeholders ink-muted/90, caret clay.
+- **Labels:** 14px semibold charcoal with a clay asterisk marking required fields; group legends are lowercase mono 12px in sage-deep. The "current stack" field sets IBM Plex Mono.
+- **Focus:** the border shifts to clay — a color change, no glow, no shadow.
+- **Error:** 8px-radius banner, terracotta/30 border on terracotta/10 ground, clay-dark text with an alert icon.
+- **Container:** the form lives on a cream panel, 16px radius, 28–36px padding, floating with the navy-tinted shadow (see Elevation & Depth).
+
+### Navigation
+
+- Sticky header, 64px tall, cream at 90% with backdrop blur, closed by a sand/80 hairline, z-50.
+- **Wordmark:** serif 20px charcoal ending in a terracotta full stop — the period scales to 125% on hover, the wordmark's only flourish.
+- **Desktop:** 15px links plus a primary sm pill CTA ("Start a conversation"). **Mobile:** a sand-ground menu button opens an editorial index — serif 24px entries with mono 01–06 numerals on sand-hairline rows, sliding open in 250ms, full-width primary button at the bottom.
+
+### The Ledger Row (signature)
+
+- Full-bleed navy; each row opens with an ivory/15 hairline and settles on a 12-col baseline grid: the serif figure (clamp(3.4rem, 6.5vw, 5.75rem), clay-light, leading none) at 4 columns; the semibold ivory claim plus fog context at 5; fog details plus mono attribution (ivory/60, "Organization · Role") at 3.
+- A sage check glyph opens the integrity note that closes the ledger — the system's way of certifying its own numbers.
+
+### Authored Figures (signature)
+
+- Every diagram is hand-authored SVG line art — sage strokes (1–1.5px, round caps), terracotta pulse nodes, solid navy nodes, sand grounds and dashed guides. Never icon packs, never stock illustrations.
+- Each carries a print-style caption in italic mono 10.5px, lowercase: "fig. 01 — the platforms I keep running".
+- The hero schematic (480×600) is the flagship: a sage spine with four stations — edge & routing, core database, observability, security & compliance — annotated in letter-spaced mono, with the core database drawn as a navy drum inside a spinning dashed terracotta ring.
+
+### Global Chrome
+
+- Scrollbars: ivory track, sand rounded thumb with a 2px ivory border, sanddeep on hover.
+- Text selection: sand ground, charcoal text.
+- Caret: clay in every input and textarea.
+
+## Do's and Don'ts
+
+### Do:
+
+- **Do** draw structure with 1px sand hairlines (#e5d8c4) — divide-y chapters, border-t rows, border-y section frames — instead of reaching for a card.
+- **Do** keep IBM Plex Mono strictly for data: dates, metrics, "·"-joined stack lists, attributions, lowercase micro-labels, and figure captions.
+- **Do** set emphasis in serif italic, and spend terracotta (#c85a3a) only where the page speaks loudest — the hero's final word, the wordmark's period, diagram pulse nodes.
+- **Do** make every interactive element clay (#b04a2c) with a 2px clay focus ring (clay-light #e09b77 on navy).
+- **Do** author diagrams as sage line art (1–1.5px strokes, round caps) with italic mono captions ("fig. NN — …").
+- **Do** hold body copy to a 36–62ch measure and let whitespace — 80/112px section padding — do the separating.
+- **Do** respect reduced motion: reveals never hide content, animations clamp to ~0ms, and the page must be fully readable with JavaScript off.
+
+### Don't:
+
+- **Don't** box content: no card grids, no repetitive card rows, no nested cards — compose with hairline-ruled rows and asymmetric 12-col splits.
+- **Don't** resurrect the old dark dashboard: no obsidian grounds, emerald telemetry accents, neon glows, gradient text, or `SERVICE // 01`-style classification tags.
+- **Don't** set headlines or prose in mono, and never uppercase the mono labels — they stay lowercase.
+- **Don't** add eyebrow kickers above headlines.
+- **Don't** use navy as a component fill (the selected radio chip is the one exception) or shrink it into boxes and sidebars — navy is full-bleed only, and only three times per page.
+- **Don't** introduce a second authored load animation; the hero draw-in is the page's one motion moment (diagram pulse dots are the only loop).
+- **Don't** bold Instrument Serif or fake a heavier display weight.

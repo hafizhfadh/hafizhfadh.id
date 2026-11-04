@@ -8,9 +8,9 @@
 
 	let { children }: LayoutProps = $props();
 
-	const pageTitle = `${profile.name} — Independent Infrastructure & Platform Engineering Partner`;
+	const pageTitle = `${profile.name} — Independent Engineering Consultancy`;
 	const pageDescription =
-		'Independent Infrastructure & Platform Engineering Partner. Helping organizations build, optimize, and operate secure, scalable technology platforms through open-source engineering, database optimization, and custom software.';
+		'Independent engineering consultancy for infrastructure, platforms, and databases. I help organizations build, secure, and evolve technology platforms — with verified results like 70% cloud cost reduction and a 1.6 TB database answering in under 500 ms.';
 	const siteUrl = 'https://hafizhfadh.id';
 
 	const structuredData = {
@@ -88,7 +88,7 @@
 	{@html `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`}
 </svelte:head>
 
-<div class="min-h-screen flex flex-col bg-[#0B0D13] text-[#E2E8F0]">
+<div class="min-h-screen flex flex-col bg-ivory text-charcoal">
 	<Navbar />
 	<main class="flex-1">
 		{@render children()}

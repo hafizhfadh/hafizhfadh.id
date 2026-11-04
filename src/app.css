@@ -1,58 +1,120 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-	--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-	--font-mono: 'Space Mono', 'JetBrains Mono', 'Fira Code', monospace;
+	/* Typography — expressive editorial trio */
+	--font-serif: 'Instrument Serif', ui-serif, Georgia, 'Times New Roman', serif;
+	--font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	--font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 
-	--color-bg-base: #0B0D13;
-	--color-bg-surface: #111520;
-	--color-bg-elevated: #171D2C;
-	--color-border-subtle: #1E2536;
-	--color-border-strong: #2D374D;
-	--color-border-accent: #10B981;
+	/* Warm canvas */
+	--color-ivory: #f4efe5;
+	--color-cream: #faf8f2;
+	--color-sand: #e5d8c4;
+	--color-sanddeep: #d6c5ab;
 
-	--color-text-primary: #F8FAFC;
-	--color-text-body: #E2E8F0;
-	--color-text-muted: #94A3B8;
-	--color-text-subtle: #64748B;
+	/* Ink */
+	--color-charcoal: #282c2b;
+	--color-inkmuted: #5c5a52;
 
-	--color-accent-emerald: #10B981;
-	--color-accent-emerald-hover: #059669;
-	--color-accent-cyan: #06B6D4;
-	--color-accent-amber: #F59E0B;
+	/* Deep navy anchors */
+	--color-navy: #172b40;
+	--color-navydeep: #0f1f30;
+
+	/* Warm accents */
+	--color-terracotta: #c85a3a;
+	--color-clay: #b04a2c;
+	--color-claydark: #9a3e23;
+	--color-claylight: #e09b77;
+	--color-sage: #687c70;
+	--color-sagedeep: #55645b;
+
+	/* Text on navy */
+	--color-fog: #c3cfd9;
 }
 
 :root {
-	color-scheme: dark;
+	color-scheme: light;
 }
 
 html {
 	font-family: var(--font-sans);
-	background-color: #0B0D13;
-	color: #E2E8F0;
+	background-color: var(--color-ivory);
+	color: var(--color-charcoal);
+	-webkit-font-smoothing: antialiased;
 }
 
-/* Accessible focus ring */
+/* Accessible focus ring in the interactive accent */
 :focus-visible {
-	outline: 2px solid #10B981;
+	outline: 2px solid var(--color-clay);
 	outline-offset: 2px;
+	border-radius: 2px;
 }
 
-/* Custom scrollbar matching dark obsidian palette */
+.on-navy :focus-visible {
+	outline-color: var(--color-claylight);
+}
+
+/* Editorial scrollbars */
 ::-webkit-scrollbar {
-	width: 8px;
-	height: 8px;
+	width: 10px;
+	height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background: #0B0D13;
+	background: var(--color-ivory);
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #1E2536;
-	border-radius: 4px;
+	background: var(--color-sand);
+	border-radius: 5px;
+	border: 2px solid var(--color-ivory);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #2D374D;
+	background: var(--color-sanddeep);
+}
+
+/* Editorial text selection and caret */
+::selection {
+	background: var(--color-sand);
+	color: var(--color-charcoal);
+}
+
+input,
+textarea {
+	caret-color: var(--color-clay);
+}
+
+/* Gentle scroll reveals — content stays visible without JavaScript */
+.reveal {
+	opacity: 0;
+	transform: translateY(16px);
+	transition:
+		opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+		transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-visible {
+	opacity: 1;
+	transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	.reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
 }

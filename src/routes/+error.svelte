@@ -1,35 +1,38 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import Button from '#lib/components/ui/Button.svelte';
-	import Badge from '#lib/components/ui/Badge.svelte';
-	import { Terminal, Home, ArrowLeft } from 'lucide-svelte';
 </script>
 
-<div class="min-h-[70vh] flex items-center justify-center px-4 py-24">
-	<div class="max-w-md w-full p-8 rounded-2xl bg-[#111520] border border-slate-800 text-center space-y-6">
-		<div class="flex justify-center">
-			<Badge variant="amber">HTTP {page.status}</Badge>
-		</div>
+<div class="flex min-h-[70vh] items-center justify-center bg-ivory px-5 py-24">
+	<div class="max-w-lg text-center">
+		<svg viewBox="0 0 120 48" class="mx-auto mb-8 w-40" aria-hidden="true">
+			<!-- A path that leads off the map -->
+			<path
+				d="M 8 36 C 30 36, 34 14, 56 14 C 78 14, 74 36, 96 36"
+				fill="none"
+				stroke="#687C70"
+				stroke-width="1.5"
+				stroke-dasharray="3 5"
+			/>
+			<circle cx="8" cy="36" r="3" fill="#172B40" />
+			<circle cx="96" cy="36" r="3" fill="#C85A3A" />
+			<path d="M 104 32 L 112 36 L 104 40" fill="none" stroke="#C85A3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
 
-		<div class="space-y-2">
-			<h1 class="text-3xl font-mono font-bold text-white tracking-tight">
-				{page.status === 404 ? 'Resource Not Found' : 'System Exception'}
-			</h1>
-			<p class="text-sm text-slate-400 font-sans">
-				{page.error?.message || 'The requested route does not exist or has been relocated.'}
-			</p>
-		</div>
+		<h1 class="font-serif text-4xl leading-tight tracking-[-0.015em] text-charcoal sm:text-5xl">
+			{page.status === 404 ? 'This page wandered off.' : 'Something went sideways.'}
+		</h1>
+		<p class="mx-auto mt-5 max-w-[46ch] text-[17px] leading-relaxed text-inkmuted">
+			{page.error?.message || 'The route you followed doesn’t exist — or it has been relocated.'}
+			The rest of the site is right where you left it.
+		</p>
+		<p class="mt-4 font-mono text-xs text-inkmuted/70">
+			{page.status} · {page.url.pathname}
+		</p>
 
-		<div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-slate-400 text-left">
-			<p class="text-emerald-400">&gt; routing.resolve({page.url.pathname})</p>
-			<p class="text-rose-400">&gt; Status: 404 NULL_POINTER_EXCEPTION</p>
-		</div>
-
-		<div class="pt-2 flex justify-center gap-3">
-			<Button href="/" variant="primary" size="md">
-				<Home class="w-4 h-4" />
-				Return to Base
-			</Button>
+		<div class="mt-9 flex justify-center gap-4">
+			<Button href="/" variant="primary" size="md">Back to the front page</Button>
+			<Button href="#contact" variant="outline" size="md">Report a broken link</Button>
 		</div>
 	</div>
 </div>
