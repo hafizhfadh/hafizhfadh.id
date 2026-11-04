@@ -1,5 +1,4 @@
 export interface EngagementStep {
-	step: string;
 	number: string;
 	title: string;
 	summary: string;
@@ -9,7 +8,6 @@ export interface EngagementStep {
 
 export const engagementProcess: EngagementStep[] = [
 	{
-		step: 'STAGE // 01',
 		number: '01',
 		title: 'Professional Introduction',
 		summary:
@@ -22,7 +20,6 @@ export const engagementProcess: EngagementStep[] = [
 		deliverable: 'Initial Discovery Brief & Mutual NDA (if required)'
 	},
 	{
-		step: 'STAGE // 02',
 		number: '02',
 		title: 'Structured Discovery Interview',
 		summary:
@@ -35,7 +32,6 @@ export const engagementProcess: EngagementStep[] = [
 		deliverable: 'Problem Statement & Scope Boundaries'
 	},
 	{
-		step: 'STAGE // 03',
 		number: '03',
 		title: 'Technical Assessment',
 		summary:
@@ -48,7 +44,6 @@ export const engagementProcess: EngagementStep[] = [
 		deliverable: 'Engineering Assessment & Recommended Roadmap'
 	},
 	{
-		step: 'STAGE // 04',
 		number: '04',
 		title: 'Tailored Proposal',
 		summary:
@@ -61,7 +56,6 @@ export const engagementProcess: EngagementStep[] = [
 		deliverable: 'Comprehensive Scope of Work & Milestone Specifications'
 	},
 	{
-		step: 'STAGE // 05',
 		number: '05',
 		title: 'Commercial Agreement',
 		summary:

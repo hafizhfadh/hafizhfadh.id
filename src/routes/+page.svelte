@@ -1,21 +1,26 @@
 <script lang="ts">
+	import Seo from '#lib/components/shared/Seo.svelte';
 	import Hero from '#lib/components/sections/Hero.svelte';
 	import ValueProp from '#lib/components/sections/ValueProp.svelte';
-	import Services from '#lib/components/sections/Services.svelte';
+	import ServiceSummaries from '#lib/components/sections/ServiceSummaries.svelte';
 	import ProvenImpact from '#lib/components/sections/ProvenImpact.svelte';
-	import Experience from '#lib/components/sections/Experience.svelte';
-	import Philosophy from '#lib/components/sections/Philosophy.svelte';
-	import TechEcosystem from '#lib/components/sections/TechEcosystem.svelte';
-	import EngagementProcess from '#lib/components/sections/EngagementProcess.svelte';
-	import ContactSection from '#lib/components/sections/ContactSection.svelte';
+	import SelectedExperience from '#lib/components/sections/SelectedExperience.svelte';
+	import PhilosophyShort from '#lib/components/sections/PhilosophyShort.svelte';
+	import ProcessStrip from '#lib/components/sections/ProcessStrip.svelte';
+	import ContactInvite from '#lib/components/sections/ContactInvite.svelte';
 </script>
+
+<Seo
+	title="Hafizh Fadhlurrohman — Independent Engineering Consultancy"
+	description="Independent engineering consultancy for infrastructure, platforms, and databases. I help organizations build, secure, and evolve technology platforms — with verified results like 70% cloud cost reduction and a 1.6 TB database answering in under 500 ms."
+	path="/"
+/>
 
 <Hero />
 <ValueProp />
-<Services />
+<ServiceSummaries />
 <ProvenImpact />
-<Experience />
-<Philosophy />
-<TechEcosystem />
-<EngagementProcess />
-<ContactSection />
+<SelectedExperience />
+<PhilosophyShort />
+<ProcessStrip />
+<ContactInvite />

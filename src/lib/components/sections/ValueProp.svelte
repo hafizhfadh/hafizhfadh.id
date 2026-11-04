@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { profile } from '#lib/data/profile';
 	import { reveal } from '#lib/actions/reveal';
+	import { ArrowRight } from 'lucide-svelte';
 </script>
 
-<section id="about" class="border-y border-sand/70 bg-cream py-20 sm:py-28">
+<section class="border-y border-sand/70 bg-cream py-20 sm:py-28">
 	<div class="mx-auto max-w-6xl px-5 sm:px-8">
 		<div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
 			<!-- Left: the standing note -->
@@ -30,18 +31,20 @@
 					slide deck of best practices. I arrive with questions — and the answers come from your
 					systems, your telemetry, and your team.
 				</p>
-				<p>
-					That approach has taken cloud bills down by 70%, kept a 1.6&nbsp;TB telecommunications
-					database answering queries in under half a second, and put software on 200,000 phones.
-					Not through cleverness — through patience, measurement, and refusing to buy bigger
-					servers before reading the query plan.
-				</p>
 
 				<blockquote class="mt-8 border-l border-sanddeep py-1 pl-6 sm:pl-8">
 					<p class="font-serif text-[clamp(1.35rem,2.4vw,1.75rem)] leading-snug text-charcoal italic">
 						“{profile.approachStatement}”
 					</p>
 				</blockquote>
+
+				<a
+					href="/about"
+					class="group mt-8 inline-flex items-center gap-2 text-[15px] font-semibold text-clay transition-colors hover:text-claydark"
+				>
+					More about how I work
+					<ArrowRight class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+				</a>
 			</div>
 		</div>
 	</div>

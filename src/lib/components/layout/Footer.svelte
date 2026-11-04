@@ -1,18 +1,10 @@
 <script lang="ts">
 	import { profile } from '#lib/data/profile';
+	import { primaryNav } from '#lib/data/navigation';
 	import { ArrowUpRight } from 'lucide-svelte';
 	import LinkedInIcon from '../ui/LinkedInIcon.svelte';
 
 	const currentYear = new Date().getFullYear();
-
-	const navItems = [
-		{ label: 'Services', href: '#services' },
-		{ label: 'Impact', href: '#impact' },
-		{ label: 'Experience', href: '#experience' },
-		{ label: 'Principles', href: '#philosophy' },
-		{ label: 'Toolkit', href: '#ecosystem' },
-		{ label: 'Process', href: '#process' }
-	];
 </script>
 
 <footer class="on-navy border-t border-ivory/10 bg-navydeep text-ivory">
@@ -34,13 +26,18 @@
 			<nav class="md:col-span-3" aria-label="Footer navigation">
 				<h2 class="font-mono text-xs lowercase tracking-wide text-ivory/60">explore</h2>
 				<ul class="mt-4 space-y-2.5">
-					{#each navItems as item}
+					{#each primaryNav as item}
 						<li>
 							<a href={item.href} class="text-sm text-fog transition-colors hover:text-ivory">
 								{item.label}
 							</a>
 						</li>
 					{/each}
+					<li>
+						<a href="/contact" class="text-sm font-semibold text-claylight transition-colors hover:text-ivory">
+							Let's talk
+						</a>
+					</li>
 				</ul>
 			</nav>
 
@@ -70,8 +67,12 @@
 						</a>
 					</li>
 					<li>
-						<a href="#contact" class="text-sm font-semibold text-claylight transition-colors hover:text-ivory">
+						<a
+							href="/contact"
+							class="inline-flex items-center gap-1.5 text-sm text-fog transition-colors hover:text-ivory"
+						>
 							Start a conversation
+							<ArrowUpRight class="h-3.5 w-3.5 text-ivory/40" />
 						</a>
 					</li>
 				</ul>

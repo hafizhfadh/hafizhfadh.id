@@ -1,6 +1,8 @@
 export interface PrincipleItem {
 	number: string;
 	title: string;
+	/** One-line teaser for Level-1 surfaces (home) — distinct voice from summary. */
+	teaser?: string;
 	summary: string;
 	application: string;
 }
@@ -9,6 +11,7 @@ export const principles: PrincipleItem[] = [
 	{
 		number: '01',
 		title: 'Open-Source Where It Makes Sense',
+		teaser: 'Battle-tested platforms, chosen for operational maturity — never for ideology.',
 		summary:
 			'Open source offers unparalleled flexibility and vendor independence, but adoption must be grounded in business requirements, security posture, operational maturity, and TCO—never ideology.',
 		application:
@@ -25,6 +28,7 @@ export const principles: PrincipleItem[] = [
 	{
 		number: '03',
 		title: 'Optimize Before Overspending',
+		teaser: 'Slow systems usually need a better query plan, not a bigger server.',
 		summary:
 			'Slow systems rarely require more expensive hardware or larger cloud instances. They usually suffer from unindexed queries, stalled connections, or un-tuned runtime parameters.',
 		application:
@@ -49,6 +53,7 @@ export const principles: PrincipleItem[] = [
 	{
 		number: '06',
 		title: 'Measure Engineering Outcomes',
+		teaser: '\u201cFaster\u201d isn\u2019t an outcome until it\u2019s a number someone audited.',
 		summary:
 			'Subjective claims of "faster" or "better" do not satisfy technical leadership. Every engineering change must produce quantifiable, auditable operational metrics.',
 		application:

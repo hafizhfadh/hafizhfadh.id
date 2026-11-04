@@ -104,3 +104,99 @@ export const certifications: CertificationItem[] = [
 		issuer: 'Microsoft'
 	}
 ];
+
+export interface CaseStudy {
+	id: string;
+	title: string;
+	organization: string;
+	period: string;
+	metric: string;
+	metricLabel: string;
+	context: string;
+	challenge: string;
+	approach: string[];
+	implementation: string[];
+	outcome: string;
+}
+
+export const caseStudies: CaseStudy[] = [
+	{
+		id: 'cloud-cost-governance',
+		title: 'A 70% smaller cloud bill',
+		organization: 'Infradigital Nusantara',
+		period: 'August 2023 – Present',
+		metric: '-70%',
+		metricLabel: 'monthly infrastructure expenditure (IDR 70M → IDR 21M)',
+		context:
+			'Infradigital\u2019s cloud infrastructure spend had reached IDR 70 million per month — a number nobody questioned until it was questioned. The environment had grown organically: oversized instances, default configurations, and workloads paying premium rates on a major cloud provider.',
+		challenge:
+			'Reduce spend without degrading reliability or performance, in an environment whose full inventory lived largely in tribal knowledge.',
+		approach: [
+			'Systemic architecture review before any migration conversation',
+			'Database configuration and query tuning as the first lever',
+			'Evaluation of a cost-efficient local cloud provider',
+			'Centralized visibility so the savings stay visible (MonIT + Grafana)'
+		],
+		implementation: [
+			'Audited configurations and right-sized workloads across the environment',
+			'Optimized query paths and indexing (B-tree, BRIN, GIN) on large datasets',
+			'Migrated workloads to a local cloud provider with better price-performance',
+			'Built MonIT, a centralized monitoring platform on Grafana with real-time visibility into application activity, database latency, and internal network health'
+		],
+		outcome:
+			'Monthly infrastructure expenditure fell from IDR 70 million to IDR 21 million — a 70% reduction that held, because the monitoring to keep it honest shipped together with the savings.'
+	},
+	{
+		id: 'telecom-database-at-scale',
+		title: 'Half-second queries on 1.6 terabytes',
+		organization: 'Monster Data Asia',
+		period: 'July 2023 – Present',
+		metric: '≤ 500 ms',
+		metricLabel: 'database-side query latency at 1.6 TB scale',
+		context:
+			'A telecommunications subsidiary\u2019s payment and billing (PPOB) systems and an online ticketing platform run on databases growing roughly 11 GB every week — 1.6 TB and climbing when the engagement began.',
+		challenge:
+			'Keep database-side query execution at or under 500 ms across high-throughput payment, billing, and ticketing endpoints while monthly cloud spend was also expected to shrink.',
+		approach: [
+			'Execution plan analysis before any hardware conversation',
+			'Index strategy matched to actual workload patterns',
+			'Configuration-level tuning: vacuum, caching, connection limits',
+			'Finding the stalled and idle connections nobody had counted'
+		],
+		implementation: [
+			'Analyzed query execution plans and index efficiency across API endpoints',
+			'Applied B-tree, BRIN, and GIN indexes according to engine capabilities and workload patterns',
+			'Tuned vacuum parameters, cache settings, and connection limits for high-concurrency workloads',
+			'Identified and eliminated stalled and idle connection bottlenecks',
+			'Produced monthly performance reports mapping slow queries to affected application features'
+		],
+		outcome:
+			'Query execution consistently holds at or under 500 ms on the 1.6 TB database, and monthly cloud expenditure fell from roughly IDR 300 million to IDR 180–200 million — a 33–40% reduction delivered from the database outward.'
+	},
+	{
+		id: 'pelajar-mobile-resilience',
+		title: '200,000 installs of resilient software',
+		organization: 'Infradigital Nusantara',
+		period: 'November 2020 – July 2023',
+		metric: '200,000+',
+		metricLabel: 'installs across Google Play and the App Store',
+		context:
+			'Pelajar is a Flutter-based mobile application for iOS and Android used by students across Indonesia — a broad device spectrum, often on unstable cellular networks.',
+		challenge:
+			'Deliver a lightweight, responsive experience on low-end devices and unreliable connections, under the organization\u2019s ISO/IEC 27001:2022 security requirements.',
+		approach: [
+			'Performance budgets treated as features, not afterthoughts',
+			'Offline-first data with optimistic synchronization',
+			'Security controls aligned to ISO/IEC 27001:2022',
+			'Disciplined release pipelines across two app stores'
+		],
+		implementation: [
+			'Optimized application performance and device resource consumption across a wide range of Android and iOS hardware',
+			'Implemented offline support and optimistic data synchronization for resilience under unstable networks',
+			'Applied application security measures aligned with the organization\u2019s ISO/IEC 27001:2022 requirements',
+			'Managed release pipelines and deployments across both app store ecosystems'
+		],
+		outcome:
+			'Pelajar grew past 200,000 installs across Google Play and the Apple App Store, with offline resilience that keeps it usable wherever connectivity is not a guarantee.'
+	}
+];

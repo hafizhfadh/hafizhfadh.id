@@ -3,21 +3,10 @@
 	import { reveal } from '#lib/actions/reveal';
 </script>
 
-<section id="ecosystem" class="bg-ivory py-20 sm:py-28">
+<section id="ecosystem" class="bg-ivory">
 	<div class="mx-auto max-w-6xl px-5 sm:px-8">
-		<!-- Section opening -->
-		<div class="max-w-2xl" use:reveal>
-			<h2 class="font-serif text-[clamp(2.1rem,4vw,3.25rem)] leading-[1.04] tracking-[-0.015em] text-charcoal">
-				The toolkit.
-			</h2>
-			<p class="mt-5 text-lg leading-relaxed text-inkmuted">
-				Technologies I work with daily — chosen per problem, never per fashion. Depth where it
-				matters, breadth where it helps.
-			</p>
-		</div>
-
 		<!-- Index of domains -->
-		<div class="mt-14">
+		<div>
 			{#each techEcosystem as item}
 				<div class="grid gap-x-14 gap-y-4 border-t border-sand py-10 lg:grid-cols-12" use:reveal>
 					<div class="lg:col-span-4">

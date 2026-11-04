@@ -8,10 +8,9 @@
 
 	let { children }: LayoutProps = $props();
 
-	const pageTitle = `${profile.name} — Independent Engineering Consultancy`;
-	const pageDescription =
-		'Independent engineering consultancy for infrastructure, platforms, and databases. I help organizations build, secure, and evolve technology platforms — with verified results like 70% cloud cost reduction and a 1.6 TB database answering in under 500 ms.';
 	const siteUrl = 'https://hafizhfadh.id';
+	const siteDescription =
+		'Independent engineering consultancy for infrastructure, platforms, and databases. I help organizations build, secure, and evolve technology platforms — with verified results like 70% cloud cost reduction and a 1.6 TB database answering in under 500 ms.';
 
 	const structuredData = {
 		'@context': 'https://schema.org',
@@ -50,7 +49,7 @@
 				name: `${profile.name} — Infrastructure & Platform Engineering`,
 				url: siteUrl,
 				founder: { '@id': `${siteUrl}/#person` },
-				description: pageDescription,
+				description: siteDescription,
 				areaServed: 'Global',
 				serviceType: [
 					'Forward Deployed Engineering',
@@ -64,27 +63,9 @@
 </script>
 
 <svelte:head>
-	<title>{pageTitle}</title>
-	<meta name="description" content={pageDescription} />
-	<meta name="keywords" content="Infrastructure Engineer, Database Engineer, PostgreSQL, Performance Tuning, DevOps, Cloud Cost Optimization, Grafana, MonIT, SvelteKit, Cloudflare Workers, Hafizh Fadhlurrohman" />
-	<meta name="author" content={profile.name} />
-	<link rel="canonical" href={siteUrl} />
 	<link rel="icon" href={favicon} />
 
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content={siteUrl} />
-	<meta property="og:title" content={pageTitle} />
-	<meta property="og:description" content={pageDescription} />
-	<meta property="og:site_name" content={profile.name} />
-
-	<!-- Twitter / X -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content={siteUrl} />
-	<meta name="twitter:title" content={pageTitle} />
-	<meta name="twitter:description" content={pageDescription} />
-
-	<!-- JSON-LD Structured Data -->
+	<!-- JSON-LD Structured Data — page-level title/description/OG tags come from Seo.svelte -->
 	{@html `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`}
 </svelte:head>
 

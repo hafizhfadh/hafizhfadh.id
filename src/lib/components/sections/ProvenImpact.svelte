@@ -1,20 +1,30 @@
 <script lang="ts">
 	import { verifiedMetrics } from '#lib/data/metrics';
 	import { reveal } from '#lib/actions/reveal';
+	import { ArrowRight } from 'lucide-svelte';
 </script>
 
 <section id="impact" class="on-navy bg-navy py-20 text-ivory sm:py-28">
 	<div class="mx-auto max-w-6xl px-5 sm:px-8">
 		<!-- Section opening -->
-		<div class="max-w-2xl" use:reveal>
-			<h2 class="font-serif text-[clamp(2.1rem,4vw,3.25rem)] leading-[1.04] tracking-[-0.015em]">
-				Proof, not promises.
-			</h2>
-			<p class="mt-5 text-lg leading-relaxed text-fog">
-				Engineering credibility is earned in production. These are verified outcomes from real
-				environments — telecom billing, mission-critical infrastructure, software on over 200,000
-				phones.
-			</p>
+		<div class="flex flex-wrap items-end justify-between gap-6" use:reveal>
+			<div class="max-w-2xl">
+				<h2 class="font-serif text-[clamp(2.1rem,4vw,3.25rem)] leading-[1.04] tracking-[-0.015em]">
+					Proof, not promises.
+				</h2>
+				<p class="mt-5 text-lg leading-relaxed text-fog">
+					Engineering credibility is earned in production. These are verified outcomes from real
+					environments — telecom billing, mission-critical infrastructure, software on over
+					200,000 phones.
+				</p>
+			</div>
+			<a
+				href="/experience"
+				class="group inline-flex items-center gap-2 text-[15px] font-semibold text-claylight transition-colors hover:text-ivory"
+			>
+				How each number happened
+				<ArrowRight class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+			</a>
 		</div>
 
 		<!-- The ledger -->

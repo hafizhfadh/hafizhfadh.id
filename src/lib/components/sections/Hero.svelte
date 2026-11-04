@@ -2,7 +2,7 @@
 	import { profile } from '#lib/data/profile';
 	import Button from '../ui/Button.svelte';
 	import { reveal } from '#lib/actions/reveal';
-	import { ArrowDown } from 'lucide-svelte';
+	import { ArrowRight } from 'lucide-svelte';
 </script>
 
 <section class="relative overflow-hidden bg-ivory pt-12 pb-14 sm:pt-16 md:pb-20">
@@ -33,16 +33,16 @@
 				</p>
 
 				<div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
-					<Button href="#contact" variant="primary" size="lg">
+					<Button href="/contact" variant="primary" size="lg">
 						Let's talk about your engineering challenges
 					</Button>
 					<a
-						href="#services"
+						href="/services"
 						class="group inline-flex items-center gap-2 text-[15px] font-semibold text-charcoal underline decoration-sanddeep decoration-2 underline-offset-8 transition-colors hover:decoration-clay"
 					>
 						Explore my work
-						<ArrowDown
-							class="h-4 w-4 text-clay transition-transform duration-300 group-hover:translate-y-0.5"
+						<ArrowRight
+							class="h-4 w-4 text-clay transition-transform duration-300 group-hover:translate-x-1"
 						/>
 					</a>
 				</div>
