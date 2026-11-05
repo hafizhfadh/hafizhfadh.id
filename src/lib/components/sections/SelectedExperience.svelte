@@ -11,11 +11,11 @@
 		<div class="flex flex-wrap items-end justify-between gap-6" use:reveal>
 			<div class="max-w-2xl">
 				<h2 class="font-serif text-[clamp(2.1rem,4vw,3.25rem)] leading-[1.04] tracking-[-0.015em] text-charcoal">
-					The work so far.
+					Where the numbers come from.
 				</h2>
 				<p class="mt-5 text-lg leading-relaxed text-inkmuted">
-					Seven years across telecommunications, cloud infrastructure, and software that people
-					rely on daily.
+					School administration software, a 200,000-install mobile app, and the databases behind
+					telecom billing. Four roles, each with the number it moved.
 				</p>
 			</div>
 			<a
@@ -35,7 +35,7 @@
 						<div>
 							<h3 class="font-serif text-2xl leading-tight text-charcoal">
 								{exp.organization}
-								<span class="text-inkmuted">— {exp.role}</span>
+								<span class="text-inkmuted">· {exp.role}</span>
 							</h3>
 						</div>
 						{#if currentOrgs.has(exp.organization)}

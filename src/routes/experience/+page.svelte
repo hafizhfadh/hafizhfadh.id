@@ -10,14 +10,14 @@
 </script>
 
 <Seo
-	title="Experience — Hafizh Fadhlurrohman"
-	description="The complete professional timeline: seven years across telecommunications, cloud infrastructure, and application development — with verified outcomes and engineering case studies."
+	title="Experience · Hafizh Fadhlurrohman"
+	description="The complete professional timeline: seven years across telecommunications, cloud infrastructure, and application development, with verified outcomes and three engineering case studies."
 	path="/experience"
 />
 
 <PageHeader
 	title="The work so far."
-	lead="Seven years across telecommunications, cloud infrastructure, and software that people rely on daily — each chapter measured by what it moved, and nothing claimed that can't be shown."
+	lead="Seven years across telecommunications, cloud infrastructure, and software people rely on daily. Every chapter below is measured by what it moved, and nothing is claimed that can't be shown."
 />
 
 <section class="bg-ivory py-16 sm:py-20">
@@ -35,8 +35,8 @@
 				Three engagements, opened up.
 			</h2>
 			<p class="mt-5 text-lg leading-relaxed text-inkmuted">
-				The context, the challenge, the approach, and the measured outcome — the same way I'd
-				walk you through them on a call.
+				Context, challenge, approach, and the measured outcome, the same way I'd walk you
+				through them on a call.
 			</p>
 		</div>
 

@@ -16,15 +16,15 @@
 					{profile.name}<span class="text-terracotta">.</span>
 				</p>
 				<p class="mt-4 max-w-md text-sm leading-relaxed text-fog">
-					Independent engineering consultancy for infrastructure, platforms, and databases —
-					building, securing, and evolving the systems organizations depend on.
+					Independent engineering consultancy for infrastructure, platforms, and databases. The
+					systems organizations depend on, built and kept in working order.
 				</p>
 				<p class="mt-6 font-mono text-xs text-ivory/60">{profile.location}</p>
 			</div>
 
-			<!-- Explore -->
+			<!-- Site navigation -->
 			<nav class="md:col-span-3" aria-label="Footer navigation">
-				<h2 class="font-mono text-xs lowercase tracking-wide text-ivory/60">explore</h2>
+				<h2 class="font-mono text-xs lowercase tracking-wide text-ivory/60">on this site</h2>
 				<ul class="mt-4 space-y-2.5">
 					{#each primaryNav as item}
 						<li>

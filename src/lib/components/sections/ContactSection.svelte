@@ -31,12 +31,12 @@
 
 		if (!fullName.trim() || !workEmail.trim() || !organization.trim() || !challengeDescription.trim()) {
 			errorMessage =
-				'Almost there — please fill in your name, work email, organization, and a few words about the challenge.';
+				'Almost there. Please fill in your name, work email, organization, and a few words about the challenge.';
 			return;
 		}
 
 		if (!emailPattern.test(workEmail.trim())) {
-			errorMessage = "That email address doesn't look complete — mind checking it?";
+			errorMessage = "That email address doesn't look complete. Mind checking it?";
 			return;
 		}
 
@@ -86,7 +86,7 @@
 	const expectations = [
 		'A reply from me personally within 24–48 business hours.',
 		'No sales sequences, no unsolicited follow-ups.',
-		'Mutual confidentiality — an NDA is available whenever it helps you speak freely.'
+		'Mutual confidentiality: an NDA is available whenever it helps you speak freely.'
 	];
 </script>
 
@@ -242,7 +242,7 @@
 							id="challengeDescription"
 							rows="5"
 							bind:value={challengeDescription}
-							placeholder="A few honest sentences are plenty — the bottleneck, the cloud bill that keeps climbing, the system nobody wants to touch…"
+							placeholder="A few honest sentences are plenty: the bottleneck, the cloud bill that keeps climbing, the system nobody wants to touch…"
 							class="mt-2 w-full resize-y rounded-lg border border-sanddeep bg-ivory px-4 py-3 text-base leading-relaxed text-charcoal transition-colors placeholder:text-inkmuted/90 focus:border-clay"
 							required
 						></textarea>
@@ -263,10 +263,10 @@
 
 					<div class="pt-1">
 						<Button type="submit" variant="primary" size="lg" class="w-full">
-							Send — let's start the conversation
+							Prepare my note
 						</Button>
 						<p class="pt-3 text-center text-xs text-inkmuted">
-							No pricing packages, no obligation — understanding comes first.
+							No pricing packages, no obligation. Understanding comes first.
 						</p>
 					</div>
 				</form>
@@ -280,7 +280,7 @@
 						<p class="mt-3 text-[15px] leading-relaxed text-inkmuted">
 							Thanks, {fullName}. Everything is structured and addressed to
 							<span class="font-semibold text-charcoal">{profile.email}</span>. Send it straight
-							from your email app — or copy it if you prefer.
+							from your email app, or copy it if you prefer.
 						</p>
 					</div>
 
@@ -291,7 +291,7 @@
 						</Button>
 						<Button variant="outline" size="md" onclick={copyInquiryData}>
 							<Copy class="h-4 w-4" />
-							{copied ? 'Copied — check your clipboard' : 'Copy the note'}
+							{copied ? 'Copied. Check your clipboard' : 'Copy the note'}
 						</Button>
 					</div>
 

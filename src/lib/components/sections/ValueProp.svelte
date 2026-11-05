@@ -22,13 +22,13 @@
 			<div class="space-y-6 text-[17px] leading-relaxed text-inkmuted lg:col-span-7 lg:col-start-6" use:reveal={{ delay: 120 }}>
 				<p>
 					Seven years of production systems have taught me one thing: the best engineering decision
-					is rarely the most impressive one. It's the one that fits the organization — its people,
-					its constraints, its budget — and still holds up five years from now.
+					is rarely the most impressive one. It's the one that fits the organization, its people,
+					its constraints, and its budget, and still holds up five years from now.
 				</p>
 				<p>
 					I work as an independent partner, which means you get me: in your codebase, in your
 					database, in the room when it matters. I don't arrive with a predetermined stack or a
-					slide deck of best practices. I arrive with questions — and the answers come from your
+					slide deck of best practices. I arrive with questions, and the answers come from your
 					systems, your telemetry, and your team.
 				</p>
 

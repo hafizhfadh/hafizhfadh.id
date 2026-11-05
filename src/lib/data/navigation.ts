@@ -3,7 +3,7 @@ export interface NavItem {
 	href: string;
 }
 
-/** Primary navigation — single source for navbar, footer, and mobile menu. */
+/** Primary navigation: single source for navbar, footer, and mobile menu. */
 export const primaryNav: NavItem[] = [
 	{ label: 'Services', href: '/services' },
 	{ label: 'Experience', href: '/experience' },

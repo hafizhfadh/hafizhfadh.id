@@ -5,48 +5,43 @@ export interface VerifiedMetric {
 	organization: string;
 	role: string;
 	details: string;
-	badge: string;
 }
 
 export const verifiedMetrics: VerifiedMetric[] = [
 	{
 		value: '70%',
-		label: 'Monthly Cloud Infrastructure Cost Reduction',
-		context: 'Reduced spend from IDR 70 million to IDR 21 million monthly',
+		label: 'Reduction in monthly cloud infrastructure spend',
+		context: 'IDR 70 million to IDR 21 million a month',
 		organization: 'Infradigital Nusantara',
 		role: 'DevOps',
 		details:
-			'Achieved through deep infrastructure optimization, database query & configuration tuning, and strategic migration to a local cloud provider.',
-		badge: 'COST GOVERNANCE'
+			'Architecture and configuration work came first, then database query tuning, then migration to a cost-efficient local cloud provider.'
 	},
 	{
 		value: '33–40%',
-		label: 'Telecommunications Cloud Spend Reduction',
-		context: 'Reduced monthly expenditure from ~IDR 300M to IDR 180–200M',
+		label: 'Reduction in a telecommunications cloud bill',
+		context: 'Roughly IDR 300M down to IDR 180–200M a month',
 		organization: 'Monster Data Asia',
 		role: 'Database Administration Consultant',
 		details:
-			'Delivered through database performance optimization, vacuum tuning, connection limits management, and targeted query plan optimizations.',
-		badge: 'DATABASE EFFICIENCY'
+			'Delivered from the database outward: query plan optimization, vacuum tuning, and connection limit management.'
 	},
 	{
 		value: '1.6 TB',
-		label: 'Mission-Critical Database Scale Administered',
-		context: 'Supporting telco payment & billing with ~11 GB weekly data growth',
+		label: 'Telecommunications database under continuous administration',
+		context: 'Payment and billing systems, growing about 11 GB every week',
 		organization: 'Monster Data Asia',
 		role: 'Database Administration Consultant',
 		details:
-			'Maintained database-side query execution times <= 500ms across high-throughput payment, billing (PPOB), and online ticketing endpoints.',
-		badge: 'SCALE & LATENCY'
+			'Query execution held at or under 500 ms across high-throughput payment, billing, and ticketing endpoints.'
 	},
 	{
 		value: '200,000+',
-		label: 'Production Mobile Application Installs',
-		context: 'Pelajar app across Google Play Store & Apple App Store',
+		label: 'Installs of a production mobile application',
+		context: 'Pelajar, across Google Play and the App Store',
 		organization: 'Infradigital Nusantara',
 		role: 'Mobile Application Developer',
 		details:
-			'Delivered lightweight, responsive client performance, offline resilience with optimistic synchronization, and ISO/IEC 27001-aligned security measures.',
-		badge: 'CLIENT DEPLOYMENT'
+			'Lightweight on low-end devices, offline-resilient with optimistic synchronization, and secured to ISO/IEC 27001 requirements.'
 	}
 ];

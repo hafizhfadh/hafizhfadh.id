@@ -14,7 +14,7 @@
 				</h2>
 				<p class="mt-5 text-lg leading-relaxed text-fog">
 					Engineering credibility is earned in production. These are verified outcomes from real
-					environments — telecom billing, mission-critical infrastructure, software on over
+					environments: telecom billing, mission-critical infrastructure, software on over
 					200,000 phones.
 				</p>
 			</div>
@@ -64,7 +64,7 @@
 					<path d="M 4.8 8.3 L 7 10.5 L 11.4 5.6" fill="none" stroke="#687C70" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
 				<p class="max-w-[62ch] text-sm leading-relaxed text-fog">
-					Every figure on this page comes from documented production and consulting history —
+					Every figure on this page comes from documented production and consulting history:
 					nothing projected, nothing aspirational. Happy to walk through the details on a call.
 				</p>
 			</div>

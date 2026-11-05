@@ -34,7 +34,7 @@
 					</div>
 					<p class="mt-3 text-sm leading-relaxed text-inkmuted">
 						{#if i === 0}
-							You introduce your organization, environment, and goals — no commitment, no scope, no sales deck.
+							You introduce your organization, environment, and goals. No commitment, no scope, no sales deck.
 						{:else if i === 1}
 							A focused conversation uncovers the root causes behind the bottlenecks and the stakes.
 						{:else if i === 2}

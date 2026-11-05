@@ -7,14 +7,14 @@
 </script>
 
 <Seo
-	title="Contact — Hafizh Fadhlurrohman"
-	description="Start a professional conversation. Tell me about your organization and the challenge — we begin with a discovery interview, not a quote. Reply within 24–48 business hours."
+	title="Contact · Hafizh Fadhlurrohman"
+	description="Start a professional conversation. Tell me about your organization and the challenge. We begin with a discovery interview, not a quote. Reply within 24–48 business hours."
 	path="/contact"
 />
 
 <PageHeader
 	title="Let's start a conversation."
-	lead="Tell me a little about your organization and what you're trying to achieve. We can start with a conversation, understand the challenge, and explore whether working together makes sense."
+	lead="A few honest sentences about your organization and the challenge are enough to start. We begin with a discovery interview, not a quote."
 />
 
 <section class="on-navy bg-navy py-16 text-ivory sm:py-20">
@@ -31,9 +31,8 @@
 				What the first weeks look like.
 			</h2>
 			<p class="mt-5 text-lg leading-relaxed text-inkmuted">
-				Every engagement starts with understanding the problem, not quoting a price. Five stages
-				take us from a first hello to engineering that ships — with a clear deliverable at each
-				step.
+				No quote before context. Five stages take us from a first hello to engineering that
+				ships, with a clear deliverable at each step.
 			</p>
 		</div>
 
@@ -46,7 +45,7 @@
 					</div>
 					<p class="mt-3 text-sm leading-relaxed text-inkmuted">{step.summary}</p>
 					<p class="mt-4 font-mono text-[11px] leading-relaxed text-sagedeep">
-						you receive — {step.deliverable}
+						you receive: {step.deliverable}
 					</p>
 				</div>
 			{/each}
@@ -62,13 +61,13 @@
 					<p class="mt-6 max-w-[58ch] text-[17px] leading-relaxed text-inkmuted">
 						I don't sell prepackaged hourly blocks or generic IT services. Pricing is determined
 						collaboratively after technical discovery confirms scope, stakes, and expected
-						outcomes — and no budget disclosure is needed to start the conversation.
+						outcomes, and no budget disclosure is needed to start the conversation.
 					</p>
 				</div>
 				<div class="lg:col-span-4 lg:col-start-9">
 					<div class="border-l border-sanddeep py-1 pl-6">
 						<p class="text-[15px] leading-relaxed text-inkmuted">
-							Embedded sprint, ongoing retainer, or project milestone — the engagement structure
+							Embedded sprint, ongoing retainer, or project milestone: the engagement structure
 							is chosen after discovery, together.
 						</p>
 					</div>

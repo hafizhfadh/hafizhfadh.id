@@ -28,8 +28,9 @@
 				</p>
 
 				<p class="mt-5 max-w-[36rem] text-lg leading-relaxed text-inkmuted">
-					I help organizations build, secure, and evolve technology platforms through thoughtful
-					engineering, open-source solutions, and reliable infrastructure.
+					Infrastructure, databases, and the platforms your business runs on, engineered on
+					open-source foundations and adapted to your environment. I stay until the numbers
+					prove it works.
 				</p>
 
 				<div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
@@ -40,7 +41,7 @@
 						href="/services"
 						class="group inline-flex items-center gap-2 text-[15px] font-semibold text-charcoal underline decoration-sanddeep decoration-2 underline-offset-8 transition-colors hover:decoration-clay"
 					>
-						Explore my work
+						What I offer
 						<ArrowRight
 							class="h-4 w-4 text-clay transition-transform duration-300 group-hover:translate-x-1"
 						/>
@@ -79,7 +80,7 @@
 						fill="none"
 					/>
 
-					<!-- Station 1 — edge & routing -->
+					<!-- Station 1: edge & routing -->
 					<g class="fade-in" style="animation-delay: 0.45s">
 						<path class="draw" style="animation-delay: 0.9s" d="M 108 104 H 122" pathLength="1" stroke="#D6C5AB" stroke-width="1.5" fill="none" />
 						<circle cx="84" cy="104" r="24" fill="#FAF8F2" stroke="#687C70" stroke-width="1.5" />
@@ -92,7 +93,7 @@
 						<text x="128" y="119" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#5C5A52">cloudflare workers · global</text>
 					</g>
 
-					<!-- Station 2 — the core database -->
+					<!-- Station 2: the core database -->
 					<g class="fade-in" style="animation-delay: 0.75s">
 						<path class="draw" style="animation-delay: 1.05s" d="M 114 252 H 128" pathLength="1" stroke="#B04A2C" stroke-width="1.5" fill="none" />
 						<circle cx="121" cy="252" r="2.2" fill="#B04A2C" />
@@ -118,7 +119,7 @@
 						<text x="128" y="267" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#5C5A52">1.6 tb · &le; 500 ms queries</text>
 					</g>
 
-					<!-- Station 3 — observability -->
+					<!-- Station 3: observability -->
 					<g class="fade-in" style="animation-delay: 1.05s">
 						<path class="draw" style="animation-delay: 1.2s" d="M 108 400 H 122" pathLength="1" stroke="#D6C5AB" stroke-width="1.5" fill="none" />
 						<circle cx="84" cy="400" r="24" fill="#FAF8F2" stroke="#687C70" stroke-width="1.5" />
@@ -134,7 +135,7 @@
 						<text x="128" y="415" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#5C5A52">monit · grafana dashboards</text>
 					</g>
 
-					<!-- Station 4 — security -->
+					<!-- Station 4: security -->
 					<g class="fade-in" style="animation-delay: 1.35s">
 						<path class="draw" style="animation-delay: 1.35s" d="M 108 516 H 122" pathLength="1" stroke="#D6C5AB" stroke-width="1.5" fill="none" />
 						<circle cx="84" cy="516" r="24" fill="#FAF8F2" stroke="#687C70" stroke-width="1.5" />
@@ -155,7 +156,7 @@
 						font-style="italic"
 						fill="#5C5A52"
 					>
-						fig. 01 — the platforms I keep running
+						fig. 01 · the platforms I keep running
 					</text>
 				</svg>
 			</div>

@@ -9,8 +9,7 @@
 	let { children }: LayoutProps = $props();
 
 	const siteUrl = 'https://hafizhfadh.id';
-	const siteDescription =
-		'Independent engineering consultancy for infrastructure, platforms, and databases. I help organizations build, secure, and evolve technology platforms — with verified results like 70% cloud cost reduction and a 1.6 TB database answering in under 500 ms.';
+	const siteDescription = profile.siteDescription;
 
 	const structuredData = {
 		'@context': 'https://schema.org',
@@ -19,7 +18,7 @@
 				'@type': 'Person',
 				'@id': `${siteUrl}/#person`,
 				name: profile.name,
-				jobTitle: 'Infrastructure and Database Engineer',
+				jobTitle: profile.title,
 				description: profile.bio,
 				email: profile.email,
 				url: siteUrl,
@@ -46,7 +45,7 @@
 			{
 				'@type': 'ProfessionalService',
 				'@id': `${siteUrl}/#service`,
-				name: `${profile.name} — Infrastructure & Platform Engineering`,
+				name: `${profile.name} · Independent Engineering Consultancy`,
 				url: siteUrl,
 				founder: { '@id': `${siteUrl}/#person` },
 				description: siteDescription,
@@ -65,7 +64,7 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 
-	<!-- JSON-LD Structured Data — page-level title/description/OG tags come from Seo.svelte -->
+	<!-- JSON-LD Structured Data: page-level title/description/OG tags come from Seo.svelte -->
 	{@html `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`}
 </svelte:head>
 

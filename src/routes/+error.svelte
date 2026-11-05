@@ -23,7 +23,7 @@
 			{page.status === 404 ? 'This page wandered off.' : 'Something went sideways.'}
 		</h1>
 		<p class="mx-auto mt-5 max-w-[46ch] text-[17px] leading-relaxed text-inkmuted">
-			{page.error?.message || 'The route you followed doesn’t exist — or it has been relocated.'}
+			{page.error?.message || 'The route you followed doesn’t exist, or it has been relocated.'}
 			The rest of the site is right where you left it.
 		</p>
 		<p class="mt-4 font-mono text-xs text-inkmuted/70">
@@ -32,7 +32,13 @@
 
 		<div class="mt-9 flex justify-center gap-4">
 			<Button href="/" variant="primary" size="md">Back to the front page</Button>
-			<Button href="#contact" variant="outline" size="md">Report a broken link</Button>
+			<Button
+				href="mailto:hafizhfadh@gmail.com?subject=Broken%20link%20on%20hafizhfadh.id&body=The%20page%20that%20failed:%20{page.url.pathname}"
+				variant="outline"
+				size="md"
+			>
+				Report a broken link
+			</Button>
 		</div>
 	</div>
 </div>

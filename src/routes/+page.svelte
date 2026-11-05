@@ -8,11 +8,12 @@
 	import PhilosophyShort from '#lib/components/sections/PhilosophyShort.svelte';
 	import ProcessStrip from '#lib/components/sections/ProcessStrip.svelte';
 	import ContactInvite from '#lib/components/sections/ContactInvite.svelte';
+	import { profile } from '#lib/data/profile';
 </script>
 
 <Seo
-	title="Hafizh Fadhlurrohman — Independent Engineering Consultancy"
-	description="Independent engineering consultancy for infrastructure, platforms, and databases. I help organizations build, secure, and evolve technology platforms — with verified results like 70% cloud cost reduction and a 1.6 TB database answering in under 500 ms."
+	title="Hafizh Fadhlurrohman · Independent Engineering Consultancy"
+	description={profile.siteDescription}
 	path="/"
 />
 

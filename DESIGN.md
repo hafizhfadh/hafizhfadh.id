@@ -122,7 +122,7 @@ components:
 
 # Design System: hafizhfadh.id — Warm Technical Editorial
 
-> Extracted from the implemented system: `src/app.css` `@theme` tokens, `src/lib/components/ui/Button.svelte`, `src/lib/components/layout/*`, `src/lib/components/shared/*`, `src/lib/components/sections/*`, `src/lib/data/navigation.ts`, and `src/lib/actions/reveal.ts`, across the nine prerendered routes in `src/routes/*`. Tokens are normative; prose explains application. The previous dark-obsidian system this replaces is the explicit anti-reference.
+> Extracted from the implemented system: `src/app.css` `@theme` tokens, `src/lib/components/ui/Button.svelte`, `src/lib/components/layout/*`, `src/lib/components/shared/*`, `src/lib/components/sections/*`, `src/lib/data/navigation.ts`, and `src/lib/actions/reveal.ts`, across the nine prerendered routes in `src/routes/*`. Tokens are normative; prose explains application. The previous dark-obsidian system this replaces is the explicit anti-reference. Copy and voice are governed by [VOICE.md](file:///Users/hfzhfdhlrrhmn/Developer/personal/hafizhfadh.id/VOICE.md); this document governs how that copy is set.
 
 ## Overview
 
@@ -216,6 +216,7 @@ Sticky cream navbar → **PageHeader** (cream band: mono breadcrumbs, serif H1, 
 
 - **Homepage narrative:** Hero (ivory) → A note on how I work (cream) → Service summaries (ivory) → Proven impact ledger (navy) → Selected experience (cream) → Philosophy in brief (ivory) → Process strip (cream) → Contact invitation (navy).
 - **Container:** max-w-6xl (1152px) with px-5 (20px) / sm:px-8 (32px) safe padding.
+- **Spacing scale (from `@theme`):** xs 4px, sm 8px, md 16px, lg 24px, xl 40px, row 56px, section 80px, section-lg 112px. Sections breathe at 64/80px (sub-pages, `py-16 sm:py-20`) or 80/112px (homepage, `py-20 sm:py-28`); intra-section blocks separate with 12px (`mt-12`–`mt-14`) from their heading, 40px (`mt-10`) inside grids. Spacing is structural: whitespace, not hairlines, does most of the separating.
 - **Grid:** 12 columns at lg with recurring asymmetric splits — hero 7/5, the note 4/7 (starting column 6), service chapters and detail positioning 7/5 with alternating reading order, contact 5/7, stance grids at 4/8. Five-column step strips carry the engagement process (home and /contact). Everything collapses to one column below lg.
 - **Section rhythm:** sub-pages run py-16 (64px) / sm:py-20–24 (80–96px); the homepage breathes larger at py-20/sm:py-28. Cream sections are framed with top and bottom sand hairlines (border-y sand/70); ivory sections rule their interiors instead — divide-y chapter lists and border-t index rows. Just above each page's CTA band, a border-t sand exploration row pairs a quiet prompt with a clay arrow link.
 - **Rows, not cards:** the ledger, the timeline, the toolkit index, and the principle field guide are full-width hairline-ruled rows on the 12-col baseline grid.
@@ -329,7 +330,7 @@ Handwritten-note fields inside the cream panel — quiet until focused.
 ### Authored Figures (signature)
 
 - Every diagram is hand-authored SVG line art — sage strokes (1–1.5px, round caps), terracotta pulse nodes, solid navy nodes, sand grounds and dashed guides. Never icon packs, never stock illustrations.
-- Service diagrams are one shared component in three authored kinds — **bridge** (two teams joined by a working span into a navy drum), **rhythm** (a calm uptime wave with checkpoint stations and one terracotta pulse), and **flow** (a tangled path resolving into one straight clay arrow) — each captioned inside the SVG in italic mono 10.5px, lowercase: "fig. 02 — embedded, not adjacent".
+- Service diagrams are one shared component in three authored kinds — **bridge** (two teams joined by a working span into a navy drum), **rhythm** (a calm uptime wave with checkpoint stations and one terracotta pulse), and **flow** (a tangled path resolving into one straight clay arrow) — each captioned inside the SVG in italic mono 10.5px, lowercase: "fig. 02 · embedded, not adjacent". Captions join their number and phrase with a middot, never an em dash (see Accessibility & Copy Hygiene).
 - The homepage hero schematic (480×600) is the flagship: a sage spine with four stations — edge & routing, core database, observability, security & compliance — annotated in letter-spaced mono, with the core database drawn as a navy drum inside a spinning dashed terracotta ring.
 
 ### Principle Glyphs (signature)
@@ -343,6 +344,30 @@ Handwritten-note fields inside the cream panel — quiet until focused.
 - Text selection: sand ground, charcoal text.
 - Caret: clay in every input and textarea.
 
+## Accessibility & Copy Hygiene
+
+Accessibility is a design input, not a post-launch audit. Every new surface inherits these requirements:
+
+- **Contrast:** all text meets WCAG 2.1 AA (4.5:1 normal, 3:1 large). The shipped pairs hold this: charcoal/ink-muted on ivory and cream, fog/ivory on navy and navy-deep, clay-dark for error text on terracotta/10. Muted text on navy is ivory at 60% opacity only for micro-labels at mono sizes and above-12px semibold, never for long body copy.
+- **Focus:** every interactive element carries a visible 2px focus ring (clay on ivory, clay-light on navy, `focus-within` on radio chips). `outline: none` never ships without a replacement indicator.
+- **Keyboard:** Tab order follows visual order; the mobile menu closes on Escape and returns focus to its button; forms are operable end to end without a pointer; radio chips keep hidden native inputs for semantics.
+- **Semantics:** one H1 per page; heading levels never skip; landmarks (`header`, `nav`, `main`, `footer`) on every route; `aria-current="page"` on the active nav item and breadcrumb; diagrams carry descriptive `role="img"` labels; decorative glyphs are `aria-hidden`.
+- **Forms:** every field has a visible label; errors surface in a `role="alert"` banner tied to the specific problem; the success state is a `role="status"` region.
+- **Motion:** `prefers-reduced-motion` clamps all animation to ~0.01ms, disables smooth scrolling, and the reveal action never hides content. Pages are fully readable with JavaScript off.
+- **Targets and zoom:** touch targets meet 44px; the viewport meta never disables zoom; text renders at 16px in inputs to prevent iOS zoom.
+- **Copy hygiene:** user-facing text contains no em dashes (R-02 of the Anti-Slop filter; use period, comma, colon, or parentheses), no fabricated numbers or endorsements, and no generic CTA labels ("Explore", "Learn more", "Get started"). Voice rules live in VOICE.md; this line makes them part of the design contract.
+
+## Impeccable Implementation Guidance
+
+How to work on this system with the Impeccable skill loaded:
+
+- **Surface modes:** every route here is a **Persuade** surface (the visitor decides whether to engage); the contact form is the one **Operate** island (task completion, honest states). Editorial rhythm may read like a magazine, but the conversion anatomy stays Persuade: one focal point per screen, one clay pill per view.
+- **Refinement, not redesign:** this system is the committed visual world. New work composes from the documented tokens and components; changing the world requires replacing DESIGN.md deliberately, never drifting one element at a time.
+- **Verify by looking:** judge quality on the rendered result at real desktop and mobile viewports, in batched passes, never from source code alone. Run the mechanical detector once, late, over changed targets: `impeccable detect --json <files>`.
+- **Copy is design:** headlines are set in the serif hierarchy (Display, Headline, Title) and their length affects the composition. Writing that breaks the measured line lengths (36–62ch body, 2–7 word headlines) is a design defect; consult VOICE.md for the language and this document for the setting.
+- **New pages:** reuse the shared anatomy (PageHeader → ivory/cream alternation → CtaBand), add SEO metadata with canonical URL and og.png, and register the route in `src/lib/data/navigation.ts` and the sitemap only if it earns a place in the primary narrative.
+- **Dials:** ENERGY 2 (confident, not loud), RHYTHM 3 (asymmetric editorial compositions, varied section shapes), MOTION 1 (hover states, one authored load animation on the hero, gentle reveals).
+
 ## Do's and Don'ts
 
 ### Do:
@@ -353,7 +378,7 @@ Handwritten-note fields inside the cream panel — quiet until focused.
 - **Do** keep IBM Plex Mono strictly for data: dates, metrics, "·"-joined stack lists, attributions, lowercase micro-labels, breadcrumbs, and figure captions.
 - **Do** set emphasis in serif italic, and spend terracotta (#c85a3a) only where the page speaks loudest — the hero's final word, the wordmark's period, diagram pulse nodes.
 - **Do** make every interactive element clay (#b04a2c) with a 2px clay focus ring (clay-light #e09b77 on navy) — pills for conversion, underlined arrow links for exploration.
-- **Do** author diagrams as sage line art (1–1.5px strokes, round caps) with italic mono captions ("fig. NN — …").
+- **Do** author diagrams as sage line art (1–1.5px strokes, round caps) with italic mono captions ("fig. NN · …", middot separator).
 - **Do** hold body copy to a 36–62ch measure, let whitespace — 64/80px on sub-pages, 80/112px on home — do the separating, and respect reduced motion: reveals never hide content, animations clamp to ~0ms, and pages must be fully readable with JavaScript off.
 
 ### Don't:

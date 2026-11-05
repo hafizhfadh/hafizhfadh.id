@@ -10,17 +10,17 @@
 
 	const journey = [
 		{
-			years: '2019 — 2020',
+			years: '2019 – 2020',
 			chapter: 'It started in schools',
-			body: 'My first full-stack role was at a foundation running Islamic boarding schools across Indonesia. I built their administration systems, accounting, a point-of-sale for the dining halls, and integrations with banking virtual accounts — software where every bug meant real paperwork for real people. It taught me that software is organization design: the system only works if it fits how the institution actually operates.'
+			body: 'My first full-stack role was at a foundation running Islamic boarding schools across Indonesia. I built their administration systems, accounting, a point-of-sale for the dining halls, and integrations with banking virtual accounts. Software where every bug meant real paperwork for real people. It taught me that software is organization design: the system only works if it fits how the institution actually operates.'
 		},
 		{
-			years: '2020 — 2023',
+			years: '2020 – 2023',
 			chapter: 'Software in people\u2019s pockets',
 			body: 'At Infradigital I engineered and maintained Pelajar, a Flutter app that grew past 200,000 installs across two app stores. Students don\u2019t all have new phones or stable networks, so performance became a feature and offline synchronization became a promise. Security controls aligned with ISO/IEC 27001:2022 were part of daily work, not a checklist before release.'
 		},
 		{
-			years: '2023 — now',
+			years: '2023 – now',
 			chapter: 'Down into the infrastructure',
 			body: 'Two parallel roles changed how I see systems. As DevOps at Infradigital, I cut monthly cloud spend by 70%, built the MonIT monitoring platform, and led ISO/IEC 27001:2022 technical implementation. As a database administration consultant at Monster Data Asia, I keep a 1.6 TB telecommunications billing database answering in under half a second. The recurring lesson: most "hardware problems" are query problems wearing a disguise.'
 		}
@@ -32,29 +32,29 @@
 			body: 'Every engagement starts with a discovery interview. I\u2019d rather understand your environment for a day than recommend confidently for a week and be wrong for a year.'
 		},
 		{
-			title: 'Measurement before opinions',
-			body: 'Execution plans, latency percentiles, audited cost figures. When the data disagrees with my instinct, the data wins — that\u2019s how the 70% reduction happened: the numbers kept us honest.'
+			title: 'Data over instinct',
+			body: 'Execution plans, latency percentiles, audited cost figures. When the data disagrees with me, the data wins. That\u2019s how the 70% reduction happened: the numbers kept us honest.'
 		},
 		{
-			title: 'Documentation before handover',
-			body: 'Everything I touch gets written down: configurations, decisions, runbooks. Your team should depend on the documentation, not on me. Tribal knowledge is a liability I refuse to leave behind.'
+			title: 'Everything written down',
+			body: 'Configurations, decisions, runbooks. Your team should depend on the documentation, not on me. Tribal knowledge is a liability I refuse to leave behind.'
 		},
 		{
 			title: 'Direct access, always',
-			body: 'You talk to the engineer doing the work — no account managers, no translation layers. If something is hard, you hear it from me early, with options instead of surprises.'
+			body: 'You talk to the engineer doing the work. No account managers, no translation layers. If something is hard, you hear it from me early, with options instead of surprises.'
 		}
 	];
 </script>
 
 <Seo
-	title="About — Hafizh Fadhlurrohman"
-	description="The person behind the consultancy: an infrastructure and database engineer from Depok, Indonesia — the journey from school software to a 1.6 TB telecommunications database, and how I work."
+	title="About · Hafizh Fadhlurrohman"
+	description="The person behind the consultancy: an infrastructure and database engineer from Depok, Indonesia. The path from school software to a 1.6 TB telecommunications database, and how I work."
 	path="/about"
 />
 
 <PageHeader
 	title="An engineer, not an agency."
-	lead="I'm {profile.name} — an infrastructure and database engineer from {profile.location}. This is the journey, and how I work."
+	lead="I'm {profile.name}, an infrastructure and database engineer from {profile.location}. The short version of how I got here, and how I work."
 />
 
 <!-- The journey -->
@@ -88,7 +88,7 @@
 					What working with me is like.
 				</h2>
 				<p class="mt-5 text-lg leading-relaxed text-inkmuted">
-					Four habits that shape every engagement — and yes, they apply from the very first
+					Four habits that shape every engagement, and yes, they apply from the very first
 					email.
 				</p>
 			</div>
@@ -150,6 +150,6 @@
 
 <CtaBand
 	title="Prefer to just talk?"
-	line="Skip the forms and write to me directly — or tell me about your challenge and I'll come prepared."
+	line="Skip the forms and write to me directly. Or tell me about your challenge and I'll come prepared."
 	ctaLabel="Start a professional conversation"
 />

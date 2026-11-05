@@ -8,21 +8,21 @@
 	import { ArrowRight } from 'lucide-svelte';
 
 	const captions: Record<string, string> = {
-		'forward-deployed': 'fig. 02 — embedded, not adjacent',
-		'managed-platforms': 'fig. 03 — calm, steady, observed',
-		'custom-applications': 'fig. 04 — from tangle to throughput'
+		'forward-deployed': 'fig. 02 · embedded, not adjacent',
+		'managed-platforms': 'fig. 03 · calm, steady, observed',
+		'custom-applications': 'fig. 04 · from tangle to throughput'
 	};
 </script>
 
 <Seo
-	title="Services — Hafizh Fadhlurrohman"
-	description="Three ways of working together: Forward Deployed Engineering, Managed Platforms & Infrastructure, and Custom Applications & Integration. Independent engineering consultancy for infrastructure, platforms, and databases."
+	title="Services · Hafizh Fadhlurrohman"
+	description="Three engagement models for infrastructure, platforms, and databases: Forward Deployed Engineering, Managed Platforms & Infrastructure, and Custom Applications & Integration. Independent engineering consultancy, scoped around your problem."
 	path="/services"
 />
 
 <PageHeader
 	title="How we can work together."
-	lead="Most engagements fall into one of three shapes. Find yours — or start from the challenge, and we'll find the shape together."
+	lead="Three engagement models, each scoped around a real problem rather than a package. Start from the challenge, and we'll find the right one together."
 />
 
 <section class="bg-ivory py-16 sm:py-24">
@@ -53,7 +53,7 @@
 								href="/services/{service.slug}"
 								class="group inline-flex items-center gap-2 text-[15px] font-semibold text-charcoal underline decoration-sanddeep decoration-2 underline-offset-8 transition-colors hover:decoration-clay"
 							>
-								Explore this service
+								{service.cta}
 								<ArrowRight
 									class="h-4 w-4 text-clay transition-transform duration-300 group-hover:translate-x-1"
 								/>
@@ -70,7 +70,7 @@
 		</div>
 
 		<div class="mt-4 flex flex-wrap items-center justify-between gap-4 border-t border-sand pt-8" use:reveal>
-			<p class="text-[15px] text-inkmuted">Not sure which shape fits? That's what the first conversation is for.</p>
+			<p class="text-[15px] text-inkmuted">Not sure which one fits? That's normal, and it's exactly what the first conversation is for.</p>
 			<a
 				href="/contact"
 				class="group inline-flex items-center gap-2 text-[15px] font-semibold text-clay transition-colors hover:text-claydark"
@@ -83,7 +83,7 @@
 </section>
 
 <CtaBand
-	title="Have a technical challenge worth solving?"
-	line="Tell me a little about your organization and what you're trying to achieve — we'll find the shape together."
+	title="The challenge decides the service."
+	line="Bring the problem as you understand it today. Scoping it together is part of the work."
 	ctaLabel="Start a professional conversation"
 />

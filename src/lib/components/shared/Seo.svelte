@@ -10,7 +10,7 @@
 	const siteUrl = 'https://hafizhfadh.id';
 	const url = $derived(`${siteUrl}${path}`);
 	// Bump the version to force WhatsApp/Telegram/Facebook to re-fetch the image
-	// after a change — their caches are keyed by URL and can hold failures.
+	// after a change: their caches are keyed by URL and can hold failures.
 	const ogImage = $derived(`${siteUrl}/og.png?v=2`);
 </script>
 
@@ -30,7 +30,7 @@
 	<meta property="og:image:type" content="image/png" />
 	<meta
 		property="og:image:alt"
-		content="Engineering Beyond Infrastructure — the editorial homepage of Hafizh Fadhlurrohman's independent engineering consultancy, set on warm ivory with a hand-drawn platform schematic."
+		content="Engineering Beyond Infrastructure. The editorial homepage of Hafizh Fadhlurrohman's independent engineering consultancy, set on warm ivory with a hand-drawn platform schematic."
 	/>
 
 	<meta name="twitter:card" content="summary_large_image" />
@@ -40,6 +40,6 @@
 	<meta name="twitter:image" content={ogImage} />
 	<meta
 		name="twitter:image:alt"
-		content="Engineering Beyond Infrastructure — the editorial homepage of Hafizh Fadhlurrohman's independent engineering consultancy, set on warm ivory with a hand-drawn platform schematic."
+		content="Engineering Beyond Infrastructure. The editorial homepage of Hafizh Fadhlurrohman's independent engineering consultancy, set on warm ivory with a hand-drawn platform schematic."
 	/>
 </svelte:head>

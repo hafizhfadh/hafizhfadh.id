@@ -36,7 +36,7 @@
 		<a
 			href="/"
 			class="group rounded-sm font-serif text-xl leading-none tracking-[-0.01em] text-charcoal transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay"
-			aria-label="Hafizh Fadhlurrohman — home"
+			aria-label="Hafizh Fadhlurrohman, home"
 		>
 			Hafizh Fadhlurrohman<span class="text-terracotta transition-transform duration-300 group-hover:scale-125">.</span>
 		</a>
@@ -80,7 +80,7 @@
 		</div>
 	</div>
 
-	<!-- Mobile menu — an editorial index -->
+	<!-- Mobile menu: an editorial index -->
 	{#if isMobileMenuOpen}
 		<div
 			id="mobile-menu"

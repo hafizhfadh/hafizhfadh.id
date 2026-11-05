@@ -15,16 +15,16 @@
 	let { service }: Props = $props();
 
 	const captions: Record<string, string> = {
-		'forward-deployed': 'fig. 02 — embedded, not adjacent',
-		'managed-platforms': 'fig. 03 — calm, steady, observed',
-		'custom-applications': 'fig. 04 — from tangle to throughput'
+		'forward-deployed': 'fig. 02 · embedded, not adjacent',
+		'managed-platforms': 'fig. 03 · calm, steady, observed',
+		'custom-applications': 'fig. 04 · from tangle to throughput'
 	};
 
 	const otherServices = services.filter((s) => s.id !== service.id);
 </script>
 
 <Seo
-	title="{service.title} — Hafizh Fadhlurrohman"
+	title="{service.title} · Hafizh Fadhlurrohman"
 	description={service.summary}
 	path="/services/{service.slug}"
 />
@@ -211,6 +211,6 @@
 
 <CtaBand
 	title="Sound like your situation?"
-	line="Tell me about the challenge — I'll tell you honestly whether this engagement shape fits, or which one does."
+	line="Tell me about the challenge, and I'll tell you honestly whether this engagement fits, or which one does."
 	ctaLabel="Discuss this engagement"
 />

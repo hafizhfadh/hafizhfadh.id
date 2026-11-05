@@ -12,8 +12,8 @@
 					Three ways of working together.
 				</h2>
 				<p class="mt-5 text-lg leading-relaxed text-inkmuted">
-					Every engagement is shaped around the problem, but most work falls into one of three
-					shapes.
+					Every engagement is scoped around a specific problem. These are the three forms it
+					usually takes.
 				</p>
 			</div>
 			<a
@@ -44,7 +44,7 @@
 							href="/services/{service.slug}"
 							class="group inline-flex items-center gap-2 text-[15px] font-semibold text-charcoal underline decoration-sanddeep decoration-2 underline-offset-8 transition-colors hover:decoration-clay"
 						>
-							Explore this service
+							{service.cta}
 							<ArrowRight
 								class="h-4 w-4 text-clay transition-transform duration-300 group-hover:translate-x-1"
 							/>

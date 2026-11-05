@@ -13,8 +13,8 @@
 					Have a technical challenge worth solving?
 				</h2>
 				<p class="mt-6 max-w-[56ch] text-lg leading-relaxed text-fog">
-					Tell me a little about your organization and what you're trying to achieve. We can
-					start with a conversation and explore whether working together makes sense.
+					Tell me what's going on in your environment. I read every message myself, and the
+					first conversation is just a conversation.
 				</p>
 			</div>
 			<div class="flex shrink-0 flex-col items-start gap-5">

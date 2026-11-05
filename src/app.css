@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-	/* Typography — expressive editorial trio */
+	/* Typography: expressive editorial trio */
 	--font-serif: 'Instrument Serif', ui-serif, Georgia, 'Times New Roman', serif;
 	--font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 	--font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
@@ -85,7 +85,7 @@ textarea {
 	caret-color: var(--color-clay);
 }
 
-/* Gentle scroll reveals — content stays visible without JavaScript */
+/* Gentle scroll reveals: content stays visible without JavaScript */
 .reveal {
 	opacity: 0;
 	transform: translateY(16px);

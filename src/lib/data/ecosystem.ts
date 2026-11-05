@@ -1,6 +1,5 @@
 export interface TechCategory {
 	category: string;
-	tag: string;
 	description: string;
 	skills: string[];
 }
@@ -8,9 +7,8 @@ export interface TechCategory {
 export const techEcosystem: TechCategory[] = [
 	{
 		category: 'Database Engineering',
-		tag: 'DATA // STORAGE // OPTIMIZATION',
 		description:
-			'Deep query plan analysis, indexing strategies, concurrency tuning, and high-availability operations across relational and in-memory databases.',
+			'Query plan analysis, indexing strategy, concurrency tuning, and high-availability operations across relational and in-memory databases.',
 		skills: [
 			'PostgreSQL',
 			'MySQL',
@@ -27,9 +25,8 @@ export const techEcosystem: TechCategory[] = [
 	},
 	{
 		category: 'Cloud & Infrastructure',
-		tag: 'INFRASTRUCTURE // COST // PLATFORM',
 		description:
-			'Cloud architecture, multi-provider cost reduction, workload sizing, and robust Linux environment administration.',
+			'Cloud architecture, multi-provider cost reduction, workload sizing, and Linux system administration.',
 		skills: [
 			'AWS',
 			'Azure',
@@ -43,9 +40,8 @@ export const techEcosystem: TechCategory[] = [
 	},
 	{
 		category: 'DevOps & Observability',
-		tag: 'TELEMETRY // RELIABILITY // METRICS',
 		description:
-			'Full-stack system visibility, centralized telemetry pipelines, proactive alerting, and health dashboards.',
+			'System-wide visibility: centralized telemetry pipelines, proactive alerting, and dashboards your team can read.',
 		skills: [
 			'Grafana',
 			'MonIT Centralized Platform',
@@ -58,9 +54,8 @@ export const techEcosystem: TechCategory[] = [
 	},
 	{
 		category: 'Security & Compliance',
-		tag: 'GOVERNANCE // CONTROLS // AUDIT',
 		description:
-			'Rigorous security implementations aligned with international standards, access controls, and vulnerability mitigation.',
+			'Controls designed into the architecture: ISO/IEC 27001:2022 alignment, least-privilege access, SIEM threat monitoring, and vulnerability mitigation.',
 		skills: [
 			'ISO/IEC 27001:2022 Implementation',
 			'Security Controls & Recertification',
@@ -71,9 +66,8 @@ export const techEcosystem: TechCategory[] = [
 	},
 	{
 		category: 'Software Engineering',
-		tag: 'CLIENT // BACKEND // INTEGRATION',
 		description:
-			'Custom software, API integration layers, resilient mobile applications, and modern edge web platforms.',
+			'Internal business systems, API integration layers, resilient mobile applications, and modern edge web platforms.',
 		skills: [
 			'SvelteKit (Svelte 5 runes)',
 			'TypeScript',

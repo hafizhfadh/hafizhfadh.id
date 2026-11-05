@@ -1,140 +1,47 @@
-# My SonicJS Application
+# hafizhfadh.id
 
-A modern headless CMS built with [SonicJS](https://sonicjs.com) on Cloudflare's edge platform.
+The personal website of Hafizh Fadhlurrohman: an independent engineering consultancy for infrastructure, platforms, and databases. A static brochure site built with SvelteKit and deployed to Cloudflare Workers.
 
-## Getting Started
+## Stack
 
-### Prerequisites
+- SvelteKit (Svelte 5 runes) + TypeScript + Vite
+- Tailwind CSS 4 (design tokens in `src/app.css` `@theme`)
+- `@sveltejs/adapter-cloudflare`, deployed via Wrangler
+- All content routes prerendered at build time (`src/routes/+layout.ts`)
 
-- Node.js 18 or higher
-- A Cloudflare account (free tier works great)
-- Wrangler CLI (installed with dependencies)
+## Getting started
 
-### Installation
-
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-2. **Create your D1 database:**
-   ```bash
-   npx wrangler d1 create my-sonicjs-db
-   ```
-
-   Copy the `database_id` from the output and update it in `wrangler.toml`.
-
-3. **Create your R2 bucket:**
-   ```bash
-   npx wrangler r2 bucket create my-sonicjs-media
-   ```
-
-4. **Create your KV namespace:**
-   ```bash
-   npx wrangler kv namespace create CACHE_KV
-   ```
-
-   Copy the `id` from the output into the `CACHE_KV` binding in `wrangler.toml`.
-   This binding is **required for good TTFB** — without it every cold Worker
-   isolate re-runs the full database bootstrap (~10s+ first byte); with it, only
-   the first isolate per deploy pays that cost.
-
-5. **Run migrations:**
-   ```bash
-   npm run db:migrate:local
-   ```
-
-6. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-
-7. **Open your browser:**
-   Navigate to `http://localhost:8787/admin` to access the admin interface.
-
-   Use the admin credentials you provided during project setup.
-
-## Project Structure
-
-```
-my-sonicjs-app/
-├── src/
-│   ├── collections/          # Your content type definitions
-│   │   └── blog-posts.collection.ts
-│   └── index.ts             # Application entry point
-├── wrangler.toml            # Cloudflare Workers configuration
-├── package.json
-└── tsconfig.json
+```bash
+bun install        # or npm install
+bun run dev        # dev server
+bun run check      # svelte-check (types, a11y warnings)
+bun run build      # production build
+bun run preview    # serve the built worker locally
+bun run deploy     # build + wrangler deploy
 ```
 
-## Available Scripts
+## Project structure
 
-- `npm run dev` - Start development server
-- `npm run deploy` - Deploy to Cloudflare
-- `npm run db:migrate` - Run migrations on production database
-- `npm run db:migrate:local` - Run migrations locally
-- `npm run type-check` - Check TypeScript types
-- `npm run test` - Run tests
-
-## Creating Collections
-
-Collections define your content types. Create a new file in `src/collections/`:
-
-```typescript
-// src/collections/products.collection.ts
-import type { CollectionConfig } from '@sonicjs-cms/core'
-
-export default {
-  name: 'products',
-  label: 'Products',
-  fields: {
-    name: { type: 'text', required: true },
-    price: { type: 'number', required: true },
-    description: { type: 'quill' }
-  }
-} satisfies CollectionConfig
+```
+src/
+├── lib/
+│   ├── data/            # Centralized content: profile, services, experience,
+│   │                    # philosophy, engagement process, ecosystem, metrics, navigation
+│   ├── components/
+│   │   ├── layout/      # Navbar, Footer
+│   │   ├── sections/    # Page sections (Hero, ProvenImpact, ServiceDetail, ...)
+│   │   ├── shared/      # Seo, PageHeader, Breadcrumbs, CtaBand, diagrams, glyphs
+│   │   └── ui/          # Button, icons
+│   └── actions/         # reveal (scroll animation)
+└── routes/              # 9 prerendered routes + error + sitemap.xml
 ```
 
-## API Access
+## Governing documents
 
-Your collections are automatically available via REST API:
+Three root documents govern all content and design. Consult them before adding pages, sections, or copy:
 
-- `GET /api/content/blog-posts` - List all blog posts
-- `GET /api/content/blog-posts/:id` - Get a single post
-- `POST /api/content/blog-posts` - Create a post (requires auth)
-- `PUT /api/content/blog-posts/:id` - Update a post (requires auth)
-- `DELETE /api/content/blog-posts/:id` - Delete a post (requires auth)
+- **PRODUCT.md**: what the site is, for whom, and why; services, IA, journeys, facts.
+- **DESIGN.md**: the Warm Technical Editorial system: tokens, typography, layout, components, motion, accessibility.
+- **VOICE.md**: brand voice and editorial governance: writing rules, vocabulary, page tones, and the verified factual record that gates every professional claim.
 
-## Deployment
-
-1. **Login to Cloudflare:**
-   ```bash
-   npx wrangler login
-   ```
-
-2. **Deploy your application:**
-   ```bash
-   npm run deploy
-   ```
-
-3. **Run migrations on production:**
-   ```bash
-   npm run db:migrate
-   ```
-
-## Documentation
-
-- [SonicJS Documentation](https://sonicjs.com)
-- [Collection Configuration](https://sonicjs.com/collections)
-- [Plugin Development](https://sonicjs.com/plugins)
-- [API Reference](https://sonicjs.com/api)
-
-## Support
-
-- [GitHub Issues](https://github.com/lane711/sonicjs/issues)
-- [Discord Community](https://discord.gg/8bMy6bv3sZ)
-- [Documentation](https://sonicjs.com)
-
-## License
-
-MIT
+Content lives in `src/lib/data/`; pages compose it. Never duplicate copy across pages, and never add claims that are not in the verified record.

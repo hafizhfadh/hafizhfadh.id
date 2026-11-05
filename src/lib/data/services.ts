@@ -12,10 +12,10 @@ export interface ServicePillar {
 	id: string;
 	slug: string;
 	title: string;
-	/** One-line teaser for Level-1 surfaces (home) — distinct voice from summary. */
+	/** One-line teaser for Level-1 surfaces (home): distinct voice from summary. */
 	teaser: string;
 	summary: string;
-	/** Distinct lead for the detail page header — not a copy of summary. */
+	/** Distinct lead for the detail page header, not a copy of summary. */
 	lead: string;
 	quote: string;
 	positioning: string;
@@ -29,6 +29,8 @@ export interface ServicePillar {
 	relevantExperience: ServiceRelevantExperience[];
 	engagementExample: string;
 	technologies: string[];
+	/** Label for the exploration link that leads to this service's detail page. */
+	cta: string;
 	diagram: 'bridge' | 'rhythm' | 'flow';
 }
 
@@ -38,14 +40,14 @@ export const services: ServicePillar[] = [
 		slug: 'forward-deployed-engineering',
 		title: 'Forward Deployed Engineering',
 		teaser:
-			'An engineering partner inside your team — solving the architecture, performance, and compliance problems that never fit a ticket queue.',
+			'An engineering partner inside your team, on the architecture, performance, and compliance problems that never fit a ticket queue.',
 		summary:
 			'Direct, embedded engineering partnership with your technical and executive teams to solve high-stakes architecture, database, and infrastructure challenges.',
 		lead: 'Embedded partnership for the problems that never fit a ticket queue.',
 		quote:
-			'Not another external vendor handing over documentation. An engineering partner who works alongside your team to understand, integrate, and solve real technical challenges.',
+			'Not another vendor handing over documentation. An engineer who joins your team, learns the environment, and stays until the problem is solved.',
 		positioning:
-			'The most valuable engineering sometimes happens inside your walls. Forward Deployed Engineering means I join your team directly — your tools, your meetings, your deadlines — to work on the problems that never fit a ticket queue: architecture decisions, performance mysteries, compliance deadlines, and the migration everyone has been postponing.',
+			'The most valuable engineering sometimes happens inside your walls. Forward Deployed Engineering means I join your team on your tools, in your meetings, against your deadlines, to work on the problems that never fit a ticket queue: architecture decisions, performance mysteries, compliance deadlines, and the migration everyone keeps postponing.',
 		challenges: [
 			{
 				title: 'A cloud bill that keeps climbing',
@@ -57,7 +59,7 @@ export const services: ServicePillar[] = [
 			},
 			{
 				title: 'A compliance deadline with no security lead',
-				body: 'ISO/IEC 27001 or a customer audit is approaching, and the controls need an engineer who implements — not a consultant who delegates.'
+				body: 'ISO/IEC 27001 or a customer audit is approaching, and the controls need an engineer who implements, not a consultant who delegates.'
 			},
 			{
 				title: 'A migration everyone postpones',
@@ -67,7 +69,7 @@ export const services: ServicePillar[] = [
 		scenarios: [
 			{
 				title: 'Embedded in a cloud migration',
-				body: 'Working alongside your staff for a fixed sprint — auditing configurations, redesigning the architecture, and implementing the migration with your team watching every step.'
+				body: 'Working alongside your staff for a fixed sprint: auditing configurations, redesigning the architecture, and implementing the migration with your team watching every step.'
 			},
 			{
 				title: 'Interim platform ownership',
@@ -88,20 +90,20 @@ export const services: ServicePillar[] = [
 		],
 		capabilitySections: [],
 		outcomes: [
-			'Accelerate delivery without accumulating long-term technical debt',
-			'Empower internal engineers through hands-on knowledge transfer',
-			'Avoid costly vendor lock-in through well-architected open-source platforms'
+			'Delivery speeds up without technical debt piling up behind it',
+			'Your engineers finish the engagement knowing what I know',
+			'Vendor lock-in avoided by design, through well-architected open-source platforms'
 		],
 		deliverables: [
 			'A discovery brief and problem statement you can act on',
 			'An engineering assessment with prioritized recommendations',
-			'Implemented improvements — not just recommendations',
+			'Implemented improvements, not just recommendations',
 			'Operational documentation and runbooks',
 			'Knowledge transfer sessions for your internal engineers'
 		],
 		collaboration: {
 			title: 'Embedded, not adjacent',
-			body: 'I work inside your environment — your repositories, your tickets, your communication channels. You get direct access to the engineer doing the work, decisions explained as they are made, and everything written down so your team owns the result long after the engagement ends.'
+			body: 'I work inside your environment: your repositories, your tickets, your communication channels. You get direct access to the engineer doing the work, decisions explained as they are made, and everything written down so your team owns the result long after the engagement ends.'
 		},
 		relevantExperience: [
 			{
@@ -116,6 +118,7 @@ export const services: ServicePillar[] = [
 		engagementExample:
 			'Embedding during a cloud migration or compliance sprint to optimize infrastructure, audit configurations, and implement reliable architectures alongside your staff.',
 		technologies: ['Linux', 'PostgreSQL', 'Grafana', 'Shell', 'Docker', 'REST APIs'],
+		cta: 'See how embedding works',
 		diagram: 'bridge'
 	},
 	{
@@ -123,18 +126,18 @@ export const services: ServicePillar[] = [
 		slug: 'managed-platforms',
 		title: 'Managed Platforms & Infrastructure',
 		teaser:
-			'Ongoing stewardship for mission-critical databases and cloud environments — fast, observable, secure, and cost-effective, month after month.',
+			'Ongoing stewardship for mission-critical databases and cloud environments: fast, observable, secure, and cost-effective month after month.',
 		summary:
 			'End-to-end stewardship, query tuning, observability, and cost governance for mission-critical databases and cloud environments.',
 		lead: 'Ongoing stewardship for the systems your business runs on.',
 		quote:
 			'Keep your platforms reliable, observable, secure, and operationally efficient without building every capability internally.',
 		positioning:
-			'Some systems are too important to learn on the job. Managed Platforms means ongoing stewardship of the databases and infrastructure your business runs on — keeping them fast, observable, secure, and cost-effective month after month, without you building every capability internally.',
+			'Some systems are too important to learn on the job. Managed Platforms means ongoing stewardship of the databases and infrastructure your business runs on: kept fast, observable, secure, and cost-effective month after month, without building every capability in-house.',
 		challenges: [
 			{
 				title: 'A database nobody truly owns',
-				body: 'It works — most days. But configuration is folklore, backups are untested, and the person who understood it left last year.'
+				body: 'It works, most days. But configuration is folklore, backups are untested, and the person who understood it left last year.'
 			},
 			{
 				title: 'Latency that grows with the data',
@@ -156,7 +159,7 @@ export const services: ServicePillar[] = [
 			},
 			{
 				title: 'Cost governance with audited figures',
-				body: 'A monthly review of spend against usage — the discipline behind 33–70% reductions in real production environments.'
+				body: 'A monthly review of spend against usage: the discipline behind 33–70% reductions in real production environments.'
 			},
 			{
 				title: 'Observability built where none exists',
@@ -176,7 +179,7 @@ export const services: ServicePillar[] = [
 		capabilitySections: [
 			{
 				title: 'Infrastructure management',
-				body: 'Day-to-day stewardship of cloud and on-premises environments — provisioning, configuration, capacity planning, and the unglamorous maintenance that prevents outages.'
+				body: 'Day-to-day stewardship of cloud and on-premises environments: provisioning, configuration, capacity planning, and the unglamorous maintenance that prevents outages.'
 			},
 			{
 				title: 'Database administration',
@@ -184,19 +187,19 @@ export const services: ServicePillar[] = [
 			},
 			{
 				title: 'Database performance optimization',
-				body: 'Query and index strategy (B-tree, BRIN, GIN), execution plan analysis, vacuum tuning, and connection pool management — the toolkit that keeps a 1.6 TB database under 500 ms.'
+				body: 'Query and index strategy (B-tree, BRIN, GIN), execution plan analysis, vacuum tuning, and connection pool management. The toolkit that keeps a 1.6 TB database under 500 ms.'
 			},
 			{
 				title: 'Cloud & on-premises operations',
-				body: 'Linux administration, workload sizing, and hybrid environments — including cost-efficient local cloud providers where they genuinely beat the giants.'
+				body: 'Linux administration, workload sizing, and hybrid environments, including cost-efficient local cloud providers where they genuinely beat the giants.'
 			},
 			{
 				title: 'Monitoring & observability',
-				body: 'Centralized telemetry with Grafana dashboards and custom collection scripts — the MonIT approach: see problems before your users do.'
+				body: 'Centralized telemetry with Grafana dashboards and custom collection scripts. The MonIT approach: see problems before your users do.'
 			},
 			{
 				title: 'Backup & recovery',
-				body: 'Backup schedules, replication, and disaster recovery that is actually tested — because an unverified backup is a hope, not a plan.'
+				body: 'Backup schedules, replication, and disaster recovery that is actually tested, because an unverified backup is a hope, not a plan.'
 			},
 			{
 				title: 'Security-conscious operations',
@@ -204,7 +207,7 @@ export const services: ServicePillar[] = [
 			},
 			{
 				title: 'Infrastructure cost optimization',
-				body: 'A monthly review of spend against usage with actionable recommendations — governance, not cost-cutting theater.'
+				body: 'A monthly review of spend against usage with actionable recommendations: governance, not cost-cutting theater.'
 			},
 			{
 				title: 'Reliability improvement',
@@ -212,9 +215,9 @@ export const services: ServicePillar[] = [
 			}
 		],
 		outcomes: [
-			'Substantial reduction in monthly cloud expenditure (33%–70% reductions achieved)',
-			'Consistently low query execution times (≤ 500ms) on multi-terabyte datasets',
-			'Elimination of silent database connection leaks and performance degradation'
+			'Cloud expenditure down 33–70% in documented engagements',
+			'Query execution held at or under 500 ms on multi-terabyte datasets',
+			'Silent connection leaks and slow degradation found and eliminated'
 		],
 		deliverables: [
 			'A monthly database performance report with prioritized recommendations',
@@ -225,12 +228,12 @@ export const services: ServicePillar[] = [
 		],
 		collaboration: {
 			title: 'A retainer that earns its keep',
-			body: 'Ongoing stewardship with a predictable rhythm: continuous monitoring, monthly reporting with actionable recommendations, and a direct line when something needs attention. You get senior database and infrastructure expertise without the salary line — and your internal team keeps learning from the work.'
+			body: 'Ongoing stewardship with a predictable rhythm: continuous monitoring, monthly reporting with actionable recommendations, and a direct line when something needs attention. You get senior database and infrastructure expertise without the salary line, and your internal team keeps learning from the work.'
 		},
 		relevantExperience: [
 			{
 				organization: 'Monster Data Asia',
-				note: 'Ongoing administration of a 1.6 TB telecommunications payment and billing database growing ~11 GB weekly, held at ≤ 500 ms query latency.'
+				note: 'Ongoing administration of a 1.6 TB telecommunications payment and billing database growing ~11 GB weekly, held at or under 500 ms query latency.'
 			},
 			{
 				organization: 'Infradigital Nusantara',
@@ -240,6 +243,7 @@ export const services: ServicePillar[] = [
 		engagementExample:
 			'Ongoing retainer for high-throughput transactional databases requiring continuous latency monitoring, monthly optimization reporting, and capacity tuning.',
 		technologies: ['PostgreSQL', 'MySQL', 'MariaDB', 'Redis', 'AWS', 'Azure', 'Grafana'],
+		cta: 'See the scope of care',
 		diagram: 'rhythm'
 	},
 	{
@@ -247,14 +251,14 @@ export const services: ServicePillar[] = [
 		slug: 'custom-applications',
 		title: 'Custom Applications & Integration',
 		teaser:
-			'Software built around your operation — internal systems, integrations, and automation that returns hours to your team.',
+			'Software built around your operation: internal systems, integrations, and automation that returns hours to your team.',
 		summary:
-			'Targeted internal business systems, workflow automation, and data integrations built to fit your precise operational realities.',
-		lead: 'Software built around your operation, not a vendor\u2019s roadmap.',
+			'Targeted internal business systems, workflow automation, and data integrations built to fit how your operation actually works.',
+		lead: 'Software built around your operation, not a vendor’s roadmap.',
 		quote:
-			'Software should adapt to your operational requirements, not force your organization to adapt to inflexible software.',
+			'Software should adapt to your operation. Your organization shouldn’t have to adapt to the software.',
 		positioning:
-			'Off-the-shelf software gets you 80% of the way there and 100% of the frustration. Custom Applications means software built around your actual operation — administrative systems, integrations between the tools you already run, and the automation that returns hours to your team every week.',
+			'Off-the-shelf software gets you 80% of the way there and 100% of the frustration. Custom Applications means software built around your actual operation: administrative systems, integrations between the tools you already run, and the automation that returns hours to your team every week.',
 		challenges: [
 			{
 				title: 'Operations run in spreadsheets',
@@ -262,11 +266,11 @@ export const services: ServicePillar[] = [
 			},
 			{
 				title: 'Systems that do not talk to each other',
-				body: 'The billing engine, the website, and the accounting tool each hold a different version of the truth — connected by copy-paste.'
+				body: 'The billing engine, the website, and the accounting tool each hold a different version of the truth, connected by copy-paste.'
 			},
 			{
 				title: 'A legacy system you cannot replace',
-				body: 'It is mission-critical, irreplaceable this year, and impossible to integrate with — so the workarounds keep multiplying.'
+				body: 'It is mission-critical, irreplaceable this year, and impossible to integrate with, so the workarounds keep multiplying.'
 			},
 			{
 				title: 'Manual work that quietly scales',
@@ -280,7 +284,7 @@ export const services: ServicePillar[] = [
 			},
 			{
 				title: 'Banking and payment integrations',
-				body: 'Virtual account payment bridges integrated directly with core banking engines — static and dynamic — so reconciliation happens by itself.'
+				body: 'Virtual account payment bridges integrated directly with core banking engines, static and dynamic, so reconciliation happens by itself.'
 			},
 			{
 				title: 'Mobile software for real-world networks',
@@ -308,11 +312,11 @@ export const services: ServicePillar[] = [
 			},
 			{
 				title: 'APIs & systems integration',
-				body: 'High-throughput API development and third-party integrations — including banking and payment gateway APIs with static and dynamic virtual accounts.'
+				body: 'High-throughput API development and third-party integrations, including banking and payment gateway APIs with static and dynamic virtual accounts.'
 			},
 			{
 				title: 'Workflow automation',
-				body: 'Backend pipelines and scheduled jobs that remove repetitive manual work — and the human error that comes with it.'
+				body: 'Backend pipelines and scheduled jobs that remove repetitive manual work, and the human error that comes with it.'
 			},
 			{
 				title: 'Open-source customization',
@@ -320,33 +324,33 @@ export const services: ServicePillar[] = [
 			},
 			{
 				title: 'Legacy integration & modernization',
-				body: 'Bridging modern web interfaces with mission-critical legacy databases — respecting the system that pays the bills while moving it forward.'
+				body: 'Bridging modern web interfaces with mission-critical legacy databases, respecting the system that pays the bills while moving it forward.'
 			},
 			{
 				title: 'Mobile & web development',
-				body: 'Flutter for iOS and Android, SvelteKit for the web — production software proven across 200,000+ installs, with offline resilience built in.'
+				body: 'Flutter for iOS and Android, SvelteKit for the web. Production software proven across 200,000+ installs, with offline resilience built in.'
 			}
 		],
 		outcomes: [
-			'Automate repetitive operational bottlenecks and eliminate manual human error',
-			'Bridge modern web interfaces with mission-critical legacy databases',
-			'Deliver responsive, offline-resilient software tested across 200k+ installs'
+			'Repetitive operational bottlenecks automated, manual error eliminated',
+			'Modern interfaces bridged onto mission-critical legacy databases',
+			'Software proven across 200,000+ installs, offline-resilient by design'
 		],
 		deliverables: [
 			'Requirements analysis translated into a build plan you can challenge',
-			'Working software in iterations — not a single big reveal',
+			'Working software in iterations, not a single big reveal',
 			'Integration documentation for every system touched',
 			'A handover with the knowledge to operate what was built',
 			'Post-launch support on clearly agreed terms'
 		],
 		collaboration: {
 			title: 'Built with your team, not just for it',
-			body: 'Short iterations, working software early, and requirements that come from watching how your operation actually works. I build on your existing stack where it makes sense — and say so plainly when it does not.'
+			body: 'Short iterations, working software early, and requirements that come from watching how your operation actually works. I build on your existing stack where it makes sense, and say so plainly when it does not.'
 		},
 		relevantExperience: [
 			{
 				organization: 'Infradigital Nusantara',
-				note: 'Pelajar Flutter app — 200,000+ installs with offline optimistic synchronization and ISO/IEC 27001-aligned security.'
+				note: 'Pelajar Flutter app: 200,000+ installs with offline optimistic synchronization and ISO/IEC 27001-aligned security.'
 			},
 			{
 				organization: 'Yayasan Al Sudais Indonesia',
@@ -356,6 +360,7 @@ export const services: ServicePillar[] = [
 		engagementExample:
 			'Building administrative accounting portals, custom POS systems, or virtual account payment bridges integrated directly with core banking and billing engines.',
 		technologies: ['SvelteKit', 'TypeScript', 'Flutter', 'PHP/Laravel', 'SQL', 'REST APIs'],
+		cta: 'See what gets built',
 		diagram: 'flow'
 	}
 ];

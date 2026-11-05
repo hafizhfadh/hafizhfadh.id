@@ -27,8 +27,8 @@ export const experiences: ExperienceItem[] = [
 		period: 'August 2023 – Present',
 		highlight: 'Reduced monthly cloud infrastructure expenditure by 70% (IDR 70M to IDR 21M)',
 		achievements: [
-			'Cut monthly infrastructure spend by 70% through systemic architecture optimization, database configuration tuning, and migration to a cost-efficient local cloud provider.',
-			'Developed MonIT, a centralized monitoring platform integrating existing monitoring tools and custom scripts with Grafana dashboards providing real-time visibility into application activity, database latency, and internal network health.',
+			'Cut monthly infrastructure spend by 70% through systematic architecture optimization, database configuration tuning, and migration to a cost-efficient local cloud provider.',
+			'Developed MonIT, a centralized monitoring platform that combines existing monitoring tools and custom scripts with Grafana dashboards: real-time visibility into application activity, database latency, and internal network health.',
 			'Optimized database queries and indexing strategies for large datasets, applying B-tree, BRIN, and GIN indexes according to database engine capabilities and workload query patterns.',
 			'Led technical implementation activities supporting the organization’s ISO/IEC 27001:2022 recertification, strengthening security controls and compliance practices.',
 			'Contributed to implementing a Security Information and Event Management (SIEM) platform to strengthen security monitoring and early cyber threat detection.'
@@ -43,12 +43,12 @@ export const experiences: ExperienceItem[] = [
 		achievements: [
 			'Reduced monthly cloud infrastructure expenditure from approximately IDR 300 million to IDR 180–200 million through systematic database performance optimization and configuration tuning.',
 			'Administer databases supporting a telecommunications subsidiary’s payment and billing (PPOB) systems and an online ticketing platform, including a 1.6 TB telecommunications database with approximately 11 GB weekly data growth.',
-			'Optimized database queries and indexing strategies across API endpoints, successfully maintaining database-side query execution times <= 500 ms.',
-			'Analyzed query execution plans, index efficiency, connection pooling, and stalled/idle connection bottlenecks.',
+			'Optimized database queries and indexing strategies across API endpoints, holding database-side query execution at or under 500 ms.',
+			'Analyzed query execution plans, index efficiency, connection pooling, and stalled or idle connection bottlenecks.',
 			'Tuned database configurations, cache settings, vacuum-related parameters, and connection limits based on high-concurrency workload characteristics.',
 			'Produce monthly database performance reports identifying slow queries, affected application features, and actionable recommendations for development teams.'
 		],
-		tags: ['Database Administration', '1.6 TB Scale', 'PPOB & Billing', 'Query Plans', 'Vacuum Tuning', 'Latency <=500ms']
+		tags: ['Database Administration', '1.6 TB Scale', 'PPOB & Billing', 'Query Plans', 'Vacuum Tuning', 'Latency ≤ 500ms']
 	},
 	{
 		organization: 'Infradigital Nusantara',
@@ -56,7 +56,7 @@ export const experiences: ExperienceItem[] = [
 		period: 'November 2020 – July 2023',
 		highlight: 'Engineered and maintained Pelajar Flutter app across 200,000+ installs',
 		achievements: [
-			'Developed and maintained Pelajar, a Flutter-based mobile application for iOS and Android, achieving more than 200,000 installs across Google Play Store and Apple App Store.',
+			'Developed and maintained Pelajar, a Flutter-based mobile application for iOS and Android, reaching more than 200,000 installs across Google Play and the App Store.',
 			'Optimized application performance and device resource consumption to deliver a lightweight, responsive experience across a broad spectrum of Android and iOS devices.',
 			'Implemented offline support and optimistic data synchronization to improve application usability and resilience under unstable cellular network conditions.',
 			'Implemented application security measures aligned with the organization’s ISO/IEC 27001:2022 security requirements.',
@@ -128,11 +128,11 @@ export const caseStudies: CaseStudy[] = [
 		metric: '-70%',
 		metricLabel: 'monthly infrastructure expenditure (IDR 70M → IDR 21M)',
 		context:
-			'Infradigital\u2019s cloud infrastructure spend had reached IDR 70 million per month — a number nobody questioned until it was questioned. The environment had grown organically: oversized instances, default configurations, and workloads paying premium rates on a major cloud provider.',
+			'Infradigital’s cloud infrastructure spend had reached IDR 70 million per month, a number nobody questioned until it was questioned. The environment had grown organically: oversized instances, default configurations, and workloads paying premium rates on a major cloud provider.',
 		challenge:
 			'Reduce spend without degrading reliability or performance, in an environment whose full inventory lived largely in tribal knowledge.',
 		approach: [
-			'Systemic architecture review before any migration conversation',
+			'Systematic architecture review before any migration conversation',
 			'Database configuration and query tuning as the first lever',
 			'Evaluation of a cost-efficient local cloud provider',
 			'Centralized visibility so the savings stay visible (MonIT + Grafana)'
@@ -144,7 +144,7 @@ export const caseStudies: CaseStudy[] = [
 			'Built MonIT, a centralized monitoring platform on Grafana with real-time visibility into application activity, database latency, and internal network health'
 		],
 		outcome:
-			'Monthly infrastructure expenditure fell from IDR 70 million to IDR 21 million — a 70% reduction that held, because the monitoring to keep it honest shipped together with the savings.'
+			'Monthly infrastructure expenditure fell from IDR 70 million to IDR 21 million. The 70% reduction held, because the monitoring to keep it honest shipped together with the savings.'
 	},
 	{
 		id: 'telecom-database-at-scale',
@@ -154,7 +154,7 @@ export const caseStudies: CaseStudy[] = [
 		metric: '≤ 500 ms',
 		metricLabel: 'database-side query latency at 1.6 TB scale',
 		context:
-			'A telecommunications subsidiary\u2019s payment and billing (PPOB) systems and an online ticketing platform run on databases growing roughly 11 GB every week — 1.6 TB and climbing when the engagement began.',
+			'A telecommunications subsidiary’s payment and billing (PPOB) systems and an online ticketing platform run on databases growing roughly 11 GB every week: 1.6 TB and climbing when the engagement began.',
 		challenge:
 			'Keep database-side query execution at or under 500 ms across high-throughput payment, billing, and ticketing endpoints while monthly cloud spend was also expected to shrink.',
 		approach: [
@@ -171,7 +171,7 @@ export const caseStudies: CaseStudy[] = [
 			'Produced monthly performance reports mapping slow queries to affected application features'
 		],
 		outcome:
-			'Query execution consistently holds at or under 500 ms on the 1.6 TB database, and monthly cloud expenditure fell from roughly IDR 300 million to IDR 180–200 million — a 33–40% reduction delivered from the database outward.'
+			'Query execution consistently holds at or under 500 ms on the 1.6 TB database, and monthly cloud expenditure fell from roughly IDR 300 million to IDR 180–200 million, a 33–40% reduction delivered from the database outward.'
 	},
 	{
 		id: 'pelajar-mobile-resilience',
@@ -181,9 +181,9 @@ export const caseStudies: CaseStudy[] = [
 		metric: '200,000+',
 		metricLabel: 'installs across Google Play and the App Store',
 		context:
-			'Pelajar is a Flutter-based mobile application for iOS and Android used by students across Indonesia — a broad device spectrum, often on unstable cellular networks.',
+			'Pelajar is a Flutter-based mobile application for iOS and Android used by students across Indonesia, on a broad device spectrum and often unstable cellular networks.',
 		challenge:
-			'Deliver a lightweight, responsive experience on low-end devices and unreliable connections, under the organization\u2019s ISO/IEC 27001:2022 security requirements.',
+			'Deliver a lightweight, responsive experience on low-end devices and unreliable connections, under the organization’s ISO/IEC 27001:2022 security requirements.',
 		approach: [
 			'Performance budgets treated as features, not afterthoughts',
 			'Offline-first data with optimistic synchronization',
@@ -193,7 +193,7 @@ export const caseStudies: CaseStudy[] = [
 		implementation: [
 			'Optimized application performance and device resource consumption across a wide range of Android and iOS hardware',
 			'Implemented offline support and optimistic data synchronization for resilience under unstable networks',
-			'Applied application security measures aligned with the organization\u2019s ISO/IEC 27001:2022 requirements',
+			'Applied application security measures aligned with the organization’s ISO/IEC 27001:2022 requirements',
 			'Managed release pipelines and deployments across both app store ecosystems'
 		],
 		outcome:
